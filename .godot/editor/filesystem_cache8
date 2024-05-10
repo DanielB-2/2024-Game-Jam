@@ -1,19 +1,20 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1715313345
-icon.svg::CompressedTexture2D::8123042654034703214::1714622279::1714622438::1::::<><>::
+::res://::1715314292
+icon.svg::CompressedTexture2D::8123042654034703214::1714622279::1715314086::1::::<><>::
 README.md::TextFile::-1::1714622279::0::1::::<><>::
 ::res://addons/::1714624065
-::res://addons/godot-git-plugin/::1714624065
-git_plugin.gdextension::GDExtension::-1::1714624065::0::1::::<><>::
-plugin.cfg::TextFile::-1::1714624065::0::1::::<><>::
-THIRDPARTY.md::TextFile::-1::1714624065::0::1::::<><>::
-::res://addons/godot-git-plugin/linux/::1714624065
-::res://addons/godot-git-plugin/macos/::1714624065
-::res://addons/godot-git-plugin/win64/::1715311348
-::res://assets/::1715313345
-Cloud.png::CompressedTexture2D::4386324700023832453::1715313342::1715313345::1::::<><>::
-DinoSprites - vita.png::CompressedTexture2D::7962400889610123536::1715311912::1715311921::1::::<><>::
-::res://scenes/::1715312694
-CharacterBody2D.gd::GDScript::-1::1715312330::0::1::::<>CharacterBody2D<>::
-main.tscn::PackedScene::539175520853137124::1715312694::0::1::::<><>::res://scenes/CharacterBody2D.gd<>uid://dlpbtxyajfv1q::::res://assets/DinoSprites - vita.png
-::res://scripts/::1715311464
+::res://addons/godot-git-plugin/::1715314164
+git_plugin.gdextension::GDExtension::-1::1715314163::0::1::::<><>::
+plugin.cfg::TextFile::-1::1715314164::0::1::::<><>::
+THIRDPARTY.md::TextFile::-1::1715314163::0::1::::<><>::
+::res://addons/godot-git-plugin/linux/::1715314163
+::res://addons/godot-git-plugin/macos/::1715314164
+::res://addons/godot-git-plugin/win64/::1715314249
+::res://assets/::1715314164
+Cloud.png::CompressedTexture2D::4386324700023832453::1715314164::1715314164::1::::<><>::
+DinoSprites - vita.png::CompressedTexture2D::7962400889610123536::1715314164::1715314164::1::::<><>::
+::res://scenes/::1715314292
+CharacterBody2D.gd::GDScript::-1::1715314164::0::1::::<>CharacterBody2D<>::
+main.tscn::PackedScene::539175520853137124::1715314293::0::1::::<><>::res://scenes/CharacterBody2D.gd<>uid://dlpbtxyajfv1q::::res://assets/DinoSprites - vita.png<>uid://b3q1ek1alfhar::::res://assets/Cloud.png<>res://scripts/TextureRect.gd
+::res://scripts/::1715314292
+TextureRect.gd::GDScript::-1::1715314164::0::1::::<>TextureRect<>::
