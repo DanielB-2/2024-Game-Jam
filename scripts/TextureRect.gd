@@ -15,6 +15,5 @@ func _process(delta):
 	if global_position.x < -300:
 		global_position.x = get_viewport().size.x
 		posy = randf_range(50, 250)
-		print("Y"+ posy)
-		print("X" + dX)
+		print(posy)
 	

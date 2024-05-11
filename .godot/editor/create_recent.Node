@@ -1,6 +1,3 @@
-ParallaxBackground
-Sprite2D
-ParallaxLayer
 TextureRect
 StaticBody2D
 CollisionShape2D
