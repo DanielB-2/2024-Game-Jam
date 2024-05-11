@@ -5,10 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://doaoix1vrbfym" path="res://scenes/player.tscn" id="1_lj0yb"]
 [ext_resource type="Script" path="res://scripts/door.gd" id="2_hsbgy"]
 [ext_resource type="Texture2D" uid="uid://dny4lcseecpko" path="res://icon.svg" id="2_u0i4s"]
-
 [ext_resource type="PackedScene" uid="uid://b04qpb1q6jiw1" path="res://scenes/building1.tscn" id="3_f0l3d"]
-[ext_resource type="PackedScene" uid="uid://ek27re4kc0gn" path="res://scenes/policy.tscn" id="5_q6e6y"]
-
+[ext_resource type="PackedScene" uid="uid://usl4v10r84qi" path="res://scenes/building2.tscn" id="5_ky8q7"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s0w4s"]
 
@@ -49,6 +47,22 @@ shape = SubResource("RectangleShape2D_1g2c6")
 scale = Vector2(0.599998, 0.879999)
 texture = ExtResource("2_u0i4s")
 
-[node name="Policy" parent="." instance=ExtResource("5_q6e6y")]
+
+
+[node name="Door2" type="Area2D" parent="."]
+position = Vector2(-538.987, -120)
+scale = Vector2(0.992514, 1)
+script = ExtResource("2_hsbgy")
+target_room = ExtResource("5_ky8q7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door2"]
+position = Vector2(875.655, 64.3199)
+shape = SubResource("RectangleShape2D_1g2c6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Door2"]
+position = Vector2(875.655, 64.3199)
+scale = Vector2(0.599998, 0.879999)
+texture = ExtResource("2_u0i4s")
 
 [connection signal="body_entered" from="Door1" to="Door1" method="_on_body_entered"]
+[connection signal="body_entered" from="Door2" to="Door2" method="_on_body_entered"]
