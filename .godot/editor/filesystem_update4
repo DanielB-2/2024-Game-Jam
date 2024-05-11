@@ -1,1 +1,4 @@
-res://scenes/main.tscn
+res://scenes/node_3d.tscn
+res://scenes/building2.tscn
+res://scenes/building.tscn
+res://scenes/player.tscn
