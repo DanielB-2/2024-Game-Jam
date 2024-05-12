@@ -1,14 +1,10 @@
-
 [gd_scene load_steps=9 format=3 uid="uid://bqxodl8ibgv4y"]
-
 
 [ext_resource type="PackedScene" uid="uid://doaoix1vrbfym" path="res://scenes/player.tscn" id="1_lj0yb"]
 [ext_resource type="Script" path="res://scripts/door.gd" id="2_hsbgy"]
 [ext_resource type="Texture2D" uid="uid://dny4lcseecpko" path="res://icon.svg" id="2_u0i4s"]
-
-[ext_resource type="PackedScene" uid="uid://b04qpb1q6jiw1" path="res://scenes/building1.tscn" id="3_f0l3d"]
+[ext_resource type="PackedScene" uid="uid://b04qpb1q6jiw1" path="res://scenes/building.tscn" id="3_f0l3d"]
 [ext_resource type="PackedScene" uid="uid://ek27re4kc0gn" path="res://scenes/policy.tscn" id="5_q6e6y"]
-
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s0w4s"]
 
@@ -30,17 +26,14 @@ position = Vector2(0, 8)
 scale = Vector2(2.069, 0.03)
 texture = SubResource("NoiseTexture2D_3nyv1")
 
-
 [node name="Player" parent="." instance=ExtResource("1_lj0yb")]
 position = Vector2(0, -114)
 
 [node name="Door1" type="Area2D" parent="."]
-
 position = Vector2(-270, -60)
 scale = Vector2(0.99625, 1)
 script = ExtResource("2_hsbgy")
 target_room = ExtResource("3_f0l3d")
-
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door1"]
 shape = SubResource("RectangleShape2D_1g2c6")
@@ -52,3 +45,4 @@ texture = ExtResource("2_u0i4s")
 [node name="Policy" parent="." instance=ExtResource("5_q6e6y")]
 
 [connection signal="body_entered" from="Door1" to="Door1" method="_on_body_entered"]
+[connection signal="body_exited" from="Door1" to="Door1" method="_on_body_exited"]

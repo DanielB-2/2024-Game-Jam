@@ -1,18 +1,20 @@
 extends Area2D
 
 @export var target_room : PackedScene
+var playerInsideArea = false
 
 func _on_body_entered(body):
-
-	if body.name == "CharacterBody2D":
+	if body.name == "Player":
+		playerInsideArea = true
 		set_process_input(true)
 
 func _on_body_exited(body):
-	if body.name == "CharacterBody2D":
+	if body.name == "Player":
+		playerInsideArea = false
 		set_process_input(false)
 
 func _input(event):
-	if event.is_action_pressed("up"):
+	if playerInsideArea and event.is_action_pressed("enter"):
 		changeScene()
 
 func changeScene():
