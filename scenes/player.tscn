@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://doaoix1vrbfym"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_l0sym"]
-[ext_resource type="Texture2D" uid="uid://dq58lk02fnfof" path="res://assets/tempPlayer.png" id="2_saeh4"]
+[ext_resource type="Texture2D" uid="uid://4tkybbqyge01" path="res://scenes/mrguy.png" id="2_ma6bv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8tre"]
 size = Vector2(49.5, 50)
@@ -13,7 +13,8 @@ script = ExtResource("1_l0sym")
 shape = SubResource("RectangleShape2D_n8tre")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_saeh4")
+scale = Vector2(0.147, 0.18)
+texture = ExtResource("2_ma6bv")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -128)

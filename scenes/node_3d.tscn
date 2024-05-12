@@ -43,6 +43,7 @@ scale = Vector2(0.599998, 0.879999)
 texture = ExtResource("2_u0i4s")
 
 [node name="Policy" parent="." instance=ExtResource("5_q6e6y")]
+position = Vector2(109, -58)
 
 [connection signal="body_entered" from="Door1" to="Door1" method="_on_body_entered"]
 [connection signal="body_exited" from="Door1" to="Door1" method="_on_body_exited"]
