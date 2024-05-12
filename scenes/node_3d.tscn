@@ -31,7 +31,6 @@ scale = Vector2(4.15169, 0.03)
 texture = SubResource("NoiseTexture2D_3nyv1")
 
 [node name="Player" parent="." instance=ExtResource("1_lj0yb")]
-position = Vector2(-270, -59)
 
 [node name="Door1" type="Area2D" parent="."]
 position = Vector2(-270, -60)

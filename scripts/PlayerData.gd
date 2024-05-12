@@ -5,6 +5,7 @@ static var instance
 
 # Player data
 var policiesHeld = 0
+var lastEntered = Vector2(0,0)
 
 func _ready():
 	instance = self

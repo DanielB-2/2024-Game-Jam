@@ -22,4 +22,3 @@ func _input(event):
 
 func changeScene():
 	get_tree().change_scene_to_file("res://scenes/node_3d.tscn")
-	theBody.onReturnToMainScene(Vector2(0, 1000))
