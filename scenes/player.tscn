@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://doaoix1vrbfym"]
+[gd_scene load_steps=5 format=3 uid="uid://doaoix1vrbfym"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_l0sym"]
 [ext_resource type="Texture2D" uid="uid://4tkybbqyge01" path="res://scenes/mrguy.png" id="2_ma6bv"]
@@ -6,19 +6,25 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8tre"]
 size = Vector2(49.5, 50)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dfdbd"]
+size = Vector2(50, 25)
+
 [node name="Player" type="CharacterBody2D"]
 z_index = 10
 script = ExtResource("1_l0sym")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="PlayerNormalCollision" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_n8tre")
+metadata/_edit_lock_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="PlayerImage" type="Sprite2D" parent="."]
 scale = Vector2(0.147, 0.18)
 texture = ExtResource("2_ma6bv")
+metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -128)
+metadata/_edit_lock_ = true
 
 [node name="PolicyLabel" type="Label" parent="."]
 z_index = 10
@@ -29,3 +35,8 @@ offset_bottom = -399.0
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 30
 text = "POLICIES: "
+metadata/_edit_lock_ = true
+
+[node name="CrouchingCollisionShape" type="CollisionShape2D" parent="."]
+position = Vector2(0, 12.5)
+shape = SubResource("RectangleShape2D_dfdbd")

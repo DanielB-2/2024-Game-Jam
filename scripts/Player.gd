@@ -29,7 +29,7 @@ func _physics_process(delta):
 		speed = 200
 		
 		$PlayerImage.position.x = 138
-		$PlayerImage.position.y = -60.5
+		$PlayerImage.position.y = 0
 		$PlayerImage.scale.x = 1
 		$PlayerImage.scale.y = .5
 		
