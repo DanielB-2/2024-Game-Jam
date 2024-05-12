@@ -77,3 +77,4 @@ scale = Vector2(3.81481, 4.29938)
 texture = ExtResource("7_d0llh")
 
 [connection signal="body_entered" from="Door1" to="Door1" method="_on_body_entered"]
+[connection signal="body_exited" from="Door1" to="Door1" method="_on_body_exited"]
