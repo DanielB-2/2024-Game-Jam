@@ -1,4 +1,7 @@
 res://node_3d.tscn
 res://Player.gd
+<<<<<<< Updated upstream
 res://scripts/CharacterBody2D.gd
 res://scripts/TextureRect.gd
+=======
+>>>>>>> Stashed changes
