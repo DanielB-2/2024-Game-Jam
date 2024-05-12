@@ -14,7 +14,7 @@ func _on_body_exited(body):
 		set_process_input(false)
 
 func _input(event):
-	if playerInsideArea and event.is_action_pressed("enter"):
+	if playerInsideArea and event.is_action_pressed("action"):
 		changeScene()
 
 func changeScene():
