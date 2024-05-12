@@ -1,1 +1,4 @@
-res://scenes/main.tscn
+res://node_3d.tscn
+res://Player.gd
+res://scripts/CharacterBody2D.gd
+res://scripts/TextureRect.gd
