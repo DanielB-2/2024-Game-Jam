@@ -1,14 +1,11 @@
-
-[gd_scene load_steps=9 format=3 uid="uid://bqxodl8ibgv4y"]
-
+[gd_scene load_steps=10 format=3 uid="uid://bqxodl8ibgv4y"]
 
 [ext_resource type="PackedScene" uid="uid://doaoix1vrbfym" path="res://scenes/player.tscn" id="1_lj0yb"]
 [ext_resource type="Script" path="res://scripts/door.gd" id="2_hsbgy"]
 [ext_resource type="Texture2D" uid="uid://dny4lcseecpko" path="res://icon.svg" id="2_u0i4s"]
-
-[ext_resource type="PackedScene" uid="uid://b04qpb1q6jiw1" path="res://scenes/building1.tscn" id="3_f0l3d"]
+[ext_resource type="PackedScene" uid="uid://b04qpb1q6jiw1" path="res://scenes/building.tscn" id="3_f0l3d"]
 [ext_resource type="PackedScene" uid="uid://ek27re4kc0gn" path="res://scenes/policy.tscn" id="5_q6e6y"]
-
+[ext_resource type="Texture2D" uid="uid://dudyuowpjlmag" path="res://assets/images/main city.jpg" id="6_xjnam"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s0w4s"]
 
@@ -18,6 +15,19 @@
 size = Vector2(78, 115)
 
 [node name="Node2D" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_offset = Vector2(-1000, 0)
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1200, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(-633, -642)
+scale = Vector2(2.32407, 2.62739)
+texture = ExtResource("6_xjnam")
+centered = false
 
 [node name="Ground" type="StaticBody2D" parent="."]
 
@@ -30,17 +40,14 @@ position = Vector2(0, 8)
 scale = Vector2(2.069, 0.03)
 texture = SubResource("NoiseTexture2D_3nyv1")
 
-
 [node name="Player" parent="." instance=ExtResource("1_lj0yb")]
 position = Vector2(0, -114)
 
 [node name="Door1" type="Area2D" parent="."]
-
 position = Vector2(-270, -60)
 scale = Vector2(0.99625, 1)
 script = ExtResource("2_hsbgy")
 target_room = ExtResource("3_f0l3d")
-
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door1"]
 shape = SubResource("RectangleShape2D_1g2c6")
