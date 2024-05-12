@@ -1,17 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-<<<<<<< Updated upstream
-::res://::1715482441
+::res://::1715484073
 FunnyMan.png::CompressedTexture2D::8857416684870793212::1715474343::1715474343::1::::<><>::
 Guy.png::CompressedTexture2D::8874577047210021796::1715482441::1715482441::1::::<><>::
 icon.svg::CompressedTexture2D::8123042654034703214::1714622248::1715403239::1::::<><>::
-node_3d.tscn::PackedScene::3557778894625917382::1715482075::0::1::::<><>::res://Player.gd<>uid://dygumgw63lrq7::::res://FunnyMan.png
-Player.gd::GDScript::-1::1715482075::0::1::::<>CharacterBody2D<>::
-=======
-::res://::1715467931
-icon.svg::CompressedTexture2D::8123042654034703214::1714622248::1715403239::1::::<><>::
-node_3d.tscn::PackedScene::3557778894625917382::1715467678::0::1::::<><>::uid://dq58lk02fnfof::::res://assets/tempPlayer.png<>res://Player.gd
-Player.gd::GDScript::-1::1715403639::0::1::::<>CharacterBody2D<>::
->>>>>>> Stashed changes
+node_3d.tscn::PackedScene::3557778894625917382::1715483507::0::1::::<><>::res://Player.gd<>uid://dyo58tn2t0ig7::::res://Guy.png
+Player.gd::GDScript::-1::1715483730::0::1::::<>CharacterBody2D<>::
 README.md::TextFile::-1::1715403600::0::1::::<><>::
 ::res://addons/::1715313231
 ::res://addons/godot-git-plugin/::1714623675
@@ -20,25 +13,13 @@ plugin.cfg::TextFile::-1::1714623675::0::1::::<><>::
 THIRDPARTY.md::TextFile::-1::1714623675::0::1::::<><>::
 ::res://addons/godot-git-plugin/linux/::1714623675
 ::res://addons/godot-git-plugin/macos/::1714623675
-::res://addons/godot-git-plugin/win64/::1715467926
-<<<<<<< Updated upstream
+::res://addons/godot-git-plugin/win64/::1715484067
 ::res://assets/::1715472410
 Cloud.png::CompressedTexture2D::4386324700023832453::1715472410::1715472410::1::::<><>::
 DinoSprites - vita.png::CompressedTexture2D::7962400889610123536::1715472410::1715472410::1::::<><>::
 tempPlayer.png::CompressedTexture2D::8346238751491428941::1715403639::1715403744::1::::<><>::
-::res://scenes/::1715472410
-main.tscn::PackedScene::539175520853137124::1715467678::0::1::::<><>::res://scripts/CharacterBody2D.gd<>uid://dlpbtxyajfv1q::::res://assets/DinoSprites - vita.png<>uid://b3q1ek1alfhar::::res://assets/Cloud.png<>res://scripts/TextureRect.gd<>res://Backgrounds/backgroundCastles.png
+::res://scenes/::1715483730
+main.tscn::PackedScene::539175520853137124::1715483730::0::1::::<><>::res://scripts/CharacterBody2D.gd<>uid://dlpbtxyajfv1q::::res://assets/DinoSprites - vita.png<>uid://b3q1ek1alfhar::::res://assets/Cloud.png<>res://scripts/TextureRect.gd<>res://Backgrounds/backgroundCastles.png
 ::res://scripts/::1715472440
 CharacterBody2D.gd::GDScript::-1::1715472440::0::1::::<>CharacterBody2D<>::
 TextureRect.gd::GDScript::-1::1715472440::0::1::::<>TextureRect<>::
-=======
-::res://assets/::1715403744
-Cloud.png::CompressedTexture2D::4386324700023832453::1715403600::1715403600::1::::<><>::
-DinoSprites - vita.png::CompressedTexture2D::7962400889610123536::1715403600::1715403600::1::::<><>::
-tempPlayer.png::CompressedTexture2D::8346238751491428941::1715403639::1715403744::1::::<><>::
-::res://scenes/::1715467678
-main.tscn::PackedScene::539175520853137124::1715467678::0::1::::<><>::res://scripts/CharacterBody2D.gd<>uid://dlpbtxyajfv1q::::res://assets/DinoSprites - vita.png<>uid://b3q1ek1alfhar::::res://assets/Cloud.png<>res://scripts/TextureRect.gd<>res://Backgrounds/backgroundCastles.png
-::res://scripts/::1715467539
-CharacterBody2D.gd::GDScript::-1::1715467539::0::1::::<>CharacterBody2D<>::
-TextureRect.gd::GDScript::-1::1715467539::0::1::::<>TextureRect<>::
->>>>>>> Stashed changes
