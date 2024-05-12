@@ -1,14 +1,12 @@
-
-[gd_scene load_steps=9 format=3 uid="uid://bqxodl8ibgv4y"]
-
+[gd_scene load_steps=11 format=3 uid="uid://bqxodl8ibgv4y"]
 
 [ext_resource type="PackedScene" uid="uid://doaoix1vrbfym" path="res://scenes/player.tscn" id="1_lj0yb"]
 [ext_resource type="Script" path="res://scripts/door.gd" id="2_hsbgy"]
 [ext_resource type="Texture2D" uid="uid://dny4lcseecpko" path="res://icon.svg" id="2_u0i4s"]
-
-[ext_resource type="PackedScene" uid="uid://b04qpb1q6jiw1" path="res://scenes/building1.tscn" id="3_f0l3d"]
+[ext_resource type="PackedScene" uid="uid://b04qpb1q6jiw1" path="res://scenes/building.tscn" id="3_f0l3d"]
 [ext_resource type="PackedScene" uid="uid://ek27re4kc0gn" path="res://scenes/policy.tscn" id="5_q6e6y"]
-
+[ext_resource type="Texture2D" uid="uid://dq58lk02fnfof" path="res://assets/tempPlayer.png" id="6_316tc"]
+[ext_resource type="Texture2D" uid="uid://d2q3vk73kg75v" path="res://assets/building.png" id="7_d0llh"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s0w4s"]
 
@@ -26,21 +24,18 @@ shape = SubResource("WorldBoundaryShape2D_s0w4s")
 debug_color = Color(0.252904, 0.630268, 0.229332, 0.42)
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground"]
-position = Vector2(0, 8)
-scale = Vector2(2.069, 0.03)
+position = Vector2(-533.168, 8)
+scale = Vector2(4.15169, 0.03)
 texture = SubResource("NoiseTexture2D_3nyv1")
 
-
 [node name="Player" parent="." instance=ExtResource("1_lj0yb")]
-position = Vector2(0, -114)
+position = Vector2(-50, -69)
 
 [node name="Door1" type="Area2D" parent="."]
-
 position = Vector2(-270, -60)
 scale = Vector2(0.99625, 1)
 script = ExtResource("2_hsbgy")
 target_room = ExtResource("3_f0l3d")
-
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door1"]
 shape = SubResource("RectangleShape2D_1g2c6")
@@ -50,5 +45,35 @@ scale = Vector2(0.599998, 0.879999)
 texture = ExtResource("2_u0i4s")
 
 [node name="Policy" parent="." instance=ExtResource("5_q6e6y")]
+
+[node name="Stairs" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Stairs"]
+position = Vector2(-56.5006, 151.372)
+scale = Vector2(6.76286, 7.57245)
+build_mode = 1
+polygon = PackedVector2Array(30, -20, 78, -59, 78, -20, 73.5878, -20)
+
+[node name="Sprite2D" type="Sprite2D" parent="Stairs/CollisionShape2D"]
+position = Vector2(66.5, -30)
+scale = Vector2(0.46, 0.4)
+texture = ExtResource("6_316tc")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Stairs/CollisionShape2D"]
+position = Vector2(48.5, -25.5)
+scale = Vector2(0.26, 0.22)
+texture = ExtResource("6_316tc")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Stairs/CollisionShape2D"]
+position = Vector2(71.5, -44.5)
+scale = Vector2(0.26, 0.22)
+texture = ExtResource("6_316tc")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(-671, -591)
+scale = Vector2(3.81481, 4.29938)
+texture = ExtResource("7_d0llh")
 
 [connection signal="body_entered" from="Door1" to="Door1" method="_on_body_entered"]
