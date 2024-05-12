@@ -1,6 +1,5 @@
 extends Area2D
 
-@export var target_room : PackedScene
 var playerInsideArea = false
 
 func _on_body_entered(body):
@@ -18,4 +17,5 @@ func _input(event):
 		changeScene()
 
 func changeScene():
-	get_tree().change_scene_to_packed(target_room)
+	get_tree().change_scene_to_file("res://scenes/node_3d.tscn")
+
