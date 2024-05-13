@@ -11,17 +11,14 @@ size = Vector2(22, 12.5)
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 10
-position = Vector2(-13, 2)
-scale = Vector2(0.266579, 0.28098)
 script = ExtResource("1_l0sym")
 
 [node name="PlayerNormalCollision" type="CollisionShape2D" parent="."]
-position = Vector2(12.875, -13.5)
+scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_n8tre")
 
 [node name="PlayerImage" type="Sprite2D" parent="."]
-position = Vector2(12.9583, -13.4)
-scale = Vector2(0.0646504, 0.0757143)
+scale = Vector2(0.195, 0.228)
 texture = ExtResource("2_ma6bv")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -38,5 +35,6 @@ theme_override_font_sizes/font_size = 30
 text = "POLICIES: "
 
 [node name="CrouchingCollisionShape" type="CollisionShape2D" parent="."]
-position = Vector2(13, -9.25)
+position = Vector2(0, 13.2)
+scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_wth06")
