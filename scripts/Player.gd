@@ -11,9 +11,11 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 # Access the PlayerData singleton
 var playerData = PlayerData
 
+func _ready():
+	global_position = playerData.lastEntered
+
 func _physics_process(delta):
 	# Add the gravity.
-	print(playerData)
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
