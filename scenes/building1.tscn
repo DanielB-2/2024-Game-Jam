@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://b04qpb1q6jiw1"]
+[gd_scene load_steps=14 format=3 uid="uid://b04qpb1q6jiw1"]
 
 [ext_resource type="PackedScene" uid="uid://doaoix1vrbfym" path="res://scenes/player.tscn" id="1_s7wtf"]
 [ext_resource type="Script" path="res://scripts/DoorExit.gd" id="3_4066m"]
 [ext_resource type="Texture2D" uid="uid://dny4lcseecpko" path="res://icon.svg" id="3_vvcbn"]
 [ext_resource type="Texture2D" uid="uid://d2q3vk73kg75v" path="res://assets/building.png" id="4_eegki"]
 [ext_resource type="Texture2D" uid="uid://dq58lk02fnfof" path="res://assets/tempPlayer.png" id="4_fis1m"]
+[ext_resource type="Script" path="res://scenes/guard.gd" id="6_d87cv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hjmq6"]
 size = Vector2(178.523, 213.5)
@@ -28,6 +29,9 @@ b = Vector2(522, -1570)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_g4yeh"]
 a = Vector2(-1567.36, -444.008)
 b = Vector2(-405.74, -457.438)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2orfx"]
+size = Vector2(131.07, 133.105)
 
 [node name="Node2D" type="Node2D"]
 
@@ -185,6 +189,21 @@ texture = ExtResource("4_fis1m")
 
 [node name="Player" parent="." instance=ExtResource("1_s7wtf")]
 position = Vector2(-254, -247)
+
+[node name="Guard" type="RigidBody2D" parent="."]
+position = Vector2(-144, -301)
+scale = Vector2(0.611218, 0.72296)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Guard"]
+position = Vector2(-60.5349, -164.601)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_2orfx")
+script = ExtResource("6_d87cv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Guard/CollisionShape2D"]
+position = Vector2(-0.0964814, 0.186363)
+scale = Vector2(1.02406, 1.04031)
+texture = ExtResource("3_vvcbn")
 
 [connection signal="body_entered" from="Building/StaticBody2D/Sprite2D/DoorExit" to="Building/StaticBody2D/Sprite2D/DoorExit" method="_on_body_entered"]
 [connection signal="body_exited" from="Building/StaticBody2D/Sprite2D/DoorExit" to="Building/StaticBody2D/Sprite2D/DoorExit" method="_on_body_exited"]
