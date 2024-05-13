@@ -193,12 +193,11 @@ position = Vector2(-254, -247)
 [node name="Guard" type="RigidBody2D" parent="."]
 position = Vector2(-144, -301)
 scale = Vector2(0.611218, 0.72296)
+script = ExtResource("6_d87cv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Guard"]
 position = Vector2(-60.5349, -164.601)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_2orfx")
-script = ExtResource("6_d87cv")
 
 [node name="Sprite2D" type="Sprite2D" parent="Guard/CollisionShape2D"]
 position = Vector2(-0.0964814, 0.186363)
