@@ -30,19 +30,10 @@ func _physics_process(delta):
 		print("Shift has been pressed")
 		speed = 200
 		
-		$PlayerImage.position.x = 138
-		$PlayerImage.position.y = -60.5
-		$PlayerImage.scale.x = 1
-		$PlayerImage.scale.y = .5
-		
 	else:
 		$CrouchingCollisionShape.disabled = true
 		$PlayerNormalCollision.disabled = false
 		speed = 500
-		$PlayerImage.position.x = 138
-		$PlayerImage.position.y = -80.5
-		$PlayerImage.scale.x = 1
-		$PlayerImage.scale.y = 1
 		
 		
 		
