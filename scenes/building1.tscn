@@ -188,19 +188,20 @@ scale = Vector2(0.26, 0.22)
 texture = ExtResource("4_fis1m")
 
 [node name="Player" parent="." instance=ExtResource("1_s7wtf")]
-position = Vector2(-254, -247)
+position = Vector2(-173, -145)
 
 [node name="Guard" type="RigidBody2D" parent="."]
-position = Vector2(-144, -301)
-scale = Vector2(0.611218, 0.72296)
+position = Vector2(-603, 165)
+gravity_scale = 0.25
+lock_rotation = true
 script = ExtResource("6_d87cv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Guard"]
-position = Vector2(-60.5349, -164.601)
+position = Vector2(150, -432)
 shape = SubResource("RectangleShape2D_2orfx")
 
 [node name="Sprite2D" type="Sprite2D" parent="Guard/CollisionShape2D"]
-position = Vector2(-0.0964814, 0.186363)
+position = Vector2(-9.53674e-07, 0)
 scale = Vector2(1.02406, 1.04031)
 texture = ExtResource("3_vvcbn")
 
