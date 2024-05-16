@@ -20,7 +20,7 @@ size = Vector2(76.2861, 112)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w7m3m"]
 size = Vector2(312, 64)
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scroll_offset = Vector2(968.587, 617.868)

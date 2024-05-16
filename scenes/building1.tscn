@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b04qpb1q6jiw1"]
+[gd_scene load_steps=23 format=3 uid="uid://b04qpb1q6jiw1"]
 
 [ext_resource type="PackedScene" uid="uid://doaoix1vrbfym" path="res://scenes/player.tscn" id="1_s7wtf"]
 [ext_resource type="Script" path="res://scripts/DoorExit.gd" id="3_4066m"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://scenes/guard.gd" id="6_d87cv"]
 [ext_resource type="PackedScene" uid="uid://ek27re4kc0gn" path="res://scenes/policy.tscn" id="6_i5mad"]
 [ext_resource type="PackedScene" uid="uid://dk0nhbw6yiwj1" path="res://scenes/shredder.tscn" id="7_0x03c"]
+[ext_resource type="Script" path="res://scenes/PlayerRoomDetection.gd" id="7_wuidu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hjmq6"]
 size = Vector2(178.523, 213.5)
@@ -49,6 +50,9 @@ size = Vector2(1544.46, 321.754)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2orfx"]
 size = Vector2(42.535, 48.5525)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8coho"]
+size = Vector2(20, 19)
 
 [node name="Node2D" type="Node2D"]
 
@@ -127,18 +131,15 @@ scale = Vector2(0.26, 0.22)
 texture = ExtResource("4_fis1m")
 
 [node name="Floor2" type="Area2D" parent="Building/StaticBody2D"]
-scale = Vector2(1, 1)
 
 [node name="shape" type="CollisionShape2D" parent="Building/StaticBody2D/Floor2"]
 position = Vector2(-256.046, -612.759)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_r166t")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Building/StaticBody2D/Floor2"]
 
 [node name="floor" type="CollisionShape2D" parent="Building/StaticBody2D/Floor2/StaticBody2D"]
 position = Vector2(567.719, -20.748)
-scale = Vector2(1, 1)
 shape = SubResource("SegmentShape2D_g4yeh")
 
 [node name="Stairs" type="RigidBody2D" parent="Building/StaticBody2D/Floor2/StaticBody2D"]
@@ -167,23 +168,19 @@ scale = Vector2(0.26, 0.22)
 texture = ExtResource("4_fis1m")
 
 [node name="Floor3" type="Area2D" parent="Building/StaticBody2D"]
-scale = Vector2(1, 1)
 
 [node name="shape" type="CollisionShape2D" parent="Building/StaticBody2D/Floor3"]
 position = Vector2(-258.863, -875.142)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_h0xgy")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Building/StaticBody2D/Floor3"]
 
 [node name="floor" type="CollisionShape2D" parent="Building/StaticBody2D/Floor3/StaticBody2D"]
 position = Vector2(955.469, -293.239)
-scale = Vector2(1, 1)
 shape = SubResource("SegmentShape2D_g4yeh")
 
 [node name="Stairs" type="RigidBody2D" parent="Building/StaticBody2D/Floor3/StaticBody2D"]
 position = Vector2(181.604, -980.691)
-scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Building/StaticBody2D/Floor3/StaticBody2D/Stairs"]
 position = Vector2(-165.244, 327.819)
@@ -207,18 +204,15 @@ scale = Vector2(0.26, 0.22)
 texture = ExtResource("4_fis1m")
 
 [node name="Floor4" type="Area2D" parent="Building/StaticBody2D"]
-scale = Vector2(1, 1)
 
 [node name="shape" type="CollisionShape2D" parent="Building/StaticBody2D/Floor4"]
 position = Vector2(-258.045, -1123.77)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_yxf6s")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Building/StaticBody2D/Floor4"]
 
 [node name="floor" type="CollisionShape2D" parent="Building/StaticBody2D/Floor4/StaticBody2D"]
 position = Vector2(570.991, -540.832)
-scale = Vector2(1, 1)
 shape = SubResource("SegmentShape2D_g4yeh")
 
 [node name="Stairs" type="RigidBody2D" parent="Building/StaticBody2D/Floor4/StaticBody2D/floor"]
@@ -247,18 +241,15 @@ scale = Vector2(0.26, 0.22)
 texture = ExtResource("4_fis1m")
 
 [node name="Floor5" type="Area2D" parent="Building/StaticBody2D"]
-scale = Vector2(1, 1)
 
 [node name="shape" type="CollisionShape2D" parent="Building/StaticBody2D/Floor5"]
 position = Vector2(-256.864, -1411.82)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_tcyv6")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Building/StaticBody2D/Floor5"]
 
 [node name="floor" type="CollisionShape2D" parent="Building/StaticBody2D/Floor5/StaticBody2D"]
 position = Vector2(1022.55, -791.192)
-scale = Vector2(1, 1)
 shape = SubResource("SegmentShape2D_g4yeh")
 
 [node name="Guard" type="RigidBody2D" parent="."]
@@ -276,7 +267,14 @@ scale = Vector2(0.331614, 0.375928)
 texture = ExtResource("3_vvcbn")
 
 [node name="Player" parent="." instance=ExtResource("1_s7wtf")]
-position = Vector2(-159, -140)
+position = Vector2(-156, -134)
+
+[node name="Area2D" type="Area2D" parent="Player"]
+script = ExtResource("7_wuidu")
+
+[node name="PlayerArea" type="CollisionShape2D" parent="Player/Area2D"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_8coho")
 
 [node name="Policy" parent="." instance=ExtResource("6_i5mad")]
 position = Vector2(-251, -374)
