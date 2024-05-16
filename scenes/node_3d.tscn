@@ -1,7 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://bqxodl8ibgv4y"]
+[gd_scene load_steps=14 format=3 uid="uid://bqxodl8ibgv4y"]
 
 [ext_resource type="PackedScene" uid="uid://doaoix1vrbfym" path="res://scenes/player.tscn" id="1_lj0yb"]
-[ext_resource type="Texture2D" uid="uid://dudyuowpjlmag" path="res://assets/images/main city.jpg" id="1_smear"]
+[ext_resource type="Texture2D" uid="uid://vqt855buh0w1" path="res://assets/images/mainercity.jpg" id="1_ogxcy"]
 [ext_resource type="Script" path="res://scripts/door.gd" id="2_hsbgy"]
 [ext_resource type="Texture2D" uid="uid://dny4lcseecpko" path="res://icon.svg" id="2_u0i4s"]
 [ext_resource type="PackedScene" uid="uid://b04qpb1q6jiw1" path="res://scenes/building.tscn" id="3_f0l3d"]
@@ -14,12 +14,15 @@
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_3nyv1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1g2c6"]
-size = Vector2(183.946, 222.32)
+size = Vector2(76.2861, 112)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w7m3m"]
+size = Vector2(312, 64)
 
 [node name="Node2D" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-scroll_offset = Vector2(-434.482, 1371.49)
+scroll_offset = Vector2(968.587, 617.868)
 scroll_ignore_camera_zoom = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -30,7 +33,7 @@ motion_mirroring = Vector2(1200, 0)
 visible = false
 position = Vector2(-54, -587)
 scale = Vector2(2.2213, 2.61783)
-texture = ExtResource("1_smear")
+texture = ExtResource("1_ogxcy")
 centered = false
 
 [node name="Ground" type="StaticBody2D" parent="."]
@@ -46,9 +49,6 @@ visible = false
 position = Vector2(-533.168, 8)
 scale = Vector2(4.15169, 0.03)
 texture = SubResource("NoiseTexture2D_3nyv1")
-
-[node name="Player" parent="." instance=ExtResource("1_lj0yb")]
-position = Vector2(-267, -50)
 
 [node name="Door1" type="Area2D" parent="."]
 visible = false
@@ -82,20 +82,19 @@ visible = false
 scale = Vector2(0.599998, 0.879999)
 texture = ExtResource("2_u0i4s")
 
-[node name="Policy" parent="." instance=ExtResource("5_q6e6y")]
-visible = false
-position = Vector2(109, -58)
-
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-732, -588)
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
-position = Vector2(-671, -591)
 scale = Vector2(3.81481, 4.29938)
 texture = ExtResource("7_d0llh")
 
 [node name="Shredder" parent="." instance=ExtResource("8_28muw")]
 visible = false
 position = Vector2(-126, -31)
+
+[node name="Policy" parent="." instance=ExtResource("5_q6e6y")]
+position = Vector2(109, -58)
 
 [node name="Policy2" parent="." instance=ExtResource("5_q6e6y")]
 visible = false
@@ -120,6 +119,19 @@ position = Vector2(223, -122)
 [node name="Policy7" parent="." instance=ExtResource("5_q6e6y")]
 visible = false
 position = Vector2(366, -253)
+
+[node name="Player" parent="." instance=ExtResource("1_lj0yb")]
+
+[node name="TestSneak" type="StaticBody2D" parent="."]
+position = Vector2(365, -61)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestSneak"]
+scale = Vector2(0.403509, 0.644444)
+shape = SubResource("RectangleShape2D_w7m3m")
+
+[node name="Sprite2D" type="Sprite2D" parent="TestSneak"]
+scale = Vector2(1.00329, 0.314286)
+texture = ExtResource("2_u0i4s")
 
 [connection signal="body_entered" from="Door1" to="Door1" method="_on_body_entered"]
 [connection signal="body_exited" from="Door1" to="Door1" method="_on_body_exited"]

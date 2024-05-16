@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var policy_label = $PolicyLabel
+@onready var _sprite = $AnimatedSprite2D
 
 var speed = 500.0
 const JUMP_VELOCITY = -400.0
@@ -28,19 +29,10 @@ func _physics_process(delta):
 		print("Shift has been pressed")
 		speed = 200
 		
-		$PlayerImage.position.x = 138
-		$PlayerImage.position.y = 0
-		$PlayerImage.scale.x = 1
-		$PlayerImage.scale.y = .5
-		
 	else:
 		$CrouchingCollisionShape.disabled = true
 		$PlayerNormalCollision.disabled = false
 		speed = 500
-		$PlayerImage.position.x = 138
-		$PlayerImage.position.y = -80.5
-		$PlayerImage.scale.x = 1
-		$PlayerImage.scale.y = 1
 		
 		
 		
@@ -53,8 +45,16 @@ func _physics_process(delta):
 	var direction = Input.get_axis("left", "right")
 	if direction:
 		velocity.x = direction * speed
+		if direction < 0:
+			_sprite.flip_h = true
+		else:
+			_sprite.flip_h = false
+				
+				
+		_sprite.play("walk")
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
+		_sprite.stop()
 
 	move_and_slide()
 	policy_label.text = "POLICIES: " + str(playerData.policiesHeld)
