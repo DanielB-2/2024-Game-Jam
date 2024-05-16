@@ -5,6 +5,7 @@ static var instance
 
 # Player data
 var policiesHeld = 0
+var lastEntered = Vector2(-100,0)
 
 func _ready():
 	# Set the singleton instance

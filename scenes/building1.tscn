@@ -51,6 +51,7 @@ size = Vector2(1544.46, 321.754)
 size = Vector2(42.535, 48.5525)
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(-582, 0)
 
 [node name="Building" type="Area2D" parent="."]
 scale = Vector2(0.611218, 0.72296)
@@ -127,18 +128,15 @@ scale = Vector2(0.26, 0.22)
 texture = ExtResource("4_fis1m")
 
 [node name="Floor2" type="Area2D" parent="Building/StaticBody2D"]
-scale = Vector2(1, 1)
 
 [node name="shape" type="CollisionShape2D" parent="Building/StaticBody2D/Floor2"]
 position = Vector2(-256.046, -612.759)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_r166t")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Building/StaticBody2D/Floor2"]
 
 [node name="floor" type="CollisionShape2D" parent="Building/StaticBody2D/Floor2/StaticBody2D"]
 position = Vector2(567.719, -20.748)
-scale = Vector2(1, 1)
 shape = SubResource("SegmentShape2D_g4yeh")
 
 [node name="Stairs" type="RigidBody2D" parent="Building/StaticBody2D/Floor2/StaticBody2D"]
@@ -167,23 +165,19 @@ scale = Vector2(0.26, 0.22)
 texture = ExtResource("4_fis1m")
 
 [node name="Floor3" type="Area2D" parent="Building/StaticBody2D"]
-scale = Vector2(1, 1)
 
 [node name="shape" type="CollisionShape2D" parent="Building/StaticBody2D/Floor3"]
 position = Vector2(-258.863, -875.142)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_h0xgy")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Building/StaticBody2D/Floor3"]
 
 [node name="floor" type="CollisionShape2D" parent="Building/StaticBody2D/Floor3/StaticBody2D"]
 position = Vector2(955.469, -293.239)
-scale = Vector2(1, 1)
 shape = SubResource("SegmentShape2D_g4yeh")
 
 [node name="Stairs" type="RigidBody2D" parent="Building/StaticBody2D/Floor3/StaticBody2D"]
 position = Vector2(181.604, -980.691)
-scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Building/StaticBody2D/Floor3/StaticBody2D/Stairs"]
 position = Vector2(-165.244, 327.819)
@@ -207,18 +201,15 @@ scale = Vector2(0.26, 0.22)
 texture = ExtResource("4_fis1m")
 
 [node name="Floor4" type="Area2D" parent="Building/StaticBody2D"]
-scale = Vector2(1, 1)
 
 [node name="shape" type="CollisionShape2D" parent="Building/StaticBody2D/Floor4"]
 position = Vector2(-258.045, -1123.77)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_yxf6s")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Building/StaticBody2D/Floor4"]
 
 [node name="floor" type="CollisionShape2D" parent="Building/StaticBody2D/Floor4/StaticBody2D"]
 position = Vector2(570.991, -540.832)
-scale = Vector2(1, 1)
 shape = SubResource("SegmentShape2D_g4yeh")
 
 [node name="Stairs" type="RigidBody2D" parent="Building/StaticBody2D/Floor4/StaticBody2D/floor"]
@@ -247,18 +238,15 @@ scale = Vector2(0.26, 0.22)
 texture = ExtResource("4_fis1m")
 
 [node name="Floor5" type="Area2D" parent="Building/StaticBody2D"]
-scale = Vector2(1, 1)
 
 [node name="shape" type="CollisionShape2D" parent="Building/StaticBody2D/Floor5"]
 position = Vector2(-256.864, -1411.82)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_tcyv6")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Building/StaticBody2D/Floor5"]
 
 [node name="floor" type="CollisionShape2D" parent="Building/StaticBody2D/Floor5/StaticBody2D"]
 position = Vector2(1022.55, -791.192)
-scale = Vector2(1, 1)
 shape = SubResource("SegmentShape2D_g4yeh")
 
 [node name="Guard" type="RigidBody2D" parent="."]

@@ -59,25 +59,24 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8tre"]
-size = Vector2(21.75, 21)
+size = Vector2(11, 40.8333)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wth06"]
-size = Vector2(22, 12.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dfdbd"]
-size = Vector2(50, 25)
+size = Vector2(11, 12.5)
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 10
 script = ExtResource("1_l0sym")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(8.37499, -3)
+position = Vector2(6, -27)
 scale = Vector2(0.094375, 0.0777778)
 sprite_frames = SubResource("SpriteFrames_uymlw")
 animation = &"walk"
+frame_progress = 0.370853
 
 [node name="PlayerNormalCollision" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, -29.75)
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_n8tre")
 
@@ -96,7 +95,7 @@ theme_override_font_sizes/font_size = 30
 text = "POLICIES: "
 
 [node name="CrouchingCollisionShape" type="CollisionShape2D" parent="."]
-position = Vector2(0, 13.2)
+position = Vector2(2.5, 13.2)
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_wth06")
 
