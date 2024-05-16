@@ -54,8 +54,8 @@ animations = [{
 "texture": ExtResource("13_vtcuv")
 }],
 "loop": true,
-"name": &"default",
-"speed": 5.0
+"name": &"walk",
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8tre"]
@@ -72,7 +72,7 @@ script = ExtResource("1_l0sym")
 position = Vector2(8.37499, -3)
 scale = Vector2(0.094375, 0.0777778)
 sprite_frames = SubResource("SpriteFrames_uymlw")
-frame_progress = 0.72084
+animation = &"walk"
 
 [node name="PlayerNormalCollision" type="CollisionShape2D" parent="."]
 scale = Vector2(3, 3)
