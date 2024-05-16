@@ -38,3 +38,13 @@ text = "POLICIES: "
 position = Vector2(0, 13.2)
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_wth06")
+
+[node name="VoidedLabel" type="Label" parent="."]
+visible = false
+z_index = 10
+offset_left = -140.0
+offset_top = -383.0
+offset_right = 141.0
+offset_bottom = -280.0
+theme_override_font_sizes/font_size = 75
+text = "VOIDED"
