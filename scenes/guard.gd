@@ -11,6 +11,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	apply_central_force(self.position.direction_to(player.position) * 100)
-	print(self.position, player.position, self.position.direction_to(player.position) * 100)
-
+	var targetPos = player.global_position+(Vector2.DOWN * 400)+(Vector2.LEFT * 150)
+	apply_central_force(self.global_position.direction_to(targetPos) * Vector2(1, 0) * 1200)
+	

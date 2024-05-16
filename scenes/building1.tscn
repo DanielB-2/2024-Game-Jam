@@ -31,7 +31,7 @@ a = Vector2(-1567.36, -444.008)
 b = Vector2(-405.74, -457.438)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2orfx"]
-size = Vector2(131.07, 133.105)
+size = Vector2(42.535, 48.5525)
 
 [node name="Node2D" type="Node2D"]
 
@@ -187,23 +187,22 @@ position = Vector2(71.5, -44.5)
 scale = Vector2(0.26, 0.22)
 texture = ExtResource("4_fis1m")
 
-[node name="Player" parent="." instance=ExtResource("1_s7wtf")]
-position = Vector2(-173, -145)
-
 [node name="Guard" type="RigidBody2D" parent="."]
-position = Vector2(-603, 165)
-gravity_scale = 0.25
+position = Vector2(-394, -4)
 lock_rotation = true
 script = ExtResource("6_d87cv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Guard"]
-position = Vector2(150, -432)
+position = Vector2(105.732, -389.724)
 shape = SubResource("RectangleShape2D_2orfx")
 
 [node name="Sprite2D" type="Sprite2D" parent="Guard/CollisionShape2D"]
 position = Vector2(-9.53674e-07, 0)
-scale = Vector2(1.02406, 1.04031)
+scale = Vector2(0.331614, 0.375928)
 texture = ExtResource("3_vvcbn")
+
+[node name="Player" parent="." instance=ExtResource("1_s7wtf")]
+position = Vector2(-159, -140)
 
 [connection signal="body_entered" from="Building/StaticBody2D/Sprite2D/DoorExit" to="Building/StaticBody2D/Sprite2D/DoorExit" method="_on_body_entered"]
 [connection signal="body_exited" from="Building/StaticBody2D/Sprite2D/DoorExit" to="Building/StaticBody2D/Sprite2D/DoorExit" method="_on_body_exited"]
