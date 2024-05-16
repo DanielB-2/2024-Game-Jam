@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var policy_label = $PolicyLabel
 @onready var voided_label = $VoidedLabel
+@onready var _sprite = $AnimatedSprite2D
 
 var speed = 500.0
 const JUMP_VELOCITY = -400.0
@@ -12,11 +13,9 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 # Access the PlayerData singleton
 var playerData = PlayerData
 
-func _ready():
-	global_position = playerData.lastEntered
-
 func _physics_process(delta):
 	# Add the gravity.
+	print(playerData)
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
@@ -47,8 +46,16 @@ func _physics_process(delta):
 	var direction = Input.get_axis("left", "right")
 	if direction:
 		velocity.x = direction * speed
+		if direction < 0:
+			_sprite.flip_h = true
+		else:
+			_sprite.flip_h = false
+				
+				
+		_sprite.play("walk")
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
+		_sprite.stop()
 
 	move_and_slide()
 	policy_label.text = "POLICIES: " + str(playerData.policiesHeld)

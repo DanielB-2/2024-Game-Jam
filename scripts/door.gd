@@ -2,7 +2,6 @@ extends Area2D
 
 @export var target_room : PackedScene
 var playerInsideArea = false
-var playerData = PlayerData
 
 func _on_body_entered(body):
 	if body.name == "Player":
@@ -20,5 +19,3 @@ func _input(event):
 
 func changeScene():
 	get_tree().change_scene_to_packed(target_room)
-	playerData.lastEntered = global_position
-	print(name)
