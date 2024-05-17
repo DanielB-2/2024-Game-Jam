@@ -1,8 +1,9 @@
 extends CharacterBody2D
 
 @onready var policy_label = $PolicyLabel
-@onready var voided_label = $VoidedLabel
+@onready var voided_label = $voidedLabel
 @onready var _sprite = $AnimatedSprite2D
+@onready var animation_player = $voidedLabel/AnimationPlayer
 
 var speed = 500.0
 const JUMP_VELOCITY = -400.0
@@ -80,7 +81,8 @@ func shred_policy():
 	# called from shredder.gd
 	playerData.policiesHeld = 0
 	print("Policies Voided")
+	animation_player.play("transition")
 	voided_label.visible = true
 	await get_tree().create_timer(1).timeout
 	voided_label.visible = false
-
+	
