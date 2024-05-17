@@ -8,9 +8,8 @@ func _ready():
 
 func _physics_process(delta):
 	for coin in get_tree().get_nodes_in_group("Policies"):
-		print(str(collected_coins) + " end")
+		#print(str(collected_coins) + " end")
 		if coin.name in collected_coins:
-			#print("thing")
 			coin.queue_free()
 
 func updateCoinState(coin_id: String, collected: bool):

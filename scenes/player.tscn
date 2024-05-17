@@ -62,22 +62,22 @@ animations = [{
 size = Vector2(11, 40.8333)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wth06"]
-size = Vector2(11, 12.5)
+size = Vector2(11, 5.71667)
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 10
 script = ExtResource("1_l0sym")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(6, -27)
-scale = Vector2(0.094375, 0.0777778)
+position = Vector2(6, -44)
+scale = Vector2(0.117, 0.097)
 sprite_frames = SubResource("SpriteFrames_uymlw")
 animation = &"walk"
 frame_progress = 0.370853
 
 [node name="PlayerNormalCollision" type="CollisionShape2D" parent="."]
-position = Vector2(2.5, -29.75)
-scale = Vector2(3, 3)
+position = Vector2(2.5, -48)
+scale = Vector2(3.75, 3.75)
 shape = SubResource("RectangleShape2D_n8tre")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -95,8 +95,8 @@ theme_override_font_sizes/font_size = 30
 text = "POLICIES: "
 
 [node name="CrouchingCollisionShape" type="CollisionShape2D" parent="."]
-position = Vector2(2.5, 13.2)
-scale = Vector2(3, 3)
+position = Vector2(2.5, 17.7188)
+scale = Vector2(3.75, 3.75)
 shape = SubResource("RectangleShape2D_wth06")
 
 [node name="VoidedLabel" type="Label" parent="."]

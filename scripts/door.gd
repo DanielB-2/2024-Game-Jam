@@ -22,3 +22,4 @@ func changeScene():
 	get_tree().change_scene_to_packed(target_room)
 	playerData.lastEntered = global_position
 	print(name)
+	print(target_room)
