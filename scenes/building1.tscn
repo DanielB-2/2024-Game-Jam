@@ -1,5 +1,4 @@
-
-[gd_scene load_steps=41 format=3 uid="uid://b04qpb1q6jiw1"]
+[gd_scene load_steps=40 format=3 uid="uid://b04qpb1q6jiw1"]
 
 [ext_resource type="Texture2D" uid="uid://clr5uixdu72tx" path="res://assets/workbg.png" id="1_0xnk1"]
 [ext_resource type="PackedScene" uid="uid://doaoix1vrbfym" path="res://scenes/player.tscn" id="1_s7wtf"]
@@ -378,34 +377,34 @@ metadata/name = "player"
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_8coho")
 
-[node name="Policy" parent="." instance=ExtResource("6_i5mad")]
+[node name="PolicyA" parent="." instance=ExtResource("6_i5mad")]
 position = Vector2(-251, -374)
 
-[node name="Policy2" parent="." instance=ExtResource("6_i5mad")]
+[node name="PolicyA2" parent="." instance=ExtResource("6_i5mad")]
 position = Vector2(-42, -374)
 
-[node name="Policy3" parent="." instance=ExtResource("6_i5mad")]
+[node name="PolicyA3" parent="." instance=ExtResource("6_i5mad")]
 position = Vector2(-251, -574)
 
-[node name="Policy4" parent="." instance=ExtResource("6_i5mad")]
+[node name="PolicyA4" parent="." instance=ExtResource("6_i5mad")]
 position = Vector2(-42, -574)
 
-[node name="Policy5" parent="." instance=ExtResource("6_i5mad")]
+[node name="PolicyA5" parent="." instance=ExtResource("6_i5mad")]
 position = Vector2(-251, -753)
 
-[node name="Policy6" parent="." instance=ExtResource("6_i5mad")]
+[node name="PolicyA6" parent="." instance=ExtResource("6_i5mad")]
 position = Vector2(-42, -753)
 
-[node name="Policy7" parent="." instance=ExtResource("6_i5mad")]
+[node name="PolicyA7" parent="." instance=ExtResource("6_i5mad")]
 position = Vector2(-251, -932)
 
-[node name="Policy8" parent="." instance=ExtResource("6_i5mad")]
+[node name="PolicyA8" parent="." instance=ExtResource("6_i5mad")]
 position = Vector2(-42, -932)
 
-[node name="Policy9" parent="." instance=ExtResource("6_i5mad")]
+[node name="PolicyA9" parent="." instance=ExtResource("6_i5mad")]
 position = Vector2(-251, -81.0001)
 
-[node name="Policy10" parent="." instance=ExtResource("6_i5mad")]
+[node name="PolicyA10" parent="." instance=ExtResource("6_i5mad")]
 position = Vector2(-42, -81.0001)
 
 [node name="Shredder" parent="." instance=ExtResource("7_0x03c")]
