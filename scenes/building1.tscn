@@ -1,3 +1,6 @@
+[gd_scene load_steps=41 format=3 uid="uid://b04qpb1q6jiw1"]
+
+[ext_resource type="Texture2D" uid="uid://clr5uixdu72tx" path="res://assets/workbg.png" id="1_0xnk1"]
 [ext_resource type="PackedScene" uid="uid://doaoix1vrbfym" path="res://scenes/player.tscn" id="1_s7wtf"]
 [ext_resource type="Script" path="res://scripts/DoorExit.gd" id="3_4066m"]
 [ext_resource type="Texture2D" uid="uid://dny4lcseecpko" path="res://icon.svg" id="3_vvcbn"]
@@ -132,6 +135,20 @@ size = Vector2(20, 19)
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(-582, 0)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_offset = Vector2(-1635.33, 1547.45)
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(0, -238)
+motion_mirroring = Vector2(1200, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(-54, -876)
+scale = Vector2(2.2213, 3.53086)
+texture = ExtResource("1_0xnk1")
+centered = false
 
 [node name="Building" type="Area2D" parent="."]
 scale = Vector2(0.611218, 0.72296)

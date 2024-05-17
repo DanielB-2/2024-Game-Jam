@@ -1,14 +1,24 @@
-[gd_scene load_steps=14 format=3 uid="uid://bqxodl8ibgv4y"]
+[gd_scene load_steps=26 format=3 uid="uid://bqxodl8ibgv4y"]
 
 [ext_resource type="PackedScene" uid="uid://doaoix1vrbfym" path="res://scenes/player.tscn" id="1_lj0yb"]
 [ext_resource type="Texture2D" uid="uid://vqt855buh0w1" path="res://assets/images/mainercity.jpg" id="1_ogxcy"]
 [ext_resource type="Script" path="res://scripts/door.gd" id="2_hsbgy"]
 [ext_resource type="Texture2D" uid="uid://dny4lcseecpko" path="res://icon.svg" id="2_u0i4s"]
-[ext_resource type="PackedScene" uid="uid://b04qpb1q6jiw1" path="res://scenes/building1.tscn" id="3_aeeix"]
 [ext_resource type="PackedScene" uid="uid://c75mieb5kwl38" path="res://scenes/building2.tscn" id="3_f0l3d"]
+[ext_resource type="PackedScene" uid="uid://b04qpb1q6jiw1" path="res://scenes/building1.tscn" id="4_avp1o"]
 [ext_resource type="PackedScene" uid="uid://ek27re4kc0gn" path="res://scenes/policy.tscn" id="5_q6e6y"]
+[ext_resource type="Texture2D" uid="uid://bj3ybwxf6fe05" path="res://assets/images/DoorAnim/Open/IMG_1683-1.png" id="5_wh4uu"]
+[ext_resource type="Texture2D" uid="uid://blxdhba8jx2o" path="res://assets/images/DoorAnim/Open/IMG_1683-2.png" id="6_5q60j"]
+[ext_resource type="Texture2D" uid="uid://bulh8ltc7ymov" path="res://assets/images/DoorAnim/Open/IMG_1683-3.png" id="7_b0awk"]
 [ext_resource type="Texture2D" uid="uid://d2q3vk73kg75v" path="res://assets/building.png" id="7_d0llh"]
 [ext_resource type="PackedScene" uid="uid://dk0nhbw6yiwj1" path="res://scenes/shredder.tscn" id="8_28muw"]
+[ext_resource type="Texture2D" uid="uid://ddmk3nydwvh5y" path="res://assets/images/DoorAnim/Open/IMG_1683-4.png" id="8_dbk8b"]
+[ext_resource type="Texture2D" uid="uid://dcvi2paqi1woc" path="res://assets/images/DoorAnim/Open/IMG_1683-5.png" id="9_w665r"]
+[ext_resource type="Texture2D" uid="uid://dbse3m4o558fo" path="res://assets/images/DoorAnim/Open/IMG_1683-6.png" id="10_gthpn"]
+[ext_resource type="Texture2D" uid="uid://db506gr5k0ngu" path="res://assets/images/DoorAnim/Open/IMG_1683-7.png" id="11_pdf7d"]
+[ext_resource type="Texture2D" uid="uid://dlobnu1rv132b" path="res://assets/images/DoorAnim/Open/IMG_1683-8.png" id="12_uydcm"]
+[ext_resource type="AudioStream" uid="uid://c1sox7gysvn5h" path="res://music/bgmusic.wav" id="18_cun76"]
+[ext_resource type="Script" path="res://scenes/audio.gd" id="18_sqmjq"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s0w4s"]
 
@@ -16,6 +26,80 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1g2c6"]
 size = Vector2(76.2861, 112)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pogoq"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_wh4uu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5q60j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_b0awk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_dbk8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_w665r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_gthpn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_pdf7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_uydcm")
+}],
+"loop": true,
+"name": &"dooropen",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6wspb"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_wh4uu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5q60j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_b0awk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_dbk8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_w665r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_gthpn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_pdf7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_uydcm")
+}],
+"loop": true,
+"name": &"dooropen",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w7m3m"]
 size = Vector2(312, 64)
@@ -31,8 +115,8 @@ position = Vector2(0, -238)
 motion_mirroring = Vector2(1200, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(-54, -587)
-scale = Vector2(2.2213, 2.61783)
+position = Vector2(-54, -629)
+scale = Vector2(2.2213, 2.74627)
 texture = ExtResource("1_ogxcy")
 centered = false
 
@@ -70,14 +154,16 @@ z_index = 2
 position = Vector2(-720, -135)
 scale = Vector2(2.63625, 2.44)
 script = ExtResource("2_hsbgy")
-target_room = ExtResource("3_aeeix")
+target_room = ExtResource("4_avp1o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door1"]
 shape = SubResource("RectangleShape2D_1g2c6")
 
-[node name="Sprite2D" type="Sprite2D" parent="Door1"]
-scale = Vector2(0.599998, 0.879999)
-texture = ExtResource("2_u0i4s")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Door1"]
+position = Vector2(0.189659, -1.02459)
+scale = Vector2(0.0865434, 0.117892)
+sprite_frames = SubResource("SpriteFrames_pogoq")
+animation = &"dooropen"
 
 [node name="Door2" type="Area2D" parent="."]
 z_index = 2
@@ -89,9 +175,11 @@ target_room = ExtResource("3_f0l3d")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door2"]
 shape = SubResource("RectangleShape2D_1g2c6")
 
-[node name="Sprite2D" type="Sprite2D" parent="Door2"]
-scale = Vector2(0.599998, 0.879999)
-texture = ExtResource("2_u0i4s")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Door2"]
+position = Vector2(1.04122, -4.72128)
+scale = Vector2(0.090322, 0.119985)
+sprite_frames = SubResource("SpriteFrames_6wspb")
+animation = &"dooropen"
 
 [node name="Building" type="Area2D" parent="."]
 z_index = -1
@@ -115,6 +203,14 @@ position = Vector2(-126, -31)
 
 [node name="Player" parent="." instance=ExtResource("1_lj0yb")]
 position = Vector2(-250, -33)
+
+[node name="MusicLoader" type="Node2D" parent="Player"]
+position = Vector2(250, 33)
+script = ExtResource("18_sqmjq")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player/MusicLoader"]
+stream = ExtResource("18_cun76")
+metadata/music = "res://music/bgmusic.wav"
 
 [node name="TestSneak" type="StaticBody2D" parent="."]
 position = Vector2(365, -61)

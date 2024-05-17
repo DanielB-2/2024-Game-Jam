@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://doaoix1vrbfym"]
+[gd_scene load_steps=25 format=3 uid="uid://doaoix1vrbfym"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_l0sym"]
 [ext_resource type="Texture2D" uid="uid://chckxu7x2crs6" path="res://assets/images/PlayerAnims/Walking/y-1.png" id="2_pny10"]
@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://bdvjsj2xxahhw" path="res://assets/images/voidedImage.png" id="14_b33rq"]
 [ext_resource type="FontFile" uid="uid://y1wejrllh8at" path="res://assets/PixelOperator8-Bold.ttf" id="14_gbf1d"]
 [ext_resource type="Texture2D" uid="uid://c3fookl17efsx" path="res://assets/images/policyBoard.png" id="15_ou85k"]
+[ext_resource type="Texture2D" uid="uid://b3cgqwbp8mtai" path="res://assets/policyImage.png" id="17_tn6kc"]
+[ext_resource type="Texture2D" uid="uid://c12bey0sdcref" path="res://assets/icon.png" id="18_tdda3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uymlw"]
 animations = [{
@@ -67,42 +69,6 @@ size = Vector2(11, 40.8333)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wth06"]
 size = Vector2(11, 5.71667)
 
-[sub_resource type="Animation" id="Animation_olhw7"]
-resource_name = "transition"
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(0.005, -0.25, 0, 0.25, 0, 0.5, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.5)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:scale:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(0.005, -0.25, 0, 0.25, 0, 0.5, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.5)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 6.10865, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.5)
-}
-
 [sub_resource type="Animation" id="Animation_r0efe"]
 length = 0.001
 tracks/0/type = "bezier"
@@ -139,6 +105,42 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0)
 }
 
+[sub_resource type="Animation" id="Animation_olhw7"]
+resource_name = "transition"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.005, -0.25, 0, 0.25, 0, 0.5, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.005, -0.25, 0, 0.25, 0, 0.5, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 6.10865, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_w3hh0"]
 _data = {
 "RESET": SubResource("Animation_r0efe"),
@@ -167,16 +169,32 @@ metadata/_edit_lock_ = true
 
 [node name="PolicyLabel" type="Label" parent="."]
 z_index = 10
-offset_left = -540.0
-offset_top = -411.0
-offset_right = -324.0
-offset_bottom = -298.0
+offset_left = -328.0
+offset_top = -423.0
+offset_right = -257.0
+offset_bottom = -382.0
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/line_spacing = 16
 theme_override_fonts/font = ExtResource("14_gbf1d")
-theme_override_font_sizes/font_size = 24
-text = "POLICIES: 5"
+theme_override_font_sizes/font_size = 18
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="PolicyLabel2" type="Label" parent="."]
+z_index = 10
+offset_left = -530.0
+offset_top = -420.0
+offset_right = -354.0
+offset_bottom = -328.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 16
+theme_override_fonts/font = ExtResource("14_gbf1d")
+theme_override_font_sizes/font_size = 18
+text = "POLICIES:"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -210,9 +228,23 @@ libraries = {
 autoplay = "transition"
 
 [node name="PolicyBoard" type="TextureRect" parent="."]
-offset_left = -554.0
-offset_top = -463.0
-offset_right = 446.0
-offset_bottom = 537.0
+offset_left = -560.0
+offset_top = -478.0
+offset_right = 782.0
+offset_bottom = 522.0
 scale = Vector2(0.24, 0.2)
 texture = ExtResource("15_ou85k")
+
+[node name="PolicyImage" type="Sprite2D" parent="PolicyBoard"]
+position = Vector2(1012.5, 520)
+scale = Vector2(0.625, 0.71)
+texture = ExtResource("17_tn6kc")
+
+[node name="PolicyBoard2" type="TextureRect" parent="PolicyBoard"]
+layout_mode = 0
+offset_left = 1020.83
+offset_top = 275.0
+offset_right = 1802.83
+offset_bottom = 1275.0
+scale = Vector2(0.24, 0.2)
+texture = ExtResource("18_tdda3")

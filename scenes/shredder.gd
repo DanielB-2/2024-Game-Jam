@@ -1,6 +1,7 @@
 extends Area2D
 
 @onready var player = $"."
+@onready var _sprite = $Sprite2D
 
 var theBody
 
@@ -20,7 +21,12 @@ func _on_body_exited(body):
 func _input(event):
 	if playerInsideArea and event.is_action_pressed("action"):
 		shredPolicies()
+		
 
 func shredPolicies():
+	_sprite.play("shred")
+	await get_tree().create_timer(1.3).timeout
+	_sprite.stop()
 	theBody.shred_policy()
+	
 

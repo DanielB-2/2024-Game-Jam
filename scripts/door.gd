@@ -1,6 +1,7 @@
 extends Area2D
 
 @export var target_room : PackedScene
+@onready var _sprite = $Sprite2D
 var playerInsideArea = false
 var playerData = PlayerData
 
@@ -16,6 +17,8 @@ func _on_body_exited(body):
 
 func _input(event):
 	if playerInsideArea and event.is_action_pressed("action"):
+		_sprite.play("dooropen")
+		await get_tree().create_timer(1.2).timeout
 		changeScene()
 
 func changeScene():
