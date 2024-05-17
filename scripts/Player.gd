@@ -29,18 +29,12 @@ func _physics_process(delta):
 	if Input.is_action_pressed("crouchKey"):
 		$CrouchingCollisionShape.disabled = false
 		$PlayerNormalCollision.disabled = true
-		
-		if not _sprite.is_playing():
-			_sprite.scale.y = 0.0485
-			
 		print("Shift has been pressed")
 		speed = 200
 		
 	else:
 		$CrouchingCollisionShape.disabled = true
 		$PlayerNormalCollision.disabled = false
-		
-		_sprite.scale.y = 0.097
 		speed = 500
 		
 		
