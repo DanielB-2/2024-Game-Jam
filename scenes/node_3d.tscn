@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bqxodl8ibgv4y"]
+[gd_scene load_steps=14 format=3 uid="uid://bqxodl8ibgv4y"]
 
 [ext_resource type="PackedScene" uid="uid://doaoix1vrbfym" path="res://scenes/player.tscn" id="1_lj0yb"]
 [ext_resource type="Texture2D" uid="uid://vqt855buh0w1" path="res://assets/images/mainercity.jpg" id="1_ogxcy"]
@@ -7,16 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://b04qpb1q6jiw1" path="res://scenes/building1.tscn" id="3_aeeix"]
 [ext_resource type="PackedScene" uid="uid://c75mieb5kwl38" path="res://scenes/building2.tscn" id="3_f0l3d"]
 [ext_resource type="PackedScene" uid="uid://ek27re4kc0gn" path="res://scenes/policy.tscn" id="5_q6e6y"]
-[ext_resource type="Texture2D" uid="uid://bj3ybwxf6fe05" path="res://assets/images/DoorAnim/Open/IMG_1683-1.png" id="5_ssrbf"]
-[ext_resource type="Texture2D" uid="uid://blxdhba8jx2o" path="res://assets/images/DoorAnim/Open/IMG_1683-2.png" id="6_n04y5"]
 [ext_resource type="Texture2D" uid="uid://d2q3vk73kg75v" path="res://assets/building.png" id="7_d0llh"]
-[ext_resource type="Texture2D" uid="uid://bulh8ltc7ymov" path="res://assets/images/DoorAnim/Open/IMG_1683-3.png" id="7_qf11v"]
 [ext_resource type="PackedScene" uid="uid://dk0nhbw6yiwj1" path="res://scenes/shredder.tscn" id="8_28muw"]
-[ext_resource type="Texture2D" uid="uid://ddmk3nydwvh5y" path="res://assets/images/DoorAnim/Open/IMG_1683-4.png" id="8_qukfq"]
-[ext_resource type="Texture2D" uid="uid://dcvi2paqi1woc" path="res://assets/images/DoorAnim/Open/IMG_1683-5.png" id="9_k6gif"]
-[ext_resource type="Texture2D" uid="uid://dbse3m4o558fo" path="res://assets/images/DoorAnim/Open/IMG_1683-6.png" id="10_jsoaw"]
-[ext_resource type="Texture2D" uid="uid://db506gr5k0ngu" path="res://assets/images/DoorAnim/Open/IMG_1683-7.png" id="11_tcbmg"]
-[ext_resource type="Texture2D" uid="uid://dlobnu1rv132b" path="res://assets/images/DoorAnim/Open/IMG_1683-8.png" id="12_tgvqb"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s0w4s"]
 
@@ -24,80 +16,6 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1g2c6"]
 size = Vector2(76.2861, 112)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_8uo3y"]
-animations = [{
-"frames": [],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_ssrbf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_n04y5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_qf11v")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_qukfq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_k6gif")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_jsoaw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_tcbmg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_tgvqb")
-}],
-"loop": true,
-"name": &"door_opening",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_xmkn4"]
-animations = [{
-"frames": [],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_ssrbf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_n04y5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_qf11v")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_qukfq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_k6gif")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_jsoaw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_tcbmg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_tgvqb")
-}],
-"loop": true,
-"name": &"door_opening",
-"speed": 5.0
-}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w7m3m"]
 size = Vector2(312, 64)
@@ -157,11 +75,9 @@ target_room = ExtResource("3_aeeix")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door1"]
 shape = SubResource("RectangleShape2D_1g2c6")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="Door1"]
-position = Vector2(-0.189676, -3.89345)
-scale = Vector2(0.0865433, 0.11189)
-sprite_frames = SubResource("SpriteFrames_8uo3y")
-animation = &"door_opening"
+[node name="Sprite2D" type="Sprite2D" parent="Door1"]
+scale = Vector2(0.599998, 0.879999)
+texture = ExtResource("2_u0i4s")
 
 [node name="Door2" type="Area2D" parent="."]
 z_index = 2
@@ -173,11 +89,9 @@ target_room = ExtResource("3_f0l3d")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door2"]
 shape = SubResource("RectangleShape2D_1g2c6")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="Door2"]
-position = Vector2(1.73328, -3.94737)
-scale = Vector2(0.0878767, 0.111025)
-sprite_frames = SubResource("SpriteFrames_xmkn4")
-animation = &"door_opening"
+[node name="Sprite2D" type="Sprite2D" parent="Door2"]
+scale = Vector2(0.599998, 0.879999)
+texture = ExtResource("2_u0i4s")
 
 [node name="Building" type="Area2D" parent="."]
 z_index = -1

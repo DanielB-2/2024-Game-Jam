@@ -1,25 +1,18 @@
-[gd_scene load_steps=45 format=3 uid="uid://b04qpb1q6jiw1"]
+[gd_scene load_steps=36 format=3 uid="uid://b04qpb1q6jiw1"]
 
 [ext_resource type="PackedScene" uid="uid://doaoix1vrbfym" path="res://scenes/player.tscn" id="1_s7wtf"]
-[ext_resource type="Texture2D" uid="uid://bj3ybwxf6fe05" path="res://assets/images/DoorAnim/Open/IMG_1683-1.png" id="3_0wg3n"]
 [ext_resource type="Script" path="res://scripts/DoorExit.gd" id="3_4066m"]
+[ext_resource type="Texture2D" uid="uid://dny4lcseecpko" path="res://icon.svg" id="3_vvcbn"]
 [ext_resource type="Texture2D" uid="uid://d2q3vk73kg75v" path="res://assets/building.png" id="4_eegki"]
 [ext_resource type="Texture2D" uid="uid://dq58lk02fnfof" path="res://assets/tempPlayer.png" id="4_fis1m"]
-[ext_resource type="Texture2D" uid="uid://blxdhba8jx2o" path="res://assets/images/DoorAnim/Open/IMG_1683-2.png" id="4_ye2ep"]
-[ext_resource type="Texture2D" uid="uid://bulh8ltc7ymov" path="res://assets/images/DoorAnim/Open/IMG_1683-3.png" id="5_5qjte"]
 [ext_resource type="Script" path="res://scenes/guard.gd" id="6_d87cv"]
-[ext_resource type="Texture2D" uid="uid://ddmk3nydwvh5y" path="res://assets/images/DoorAnim/Open/IMG_1683-4.png" id="6_ewxvg"]
 [ext_resource type="PackedScene" uid="uid://ek27re4kc0gn" path="res://scenes/policy.tscn" id="6_i5mad"]
 [ext_resource type="Texture2D" uid="uid://dpl7sxyp0o3js" path="res://assets/images/EnemyAnims/Walking/walking-1.png" id="6_yt3k4"]
 [ext_resource type="PackedScene" uid="uid://dk0nhbw6yiwj1" path="res://scenes/shredder.tscn" id="7_0x03c"]
-[ext_resource type="Texture2D" uid="uid://dcvi2paqi1woc" path="res://assets/images/DoorAnim/Open/IMG_1683-5.png" id="7_svyyg"]
 [ext_resource type="Texture2D" uid="uid://dx0kik60q78vw" path="res://assets/images/EnemyAnims/Walking/walking-2.png" id="7_yavjk"]
 [ext_resource type="Texture2D" uid="uid://b6kxwl7pwi2ur" path="res://assets/images/EnemyAnims/Walking/walking-3.png" id="8_l0ejr"]
-[ext_resource type="Texture2D" uid="uid://dbse3m4o558fo" path="res://assets/images/DoorAnim/Open/IMG_1683-6.png" id="8_x5f8m"]
-[ext_resource type="Texture2D" uid="uid://db506gr5k0ngu" path="res://assets/images/DoorAnim/Open/IMG_1683-7.png" id="9_ewlhe"]
 [ext_resource type="Texture2D" uid="uid://72feu0r42302" path="res://assets/images/EnemyAnims/Walking/walking-4.png" id="9_j2hbd"]
 [ext_resource type="Texture2D" uid="uid://0orf67h81yx3" path="res://assets/images/EnemyAnims/Walking/walking-5.png" id="10_br04c"]
-[ext_resource type="Texture2D" uid="uid://dlobnu1rv132b" path="res://assets/images/DoorAnim/Open/IMG_1683-8.png" id="10_rbu8o"]
 [ext_resource type="Texture2D" uid="uid://dr25mslojdtv7" path="res://assets/images/EnemyAnims/Walking/walking-6.png" id="11_5w6tu"]
 [ext_resource type="Texture2D" uid="uid://cuftq4n8q7qii" path="res://assets/images/EnemyAnims/Walking/walking-7.png" id="12_emc0n"]
 [ext_resource type="Texture2D" uid="uid://bpma4r4h0bxll" path="res://assets/images/EnemyAnims/Walking/walking-8.png" id="13_fuhjg"]
@@ -29,47 +22,9 @@
 [ext_resource type="Texture2D" uid="uid://bbumytqso5cii" path="res://assets/images/EnemyAnims/Walking/walking-12.png" id="17_07j2k"]
 [ext_resource type="Texture2D" uid="uid://j5hmvts812hr" path="res://assets/images/EnemyAnims/Walking/walking-13.png" id="18_7vhis"]
 [ext_resource type="Texture2D" uid="uid://p2ob4mry3ceh" path="res://assets/images/EnemyAnims/Walking/walking-14.png" id="19_7gjev"]
-[ext_resource type="Texture2D" uid="uid://nr7yj53y6qby" path="res://assets/bgbuilding.jpg" id="30_v4w4d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hjmq6"]
 size = Vector2(178.523, 213.5)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_d5mle"]
-animations = [{
-"frames": [],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_0wg3n")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_ye2ep")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_5qjte")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_ewxvg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_svyyg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_x5f8m")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_ewlhe")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_rbu8o")
-}],
-"loop": true,
-"name": &"door_opening",
-"speed": 5.0
-}]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_d07jf"]
 a = Vector2(-1019, -12)
@@ -186,11 +141,10 @@ script = ExtResource("3_4066m")
 position = Vector2(50.2616, 49.25)
 shape = SubResource("RectangleShape2D_hjmq6")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="Building/StaticBody2D/Sprite2D/DoorExit"]
-position = Vector2(50.7974, 56.0864)
-scale = Vector2(0.203107, 0.234915)
-sprite_frames = SubResource("SpriteFrames_d5mle")
-animation = &"door_opening"
+[node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Sprite2D/DoorExit"]
+position = Vector2(51.0636, 50.84)
+scale = Vector2(1.39787, 1.67437)
+texture = ExtResource("3_vvcbn")
 
 [node name="LeftWall" type="CollisionShape2D" parent="Building/StaticBody2D"]
 shape = SubResource("SegmentShape2D_d07jf")
@@ -417,20 +371,6 @@ position = Vector2(-42, -81.0001)
 
 [node name="Shredder" parent="." instance=ExtResource("7_0x03c")]
 position = Vector2(-513, -85)
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-scroll_offset = Vector2(-1635.33, 1547.45)
-scroll_ignore_camera_zoom = true
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(0, -238)
-motion_mirroring = Vector2(1200, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(-1502, -1084)
-scale = Vector2(2.91111, 5.62691)
-texture = ExtResource("30_v4w4d")
-centered = false
 
 [connection signal="body_entered" from="Building/StaticBody2D/Sprite2D/DoorExit" to="Building/StaticBody2D/Sprite2D/DoorExit" method="_on_body_entered"]
 [connection signal="body_exited" from="Building/StaticBody2D/Sprite2D/DoorExit" to="Building/StaticBody2D/Sprite2D/DoorExit" method="_on_body_exited"]
