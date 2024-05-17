@@ -15,9 +15,9 @@ func _ready():
 func collectPolicy():
 	if policiesHeld < 4:
 		policiesHeld += 1
-		return false
-	else:
 		return true
+	else:
+		return false
 
 # Function to shred policies
 func shredPolicies():

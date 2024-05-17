@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://b04qpb1q6jiw1"]
+[gd_scene load_steps=40 format=3 uid="uid://b04qpb1q6jiw1"]
 
 [ext_resource type="Texture2D" uid="uid://clr5uixdu72tx" path="res://assets/workbg.png" id="1_0xnk1"]
 [ext_resource type="PackedScene" uid="uid://doaoix1vrbfym" path="res://scenes/player.tscn" id="1_s7wtf"]
@@ -62,12 +62,6 @@ size = Vector2(1538.82, 242.219)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tcyv6"]
 size = Vector2(1544.46, 321.754)
-
-[sub_resource type="Curve2D" id="Curve2D_r2a48"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, -646.251, 33.1969, 0, 0, 0, 0, 279.769, 33.1969, 0, 0, 0, 0, 654.431, -239.294, 0, 0, 0, 0, 521.909, -394.213, 0, 0, 0, 0, -355.029, -399.746, 0, 0, 0, 0, -530.09, -517.318, 0, 0, 0, 0, -387.751, -690.218, 0, 0, 0, 0, 479.371, -684.685, 0, 0, 0, 0, 657.704, -821.622, 0, 0, 0, 0, 531.726, -914.297, 0, 0, 0, 0, -373.026, -903.231, 0, 0, 0, 0, -549.723, -1052.62, 0, 0, 0, 0, -438.469, -1184.02, 0, 0, 0, 0, 695.334, -1197.85)
-}
-point_count = 14
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2orfx"]
 size = Vector2(42.5355, 109.552)
@@ -349,14 +343,6 @@ shape = SubResource("RectangleShape2D_tcyv6")
 position = Vector2(1022.55, -791.192)
 shape = SubResource("SegmentShape2D_g4yeh")
 
-[node name="Path2D" type="Path2D" parent="Building/StaticBody2D"]
-position = Vector2(-258.5, -239.294)
-scale = Vector2(0.999999, 1)
-curve = SubResource("Curve2D_r2a48")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Building/StaticBody2D/Path2D"]
-position = Vector2(-646.251, 33.1969)
-
 [node name="Guard" type="RigidBody2D" parent="."]
 position = Vector2(-394, -4)
 lock_rotation = true
@@ -391,34 +377,34 @@ metadata/name = "player"
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_8coho")
 
-[node name="Policy" parent="." instance=ExtResource("6_i5mad")]
+[node name="PolicyA" parent="." instance=ExtResource("6_i5mad")]
 position = Vector2(-251, -374)
 
-[node name="Policy2" parent="." instance=ExtResource("6_i5mad")]
+[node name="PolicyA2" parent="." instance=ExtResource("6_i5mad")]
 position = Vector2(-42, -374)
 
-[node name="Policy3" parent="." instance=ExtResource("6_i5mad")]
+[node name="PolicyA3" parent="." instance=ExtResource("6_i5mad")]
 position = Vector2(-251, -574)
 
-[node name="Policy4" parent="." instance=ExtResource("6_i5mad")]
+[node name="PolicyA4" parent="." instance=ExtResource("6_i5mad")]
 position = Vector2(-42, -574)
 
-[node name="Policy5" parent="." instance=ExtResource("6_i5mad")]
+[node name="PolicyA5" parent="." instance=ExtResource("6_i5mad")]
 position = Vector2(-251, -753)
 
-[node name="Policy6" parent="." instance=ExtResource("6_i5mad")]
+[node name="PolicyA6" parent="." instance=ExtResource("6_i5mad")]
 position = Vector2(-42, -753)
 
-[node name="Policy7" parent="." instance=ExtResource("6_i5mad")]
+[node name="PolicyA7" parent="." instance=ExtResource("6_i5mad")]
 position = Vector2(-251, -932)
 
-[node name="Policy8" parent="." instance=ExtResource("6_i5mad")]
+[node name="PolicyA8" parent="." instance=ExtResource("6_i5mad")]
 position = Vector2(-42, -932)
 
-[node name="Policy9" parent="." instance=ExtResource("6_i5mad")]
+[node name="PolicyA9" parent="." instance=ExtResource("6_i5mad")]
 position = Vector2(-251, -81.0001)
 
-[node name="Policy10" parent="." instance=ExtResource("6_i5mad")]
+[node name="PolicyA10" parent="." instance=ExtResource("6_i5mad")]
 position = Vector2(-42, -81.0001)
 
 [node name="Shredder" parent="." instance=ExtResource("7_0x03c")]
