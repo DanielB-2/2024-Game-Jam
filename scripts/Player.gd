@@ -61,7 +61,7 @@ func _physics_process(delta):
 		_sprite.stop()
 
 	move_and_slide()
-	policy_label.text = "POLICIES: " + str(playerData.policiesHeld)
+	policy_label.text = str(playerData.policiesHeld)
 	
 func onReturnToMainScene(doorPosition):
 	# Spawn player at the door position
