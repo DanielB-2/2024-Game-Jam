@@ -55,7 +55,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 10.0
+"speed": 15.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8tre"]
@@ -73,7 +73,7 @@ position = Vector2(6, -44)
 scale = Vector2(0.117, 0.097)
 sprite_frames = SubResource("SpriteFrames_uymlw")
 animation = &"walk"
-frame_progress = 0.370853
+frame_progress = 0.533444
 
 [node name="PlayerNormalCollision" type="CollisionShape2D" parent="."]
 position = Vector2(2.5, -48)
