@@ -64,6 +64,9 @@ size = Vector2(21.75, 21)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wth06"]
 size = Vector2(22, 12.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dfdbd"]
+size = Vector2(50, 25)
+
 [node name="Player" type="CharacterBody2D"]
 z_index = 10
 script = ExtResource("1_l0sym")
@@ -80,6 +83,7 @@ shape = SubResource("RectangleShape2D_n8tre")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -128)
+metadata/_edit_lock_ = true
 
 [node name="PolicyLabel" type="Label" parent="."]
 z_index = 10
