@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bqxodl8ibgv4y"]
+[gd_scene load_steps=13 format=3 uid="uid://bqxodl8ibgv4y"]
 
 [ext_resource type="PackedScene" uid="uid://doaoix1vrbfym" path="res://scenes/player.tscn" id="1_lj0yb"]
 [ext_resource type="Texture2D" uid="uid://vqt855buh0w1" path="res://assets/images/mainercity.jpg" id="1_ogxcy"]
@@ -26,59 +26,48 @@ scroll_offset = Vector2(968.587, 617.868)
 scroll_ignore_camera_zoom = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-visible = false
 motion_mirroring = Vector2(1200, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-visible = false
 position = Vector2(-54, -587)
 scale = Vector2(2.2213, 2.61783)
 texture = ExtResource("1_ogxcy")
 centered = false
 
 [node name="Ground" type="StaticBody2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
-visible = false
 shape = SubResource("WorldBoundaryShape2D_s0w4s")
 debug_color = Color(0.252904, 0.630268, 0.229332, 0.42)
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground"]
-visible = false
 position = Vector2(-533.168, 8)
 scale = Vector2(4.15169, 0.03)
 texture = SubResource("NoiseTexture2D_3nyv1")
 
 [node name="Door1" type="Area2D" parent="."]
-visible = false
 position = Vector2(-270, -60)
 scale = Vector2(0.99625, 1)
 script = ExtResource("2_hsbgy")
 target_room = ExtResource("3_f0l3d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door1"]
-visible = false
 shape = SubResource("RectangleShape2D_1g2c6")
 
 [node name="Sprite2D" type="Sprite2D" parent="Door1"]
-visible = false
 scale = Vector2(0.599998, 0.879999)
 texture = ExtResource("2_u0i4s")
 
 [node name="Door2" type="Area2D" parent="."]
-visible = false
 position = Vector2(-397, -60)
 scale = Vector2(0.99625, 1)
 script = ExtResource("2_hsbgy")
 target_room = ExtResource("3_f0l3d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door2"]
-visible = false
 shape = SubResource("RectangleShape2D_1g2c6")
 
 [node name="Sprite2D" type="Sprite2D" parent="Door2"]
-visible = false
 scale = Vector2(0.599998, 0.879999)
 texture = ExtResource("2_u0i4s")
 
@@ -90,34 +79,27 @@ scale = Vector2(3.81481, 4.29938)
 texture = ExtResource("7_d0llh")
 
 [node name="Shredder" parent="." instance=ExtResource("8_28muw")]
-visible = false
 position = Vector2(-126, -31)
 
 [node name="Policy" parent="." instance=ExtResource("5_q6e6y")]
 position = Vector2(109, -58)
 
 [node name="Policy2" parent="." instance=ExtResource("5_q6e6y")]
-visible = false
 position = Vector2(51, -40)
 
 [node name="Policy3" parent="." instance=ExtResource("5_q6e6y")]
-visible = false
 position = Vector2(35, -93)
 
 [node name="Policy4" parent="." instance=ExtResource("5_q6e6y")]
-visible = false
 position = Vector2(104, -107)
 
 [node name="Policy5" parent="." instance=ExtResource("5_q6e6y")]
-visible = false
 position = Vector2(169, -62)
 
 [node name="Policy6" parent="." instance=ExtResource("5_q6e6y")]
-visible = false
 position = Vector2(223, -122)
 
 [node name="Policy7" parent="." instance=ExtResource("5_q6e6y")]
-visible = false
 position = Vector2(366, -253)
 
 [node name="Player" parent="." instance=ExtResource("1_lj0yb")]
