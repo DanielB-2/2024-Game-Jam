@@ -1,5 +1,4 @@
 extends Node
 
 
-var playerLocation = "";
-var guard1Location = "";
+var locations = {"player" : "", "guard1": ""}
