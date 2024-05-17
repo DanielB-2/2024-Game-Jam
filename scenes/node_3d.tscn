@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bqxodl8ibgv4y"]
+[gd_scene load_steps=14 format=3 uid="uid://bqxodl8ibgv4y"]
 
 [ext_resource type="PackedScene" uid="uid://doaoix1vrbfym" path="res://scenes/player.tscn" id="1_lj0yb"]
 [ext_resource type="Texture2D" uid="uid://vqt855buh0w1" path="res://assets/images/mainercity.jpg" id="1_ogxcy"]
@@ -11,8 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://dk0nhbw6yiwj1" path="res://scenes/shredder.tscn" id="8_28muw"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s0w4s"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_3nyv1"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2d3lp"]
 
@@ -29,6 +27,7 @@ scroll_offset = Vector2(-1635.33, 1547.45)
 scroll_ignore_camera_zoom = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(0, -238)
 motion_mirroring = Vector2(1200, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
@@ -46,9 +45,9 @@ shape = SubResource("WorldBoundaryShape2D_s0w4s")
 debug_color = Color(0.252904, 0.630268, 0.229332, 0.42)
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground"]
-position = Vector2(-533.168, 8)
-scale = Vector2(4.15169, 0.03)
-texture = SubResource("NoiseTexture2D_3nyv1")
+position = Vector2(-533.168, 200)
+scale = Vector2(39.8826, 3.35)
+texture = ExtResource("2_u0i4s")
 
 [node name="WorldBounds" type="StaticBody2D" parent="."]
 position = Vector2(1280, 0)
@@ -95,6 +94,7 @@ scale = Vector2(0.599998, 0.879999)
 texture = ExtResource("2_u0i4s")
 
 [node name="Building" type="Area2D" parent="."]
+z_index = -1
 position = Vector2(-732, -588)
 
 [node name="Sprite2D" type="Sprite2D" parent="Building"]
@@ -102,6 +102,7 @@ scale = Vector2(3.81481, 4.29938)
 texture = ExtResource("7_d0llh")
 
 [node name="Building2" type="Area2D" parent="."]
+z_index = -1
 position = Vector2(-732, -588)
 
 [node name="Sprite2D" type="Sprite2D" parent="Building2"]
@@ -113,7 +114,7 @@ texture = ExtResource("7_d0llh")
 position = Vector2(-126, -31)
 
 [node name="Player" parent="." instance=ExtResource("1_lj0yb")]
-position = Vector2(366, -125)
+position = Vector2(-250, -33)
 
 [node name="TestSneak" type="StaticBody2D" parent="."]
 position = Vector2(365, -61)

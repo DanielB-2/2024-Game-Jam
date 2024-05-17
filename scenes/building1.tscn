@@ -36,7 +36,7 @@ size = Vector2(1536.28, 265.575)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_g4yeh"]
 a = Vector2(-1567.36, -456.457)
-b = Vector2(-405.74, -457.438)
+b = Vector2(-500.64, -456.457)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0xgy"]
 size = Vector2(1537.19, 238.761)
@@ -142,6 +142,7 @@ shape = SubResource("SegmentShape2D_g4yeh")
 [node name="Stairs" type="RigidBody2D" parent="Building/StaticBody2D/Floor2/StaticBody2D"]
 position = Vector2(-674.061, -521.467)
 scale = Vector2(0.990977, 0.959108)
+freeze = true
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Building/StaticBody2D/Floor2/StaticBody2D/Stairs"]
 position = Vector2(326.892, 160.081)
@@ -178,6 +179,7 @@ shape = SubResource("SegmentShape2D_g4yeh")
 
 [node name="Stairs" type="RigidBody2D" parent="Building/StaticBody2D/Floor3/StaticBody2D"]
 position = Vector2(181.604, -980.691)
+freeze = true
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Building/StaticBody2D/Floor3/StaticBody2D/Stairs"]
 position = Vector2(-165.244, 327.819)
@@ -215,6 +217,7 @@ shape = SubResource("SegmentShape2D_g4yeh")
 [node name="Stairs" type="RigidBody2D" parent="Building/StaticBody2D/Floor4/StaticBody2D/floor"]
 position = Vector2(-1253.24, -510.402)
 scale = Vector2(0.990977, 0.959108)
+freeze = true
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Building/StaticBody2D/Floor4/StaticBody2D/floor/Stairs"]
 position = Vector2(326.892, 160.081)
