@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://bqxodl8ibgv4y"]
+[gd_scene load_steps=15 format=3 uid="uid://bqxodl8ibgv4y"]
 
 [ext_resource type="PackedScene" uid="uid://doaoix1vrbfym" path="res://scenes/player.tscn" id="1_lj0yb"]
 [ext_resource type="Texture2D" uid="uid://vqt855buh0w1" path="res://assets/images/mainercity.jpg" id="1_ogxcy"]
 [ext_resource type="Script" path="res://scripts/door.gd" id="2_hsbgy"]
 [ext_resource type="Texture2D" uid="uid://dny4lcseecpko" path="res://icon.svg" id="2_u0i4s"]
-[ext_resource type="PackedScene" uid="uid://b04qpb1q6jiw1" path="res://scenes/building.tscn" id="3_f0l3d"]
+[ext_resource type="PackedScene" uid="uid://b04qpb1q6jiw1" path="res://scenes/building1.tscn" id="3_aeeix"]
+[ext_resource type="PackedScene" uid="uid://c75mieb5kwl38" path="res://scenes/building2.tscn" id="3_f0l3d"]
 [ext_resource type="PackedScene" uid="uid://ek27re4kc0gn" path="res://scenes/policy.tscn" id="5_q6e6y"]
 [ext_resource type="Texture2D" uid="uid://d2q3vk73kg75v" path="res://assets/building.png" id="7_d0llh"]
 [ext_resource type="PackedScene" uid="uid://dk0nhbw6yiwj1" path="res://scenes/shredder.tscn" id="8_28muw"]
@@ -24,7 +25,7 @@ size = Vector2(312, 64)
 [node name="Node2D" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-scroll_offset = Vector2(968.587, 617.868)
+scroll_offset = Vector2(-1635.33, 1547.45)
 scroll_ignore_camera_zoom = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -70,7 +71,7 @@ z_index = 2
 position = Vector2(-720, -135)
 scale = Vector2(2.63625, 2.44)
 script = ExtResource("2_hsbgy")
-target_room = ExtResource("3_f0l3d")
+target_room = ExtResource("3_aeeix")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door1"]
 shape = SubResource("RectangleShape2D_1g2c6")
