@@ -1,9 +1,8 @@
 extends Area2D
 
-@onready var player = $"."
-
 func _on_body_entered(body):
 	if body.name == "Player":
-		var atLimit = body.collect_policy()
-		if not atLimit:
-			queue_free()
+		var policy_name = self.name
+		if not PlayerData.collectPolicy():
+			Global.coin_collected.emit(policy_name) #goes into Globa.gd
+			queue_free() 

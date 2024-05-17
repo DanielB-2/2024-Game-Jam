@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://ek27re4kc0gn" path="res://scenes/policy.tscn" id="6_i5mad"]
 [ext_resource type="Texture2D" uid="uid://dpl7sxyp0o3js" path="res://assets/images/EnemyAnims/Walking/walking-1.png" id="6_yt3k4"]
 [ext_resource type="PackedScene" uid="uid://dk0nhbw6yiwj1" path="res://scenes/shredder.tscn" id="7_0x03c"]
-[ext_resource type="Script" path="res://scenes/PlayerRoomDetection.gd" id="7_wuidu"]
 [ext_resource type="Texture2D" uid="uid://dx0kik60q78vw" path="res://assets/images/EnemyAnims/Walking/walking-2.png" id="7_yavjk"]
 [ext_resource type="Texture2D" uid="uid://b6kxwl7pwi2ur" path="res://assets/images/EnemyAnims/Walking/walking-3.png" id="8_l0ejr"]
 [ext_resource type="Texture2D" uid="uid://72feu0r42302" path="res://assets/images/EnemyAnims/Walking/walking-4.png" id="9_j2hbd"]
@@ -51,7 +50,7 @@ size = Vector2(1536.28, 265.575)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_g4yeh"]
 a = Vector2(-1567.36, -456.457)
-b = Vector2(-500.64, -456.457)
+b = Vector2(-405.74, -457.438)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0xgy"]
 size = Vector2(1537.19, 238.761)
@@ -63,7 +62,7 @@ size = Vector2(1538.82, 242.219)
 size = Vector2(1544.46, 321.754)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2orfx"]
-size = Vector2(42.5355, 109.552)
+size = Vector2(42.535, 48.5525)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i368j"]
 animations = [{
@@ -119,9 +118,6 @@ animations = [{
 "name": &"enemy_walking",
 "speed": 5.0
 }]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8coho"]
-size = Vector2(20, 19)
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(-582, 0)
@@ -215,7 +211,6 @@ shape = SubResource("SegmentShape2D_g4yeh")
 [node name="Stairs" type="RigidBody2D" parent="Building/StaticBody2D/Floor2/StaticBody2D"]
 position = Vector2(-674.061, -521.467)
 scale = Vector2(0.990977, 0.959108)
-freeze = true
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Building/StaticBody2D/Floor2/StaticBody2D/Stairs"]
 position = Vector2(326.892, 160.081)
@@ -252,7 +247,6 @@ shape = SubResource("SegmentShape2D_g4yeh")
 
 [node name="Stairs" type="RigidBody2D" parent="Building/StaticBody2D/Floor3/StaticBody2D"]
 position = Vector2(181.604, -980.691)
-freeze = true
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Building/StaticBody2D/Floor3/StaticBody2D/Stairs"]
 position = Vector2(-165.244, 327.819)
@@ -290,7 +284,6 @@ shape = SubResource("SegmentShape2D_g4yeh")
 [node name="Stairs" type="RigidBody2D" parent="Building/StaticBody2D/Floor4/StaticBody2D/floor"]
 position = Vector2(-1253.24, -510.402)
 scale = Vector2(0.990977, 0.959108)
-freeze = true
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Building/StaticBody2D/Floor4/StaticBody2D/floor/Stairs"]
 position = Vector2(326.892, 160.081)
@@ -331,24 +324,17 @@ lock_rotation = true
 script = ExtResource("6_d87cv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Guard"]
-position = Vector2(105.732, -420.224)
+position = Vector2(105.732, -389.724)
 shape = SubResource("RectangleShape2D_2orfx")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Guard"]
-position = Vector2(111, -419)
-scale = Vector2(0.1025, 0.0916667)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Guard/CollisionShape2D"]
+position = Vector2(4.26799, -16.276)
+scale = Vector2(0.0766666, 0.0733333)
 sprite_frames = SubResource("SpriteFrames_i368j")
 animation = &"enemy_walking"
 
 [node name="Player" parent="." instance=ExtResource("1_s7wtf")]
-position = Vector2(-156, -134)
-
-[node name="Area2D" type="Area2D" parent="Player"]
-script = ExtResource("7_wuidu")
-
-[node name="PlayerArea" type="CollisionShape2D" parent="Player/Area2D"]
-position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_8coho")
+position = Vector2(-159, -140)
 
 [node name="Policy" parent="." instance=ExtResource("6_i5mad")]
 position = Vector2(-251, -374)

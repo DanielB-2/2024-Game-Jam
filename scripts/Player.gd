@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var policy_label = $PolicyLabel
+@onready var voided_label = $VoidedLabel
 @onready var _sprite = $AnimatedSprite2D
 
 var speed = 500.0
@@ -12,9 +13,11 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 # Access the PlayerData singleton
 var playerData = PlayerData
 
+func _ready():
+	global_position = playerData.lastEntered
+	
 func _physics_process(delta):
 	# Add the gravity.
-	print(playerData)
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
@@ -59,6 +62,12 @@ func _physics_process(delta):
 	move_and_slide()
 	policy_label.text = "POLICIES: " + str(playerData.policiesHeld)
 	
+func onReturnToMainScene(doorPosition):
+	# Spawn player at the door position
+	print("returned to main scene " + str(doorPosition))
+	global_position = doorPosition
+	print(global_position)
+	
 func collect_policy():
 	# function called from policy.gd. returns false if not at limit. returns true if at limit
 	if playerData.policiesHeld < 4:
@@ -71,3 +80,7 @@ func shred_policy():
 	# called from shredder.gd
 	playerData.policiesHeld = 0
 	print("Policies Voided")
+	voided_label.visible = true
+	await get_tree().create_timer(1).timeout
+	voided_label.visible = false
+

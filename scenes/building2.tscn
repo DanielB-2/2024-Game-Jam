@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b04qpb1q6jiw1"]
+[gd_scene load_steps=9 format=3 uid="uid://c75mieb5kwl38"]
 
 [ext_resource type="PackedScene" uid="uid://doaoix1vrbfym" path="res://scenes/player.tscn" id="1_s7wtf"]
 [ext_resource type="Script" path="res://scripts/DoorExit.gd" id="3_4066m"]
@@ -69,7 +69,6 @@ script = ExtResource("3_4066m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/Sprite2D/DoorExit"]
 position = Vector2(50.2616, 49.25)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_hjmq6")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D/Sprite2D/DoorExit"]
