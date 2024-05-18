@@ -397,28 +397,28 @@ metadata/name = "player"
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_8coho")
 
-[node name="PolicyA" parent="." instance=ExtResource("24_imp60")]
+[node name="PolicyD" parent="." instance=ExtResource("24_imp60")]
 position = Vector2(-2124, -374)
 
-[node name="PolicyA2" parent="." instance=ExtResource("24_imp60")]
+[node name="PolicyD2" parent="." instance=ExtResource("24_imp60")]
 position = Vector2(-1915, -374)
 
-[node name="PolicyA3" parent="." instance=ExtResource("24_imp60")]
+[node name="PolicyD3" parent="." instance=ExtResource("24_imp60")]
 position = Vector2(-2124, -574)
 
-[node name="PolicyA4" parent="." instance=ExtResource("24_imp60")]
+[node name="PolicyD4" parent="." instance=ExtResource("24_imp60")]
 position = Vector2(-1915, -574)
 
-[node name="PolicyA5" parent="." instance=ExtResource("24_imp60")]
+[node name="PolicyD5" parent="." instance=ExtResource("24_imp60")]
 position = Vector2(-2124, -753)
 
-[node name="PolicyA6" parent="." instance=ExtResource("24_imp60")]
+[node name="PolicyD6" parent="." instance=ExtResource("24_imp60")]
 position = Vector2(-1915, -753)
 
-[node name="PolicyA7" parent="." instance=ExtResource("24_imp60")]
+[node name="PolicyD7" parent="." instance=ExtResource("24_imp60")]
 position = Vector2(-2124, -932)
 
-[node name="PolicyA8" parent="." instance=ExtResource("24_imp60")]
+[node name="PolicyD8" parent="." instance=ExtResource("24_imp60")]
 position = Vector2(-1915, -932)
 
 [node name="Shredder" parent="." instance=ExtResource("25_tcsl2")]
