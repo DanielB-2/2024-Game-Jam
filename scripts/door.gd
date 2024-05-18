@@ -8,11 +8,13 @@ var playerData = PlayerData
 func _on_body_entered(body):
 	if body.name == "Player":
 		playerInsideArea = true
+		body.toggleSpaceIcon()
 		set_process_input(true)
 
 func _on_body_exited(body):
 	if body.name == "Player":
 		playerInsideArea = false
+		body.toggleSpaceIcon()
 		set_process_input(false)
 
 func _input(event):

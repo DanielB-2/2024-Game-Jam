@@ -19,7 +19,16 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	targetPos = player.global_position+(Vector2.DOWN * 400)+(Vector2.LEFT * 150)
-	collision.disabled = true if playerData.tietoggle else false
+	if playerData.tietoggle:
+		set_collision_layer_value(2, false)
+		set_collision_mask_value(2, false)
+		set_collision_layer_value(1, true)
+		set_collision_mask_value(1, true)
+	else:
+		set_collision_layer_value(2, true)
+		set_collision_mask_value(2, true)
+		set_collision_layer_value(1, false)
+		set_collision_mask_value(1, false)
 	if targetPos.distance_to(lastPos) > 0 and canMove:
 		_anim.play("enemy_walking")
 		canMove = false

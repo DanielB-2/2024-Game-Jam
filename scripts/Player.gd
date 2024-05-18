@@ -6,6 +6,7 @@ extends CharacterBody2D
 @onready var animation_player = $voidedLabel/AnimationPlayer
 @onready var hideaction = $PolicyLabel3
 @onready var hideactionimg = $PolicyBoard3/PolicyImage
+@onready var space_label = $spaceLabel
 
 @onready var tieGood = load("res://assets/tie.png")
 @onready var tieBad = load("res://assets/hide.png")
@@ -103,3 +104,5 @@ func shred_policy():
 	await get_tree().create_timer(1.5).timeout
 	voided_label.visible = false
 	
+func toggleSpaceIcon():
+	space_label.visible = not space_label.visible

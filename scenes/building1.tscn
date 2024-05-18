@@ -157,6 +157,7 @@ centered = false
 scale = Vector2(0.611218, 0.72296)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Building"]
+collision_layer = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D"]
 position = Vector2(-280.5, -851)
@@ -205,6 +206,7 @@ shape = SubResource("RectangleShape2D_53iu8")
 [node name="Stairs" type="RigidBody2D" parent="Building/StaticBody2D/Floor1/StaticBody2D"]
 position = Vector2(272.412, 114.806)
 scale = Vector2(1.02493, 0.910748)
+collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Building/StaticBody2D/Floor1/StaticBody2D/Stairs"]
 position = Vector2(-220, 258)
@@ -224,19 +226,21 @@ position = Vector2(-256.046, -612.759)
 shape = SubResource("RectangleShape2D_r166t")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Building/StaticBody2D/Floor2"]
+collision_layer = 3
 
 [node name="floor" type="CollisionShape2D" parent="Building/StaticBody2D/Floor2/StaticBody2D"]
 position = Vector2(567.719, -20.748)
 shape = SubResource("SegmentShape2D_g4yeh")
 
 [node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Floor2/StaticBody2D/floor"]
-position = Vector2(-912.931, -489.654)
-scale = Vector2(0.40715, 0.135554)
+position = Vector2(-1022.96, -489.654)
+scale = Vector2(0.344278, 0.135554)
 texture = ExtResource("6_7ghyd")
 
 [node name="Stairs" type="RigidBody2D" parent="Building/StaticBody2D/Floor2/StaticBody2D"]
 position = Vector2(-674.061, -521.467)
 scale = Vector2(0.990977, 0.959108)
+collision_layer = 3
 freeze = true
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Building/StaticBody2D/Floor2/StaticBody2D/Stairs"]
@@ -257,18 +261,20 @@ position = Vector2(-258.863, -875.142)
 shape = SubResource("RectangleShape2D_h0xgy")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Building/StaticBody2D/Floor3"]
+collision_layer = 3
 
 [node name="floor" type="CollisionShape2D" parent="Building/StaticBody2D/Floor3/StaticBody2D"]
 position = Vector2(955.469, -293.239)
 shape = SubResource("SegmentShape2D_g4yeh")
 
 [node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Floor3/StaticBody2D/floor"]
-position = Vector2(-1078.99, -495.186)
-scale = Vector2(0.40715, 0.135554)
+position = Vector2(-1012.73, -495.186)
+scale = Vector2(0.369287, 0.135554)
 texture = ExtResource("6_7ghyd")
 
 [node name="Stairs" type="RigidBody2D" parent="Building/StaticBody2D/Floor3/StaticBody2D"]
 position = Vector2(181.604, -980.691)
+collision_layer = 3
 freeze = true
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Building/StaticBody2D/Floor3/StaticBody2D/Stairs"]
@@ -289,6 +295,7 @@ position = Vector2(-258.045, -1123.77)
 shape = SubResource("RectangleShape2D_yxf6s")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Building/StaticBody2D/Floor4"]
+collision_layer = 3
 
 [node name="floor" type="CollisionShape2D" parent="Building/StaticBody2D/Floor4/StaticBody2D"]
 position = Vector2(570.991, -540.832)
@@ -297,6 +304,7 @@ shape = SubResource("SegmentShape2D_g4yeh")
 [node name="Stairs" type="RigidBody2D" parent="Building/StaticBody2D/Floor4/StaticBody2D/floor"]
 position = Vector2(-1253.24, -510.402)
 scale = Vector2(0.990977, 0.959108)
+collision_layer = 3
 freeze = true
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Building/StaticBody2D/Floor4/StaticBody2D/floor/Stairs"]
@@ -311,8 +319,8 @@ scale = Vector2(0.0279648, 0.028853)
 texture = ExtResource("6_6i2xm")
 
 [node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Floor4/StaticBody2D/floor"]
-position = Vector2(-962.014, -495.187)
-scale = Vector2(0.40715, 0.135554)
+position = Vector2(-1051.59, -495.187)
+scale = Vector2(0.355964, 0.135554)
 texture = ExtResource("6_7ghyd")
 
 [node name="Floor5" type="Area2D" parent="Building/StaticBody2D"]
@@ -322,14 +330,15 @@ position = Vector2(-256.864, -1411.82)
 shape = SubResource("RectangleShape2D_tcyv6")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Building/StaticBody2D/Floor5"]
+collision_layer = 3
 
 [node name="floor" type="CollisionShape2D" parent="Building/StaticBody2D/Floor5/StaticBody2D"]
 position = Vector2(1022.55, -791.192)
 shape = SubResource("SegmentShape2D_g4yeh")
 
 [node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Floor5/StaticBody2D/floor"]
-position = Vector2(-1146.89, -489.653)
-scale = Vector2(0.40715, 0.135554)
+position = Vector2(-1044.23, -489.653)
+scale = Vector2(0.348485, 0.135554)
 texture = ExtResource("6_7ghyd")
 
 [node name="Path2D" type="Path2D" parent="Building"]
@@ -344,6 +353,8 @@ rotates = false
 position = Vector2(-184.447, 580.049)
 rotation = 0.0171356
 scale = Vector2(1.63608, 1.3832)
+collision_layer = 2
+collision_mask = 2
 lock_rotation = true
 script = ExtResource("6_d87cv")
 
@@ -352,7 +363,7 @@ position = Vector2(105.732, -420.224)
 shape = SubResource("RectangleShape2D_2orfx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Building/Path2D/PathFollow2D/Guard"]
-position = Vector2(111, -419)
+position = Vector2(110.869, -431.639)
 scale = Vector2(0.1025, 0.0916667)
 sprite_frames = SubResource("SpriteFrames_i368j")
 animation = &"enemy_walking"
