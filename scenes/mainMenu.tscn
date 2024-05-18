@@ -32,6 +32,7 @@ text = "New Game"
 script = ExtResource("2_3vh1e")
 
 [node name="Button" type="Button" parent="Button"]
+layout_mode = 0
 offset_left = -1.0
 offset_top = 135.0
 offset_right = 564.0
