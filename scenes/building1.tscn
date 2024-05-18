@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://b04qpb1q6jiw1"]
+[gd_scene load_steps=42 format=3 uid="uid://b04qpb1q6jiw1"]
 
 [ext_resource type="Texture2D" uid="uid://clr5uixdu72tx" path="res://assets/workbg.png" id="1_0xnk1"]
 [ext_resource type="PackedScene" uid="uid://doaoix1vrbfym" path="res://scenes/player.tscn" id="1_s7wtf"]
@@ -126,6 +126,8 @@ animations = [{
 "name": &"enemy_walking",
 "speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5mhn7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fg0lw"]
 size = Vector2(25, 26.5)
@@ -374,11 +376,19 @@ scale = Vector2(0.1025, 0.0916667)
 sprite_frames = SubResource("SpriteFrames_i368j")
 animation = &"enemy_walking"
 
-[node name="GuardArea" type="Area2D" parent="Guard"]
+[node name="GuardArea" type="Area2D" parent="Building/Path2D/PathFollow2D/Guard"]
+position = Vector2(648.856, -308.417)
+rotation = -0.0144766
+scale = Vector2(1.00003, 0.99998)
+skew = 0.00412893
 script = ExtResource("21_4awx5")
 metadata/name = "guard1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Building/Path2D/PathFollow2D/Guard/GuardArea"]
+position = Vector2(-541, -119)
+shape = SubResource("RectangleShape2D_5mhn7")
+
+[node name="Building_Path2D_PathFollow2D_Guard_GuardArea#CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(107, -424)
 shape = SubResource("RectangleShape2D_fg0lw")
 
