@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://b04qpb1q6jiw1"]
+[gd_scene load_steps=42 format=3 uid="uid://b04qpb1q6jiw1"]
 
 [ext_resource type="Texture2D" uid="uid://clr5uixdu72tx" path="res://assets/workbg.png" id="1_0xnk1"]
 [ext_resource type="PackedScene" uid="uid://doaoix1vrbfym" path="res://scenes/player.tscn" id="1_s7wtf"]
@@ -331,7 +331,6 @@ shape = SubResource("SegmentShape2D_g4yeh")
 position = Vector2(-1146.89, -489.653)
 scale = Vector2(0.40715, 0.135554)
 texture = ExtResource("6_7ghyd")
-
 [node name="Path2D" type="Path2D" parent="Building"]
 curve = SubResource("Curve2D_r74vt")
 
@@ -348,7 +347,7 @@ lock_rotation = true
 script = ExtResource("6_d87cv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Building/Path2D/PathFollow2D/Guard"]
-z_index = 1
+
 position = Vector2(105.732, -420.224)
 shape = SubResource("RectangleShape2D_2orfx")
 
