@@ -8,7 +8,7 @@ var lastPos = Vector2()
 @onready var playerData = PlayerData
 var canMove = true
 var pathFollow
-
+var direction = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	player = get_parent().get_parent().get_parent().get_parent().get_node("Player")
@@ -42,6 +42,17 @@ func _process(delta):
 	
 
 func _physics_process(delta):
-	pathFollow.progress -= 200 * delta;
+	#if the guard is walking down the building
+	if direction == false:
+		pathFollow.progress -= 200 * delta
+		#check if the guard has reached the bottom
+		if pathFollow.progress<100:
+			direction = true
+	else:
+		pathFollow.progress += 200*delta
+		#check if the guard has reached the top of the building
+		if pathFollow.progress >= 6100:
+			direction = false;
+	
 	print(pathFollow.progress)
 	

@@ -52,8 +52,8 @@ size = Vector2(1536.28, 473.055)
 size = Vector2(1536.28, 265.575)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_g4yeh"]
-a = Vector2(-1567.36, -456.457)
-b = Vector2(-500.64, -456.457)
+a = Vector2(-1557.55, -456.456)
+b = Vector2(-417.2, -460.607)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0xgy"]
 size = Vector2(1537.19, 238.761)
@@ -66,7 +66,7 @@ size = Vector2(1544.46, 321.754)
 
 [sub_resource type="Curve2D" id="Curve2D_r74vt"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -885.118, -167.367, 0, 0, 0, 0, -37.6298, -171.517, 0, 0, 0, 0, 358.301, -477.205, 0, 0, 0, 0, 214.326, -614.142, 0, 0, 0, 0, -525.181, -618.291, 0, 0, 0, 0, -793.498, -741.396, 0, 0, 0, 0, -675.7, -911.53, 0, 0, 0, 0, 165.244, -907.381, 0, 0, 0, 0, 379.57, -1096.88, 0, 0, 0, 0, 220.87, -1143.91, 0, 0, 0, 0, -590.624, -1143.91, 0, 0, 0, 0, -826.219, -1273.93, 0, 0, 0, 0, -683.88, -1405.33, 0, 0, 0, 0, 430.288, -1419.17)
+"points": PackedVector2Array(0, 0, 0, 0, -885.118, -160.974, -27.5733, 26.8517, 27.5733, -26.8517, 65.3483, -168.646, -3.13478, 58.2807, 3.13478, -58.2807, 360.544, -430.769, 86.8237, 0.523573, -86.8237, -0.523573, 188.617, -549.684, 82.1747, 2.25667, -82.1747, -2.25667, -601.276, -549.684, 94.2671, 63.361, -94.2671, -63.361, -782.935, -643.025, -82.1016, -0.373767, 82.1016, 0.373767, -700.215, -809.25, -38.7063, 0.913973, 38.7063, -0.913973, 167.531, -809.25, -58.6958, 49.0359, 58.6958, -49.0359, 302.154, -901.312, 95.7743, -0.583449, -95.7743, 0.583449, 185.373, -1035.57, 46.5991, 0.579056, -46.5991, -0.579056, -570.459, -1036.85, 39.8425, 21.1923, -39.8425, -21.1923, -713.191, -1107.18, -127.288, 1.61282, 127.288, -1.61282, -599.654, -1263.17, 0, 0, 0, 0, 451.374, -1263.17)
 }
 point_count = 14
 
@@ -213,11 +213,12 @@ freeze = true
 position = Vector2(-220, 258)
 scale = Vector2(8.84064, 9.69231)
 build_mode = 1
-polygon = PackedVector2Array(30.1294, -19.3274, 78, -59, 78, -20, 73.5878, -20)
+polygon = PackedVector2Array(30.2111, -19.8811, 79.8657, -58.5852, 78, -20)
 
 [node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Floor1/StaticBody2D/Stairs/CollisionShape2D"]
-position = Vector2(56.4829, -36.1776)
-scale = Vector2(0.0247744, 0.0220355)
+position = Vector2(57.2502, -38.2146)
+rotation = 0.0174533
+scale = Vector2(0.0254356, 0.0220355)
 texture = ExtResource("6_6i2xm")
 
 [node name="Floor2" type="Area2D" parent="Building/StaticBody2D"]
@@ -234,8 +235,8 @@ position = Vector2(567.719, -20.748)
 shape = SubResource("SegmentShape2D_g4yeh")
 
 [node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Floor2/StaticBody2D/floor"]
-position = Vector2(-1022.96, -489.654)
-scale = Vector2(0.344278, 0.135554)
+position = Vector2(-959.152, -489.654)
+scale = Vector2(0.38074, 0.135554)
 texture = ExtResource("6_7ghyd")
 
 [node name="Stairs" type="RigidBody2D" parent="Building/StaticBody2D/Floor2/StaticBody2D"]
@@ -248,11 +249,11 @@ freeze = true
 position = Vector2(326.892, 160.081)
 scale = Vector2(-8.54294, 5.89571)
 build_mode = 1
-polygon = PackedVector2Array(30.1294, -19.3274, 78, -59, 78, -20)
+polygon = PackedVector2Array(37.8784, -19.8137, 78.0757, -62.6213, 78, -20)
 
 [node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Floor2/StaticBody2D/Stairs/CollisionShape2D"]
-position = Vector2(54.2646, -38.4461)
-scale = Vector2(0.0279648, 0.028853)
+position = Vector2(59.2839, -40.046)
+scale = Vector2(0.0230631, 0.0272906)
 texture = ExtResource("6_6i2xm")
 
 [node name="Floor3" type="Area2D" parent="Building/StaticBody2D"]
@@ -269,8 +270,8 @@ position = Vector2(955.469, -293.239)
 shape = SubResource("SegmentShape2D_g4yeh")
 
 [node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Floor3/StaticBody2D/floor"]
-position = Vector2(-1012.73, -495.186)
-scale = Vector2(0.369287, 0.135554)
+position = Vector2(-1061.81, -495.186)
+scale = Vector2(0.397334, 0.135554)
 texture = ExtResource("6_7ghyd")
 
 [node name="Stairs" type="RigidBody2D" parent="Building/StaticBody2D/Floor3/StaticBody2D"]
@@ -282,11 +283,11 @@ freeze = true
 position = Vector2(-165.244, 327.819)
 scale = Vector2(6.25614, 5.59452)
 build_mode = 1
-polygon = PackedVector2Array(30.1294, -19.3274, 78, -59, 78, -20)
+polygon = PackedVector2Array(26.6747, -19.0376, 79.7623, -64.5302, 78.4548, -19.2848)
 
 [node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Floor3/StaticBody2D/Stairs/CollisionShape2D"]
-position = Vector2(54.2646, -38.4461)
-scale = Vector2(0.0279648, 0.028853)
+position = Vector2(54.2646, -40.1768)
+scale = Vector2(0.0279648, 0.0271629)
 texture = ExtResource("6_6i2xm")
 
 [node name="Floor4" type="Area2D" parent="Building/StaticBody2D"]
@@ -312,7 +313,7 @@ freeze = true
 position = Vector2(326.892, 160.081)
 scale = Vector2(-8.54294, 5.89571)
 build_mode = 1
-polygon = PackedVector2Array(30.1294, -19.3274, 78, -59, 78, -20)
+polygon = PackedVector2Array(28.9878, -19.0798, 79.0411, -64.8227, 78, -20)
 
 [node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Floor4/StaticBody2D/floor/Stairs/CollisionShape2D"]
 position = Vector2(54.2646, -38.4461)
@@ -320,8 +321,8 @@ scale = Vector2(0.0279648, 0.028853)
 texture = ExtResource("6_6i2xm")
 
 [node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Floor4/StaticBody2D/floor"]
-position = Vector2(-1051.59, -495.187)
-scale = Vector2(0.355964, 0.135554)
+position = Vector2(-994.327, -495.187)
+scale = Vector2(0.388686, 0.135554)
 texture = ExtResource("6_7ghyd")
 
 [node name="Floor5" type="Area2D" parent="Building/StaticBody2D"]
@@ -338,24 +339,27 @@ position = Vector2(1022.55, -791.192)
 shape = SubResource("SegmentShape2D_g4yeh")
 
 [node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Floor5/StaticBody2D/floor"]
-position = Vector2(-1044.23, -489.653)
-scale = Vector2(0.348485, 0.135554)
+position = Vector2(-1080.22, -489.653)
+scale = Vector2(0.369052, 0.135554)
 texture = ExtResource("6_7ghyd")
 
 [node name="Path2D" type="Path2D" parent="Building"]
+position = Vector2(-3.74628, 116.042)
+scale = Vector2(1.00871, 1.08177)
 curve = SubResource("Curve2D_r74vt")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Building/Path2D"]
-position = Vector2(-885.118, -167.367)
+position = Vector2(-885.118, -160.974)
 rotation = -0.00489633
 rotates = false
 
 [node name="Guard" type="RigidBody2D" parent="Building/Path2D/PathFollow2D"]
-position = Vector2(-184.447, 580.049)
+position = Vector2(-180.842, 495.237)
 rotation = 0.0171356
 scale = Vector2(1.63608, 1.3832)
 collision_layer = 2
 collision_mask = 2
+gravity_scale = 0.0
 lock_rotation = true
 script = ExtResource("6_d87cv")
 
@@ -386,7 +390,7 @@ position = Vector2(107, -424)
 shape = SubResource("RectangleShape2D_fg0lw")
 
 [node name="Player" parent="." instance=ExtResource("1_s7wtf")]
-position = Vector2(-152, -123)
+position = Vector2(-1295, -227)
 
 [node name="Area2D" type="Area2D" parent="Player"]
 script = ExtResource("21_4awx5")
@@ -427,7 +431,7 @@ position = Vector2(-251, -81.0001)
 position = Vector2(-42, -81.0001)
 
 [node name="Shredder" parent="." instance=ExtResource("7_0x03c")]
-position = Vector2(-513, -85)
+position = Vector2(-456, -79)
 
 [connection signal="body_entered" from="Building/StaticBody2D/Sprite2D/DoorExit" to="Building/StaticBody2D/Sprite2D/DoorExit" method="_on_body_entered"]
 [connection signal="body_exited" from="Building/StaticBody2D/Sprite2D/DoorExit" to="Building/StaticBody2D/Sprite2D/DoorExit" method="_on_body_exited"]
