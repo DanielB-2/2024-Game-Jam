@@ -188,7 +188,7 @@ shape = SubResource("SegmentShape2D_cqh0v")
 shape = SubResource("SegmentShape2D_7djjw")
 
 [node name="BottomWall" type="CollisionShape2D" parent="Building/StaticBody2D"]
-position = Vector2(-13.0886, 10.5118)
+position = Vector2(-13.0886, -49.7953)
 scale = Vector2(0.999999, 1)
 shape = SubResource("SegmentShape2D_aby2f")
 one_way_collision_margin = 10.0
@@ -207,6 +207,7 @@ shape = SubResource("RectangleShape2D_53iu8")
 position = Vector2(272.412, 114.806)
 scale = Vector2(1.02493, 0.910748)
 collision_layer = 3
+freeze = true
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Building/StaticBody2D/Floor1/StaticBody2D/Stairs"]
 position = Vector2(-220, 258)

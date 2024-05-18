@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ek27re4kc0gn"]
+[gd_scene load_steps=5 format=3 uid="uid://ek27re4kc0gn"]
 
 [ext_resource type="Script" path="res://scripts/policy.gd" id="1_oxyby"]
 [ext_resource type="Texture2D" uid="uid://b3cgqwbp8mtai" path="res://assets/policyImage.png" id="2_np5pa"]
+[ext_resource type="AudioStream" uid="uid://g7xt2irgyfnb" path="res://music/collectpolict.wav" id="3_hpdy1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_56anv"]
 radius = 75.0003
@@ -16,5 +17,8 @@ texture = ExtResource("2_np5pa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_56anv")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_hpdy1")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
