@@ -29,7 +29,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1g2c6"]
 size = Vector2(76.2861, 112)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_pogoq"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_6wspb"]
 animations = [{
 "frames": [],
 "loop": true,
@@ -66,7 +66,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_6wspb"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_pogoq"]
 animations = [{
 "frames": [],
 "loop": true,
@@ -151,23 +151,6 @@ rotation = 4.71239
 scale = Vector2(4.80024, 1)
 shape = SubResource("WorldBoundaryShape2D_2d3lp")
 
-[node name="Door1" type="Area2D" parent="."]
-z_index = 2
-position = Vector2(-720, -135)
-scale = Vector2(2.63625, 2.44)
-script = ExtResource("2_hsbgy")
-target_room = ExtResource("4_avp1o")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Door1"]
-shape = SubResource("RectangleShape2D_1g2c6")
-
-[node name="Sprite2D" type="AnimatedSprite2D" parent="Door1"]
-position = Vector2(0.189659, -1.02459)
-scale = Vector2(0.0865434, 0.117892)
-sprite_frames = SubResource("SpriteFrames_pogoq")
-animation = &"dooropen"
-frame_progress = 0.232825
-
 [node name="Door2" type="Area2D" parent="."]
 z_index = 2
 position = Vector2(-1327, -127)
@@ -183,14 +166,6 @@ position = Vector2(1.04122, -4.72128)
 scale = Vector2(0.090322, 0.119985)
 sprite_frames = SubResource("SpriteFrames_6wspb")
 animation = &"dooropen"
-
-[node name="Building" type="Area2D" parent="."]
-z_index = -1
-position = Vector2(-732, -588)
-
-[node name="Sprite2D" type="Sprite2D" parent="Building"]
-scale = Vector2(3.81481, 4.29938)
-texture = ExtResource("7_d0llh")
 
 [node name="Door3" type="Area2D" parent="."]
 z_index = 2
@@ -251,6 +226,31 @@ position = Vector2(-605, 0)
 scale = Vector2(3.81481, 4.29938)
 texture = ExtResource("7_d0llh")
 
+[node name="Door1" type="Area2D" parent="."]
+z_index = 2
+position = Vector2(-651, -127)
+scale = Vector2(2.59625, 2.28)
+script = ExtResource("2_hsbgy")
+target_room = ExtResource("4_avp1o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door1"]
+shape = SubResource("RectangleShape2D_1g2c6")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Door1"]
+position = Vector2(1.04122, -4.72128)
+scale = Vector2(0.090322, 0.119985)
+sprite_frames = SubResource("SpriteFrames_6wspb")
+animation = &"dooropen"
+
+[node name="Building" type="Area2D" parent="."]
+z_index = -1
+position = Vector2(-56, -588)
+
+[node name="Sprite2D" type="Sprite2D" parent="Building"]
+position = Vector2(-605, 0)
+scale = Vector2(3.81481, 4.29938)
+texture = ExtResource("7_d0llh")
+
 [node name="Shredder" parent="." instance=ExtResource("8_28muw")]
 position = Vector2(360, -113)
 
@@ -299,11 +299,11 @@ position = Vector2(223, -122)
 [node name="Policy7" parent="Policies" instance=ExtResource("5_q6e6y")]
 position = Vector2(366, -253)
 
-[connection signal="body_entered" from="Door1" to="Door1" method="_on_body_entered"]
-[connection signal="body_exited" from="Door1" to="Door1" method="_on_body_exited"]
 [connection signal="body_entered" from="Door2" to="Door2" method="_on_body_entered"]
 [connection signal="body_exited" from="Door2" to="Door2" method="_on_body_exited"]
 [connection signal="body_entered" from="Door3" to="Door3" method="_on_body_entered"]
 [connection signal="body_exited" from="Door3" to="Door3" method="_on_body_exited"]
 [connection signal="body_entered" from="Door4" to="Door4" method="_on_body_entered"]
 [connection signal="body_exited" from="Door4" to="Door4" method="_on_body_exited"]
+[connection signal="body_entered" from="Door1" to="Door1" method="_on_body_entered"]
+[connection signal="body_exited" from="Door1" to="Door1" method="_on_body_exited"]
