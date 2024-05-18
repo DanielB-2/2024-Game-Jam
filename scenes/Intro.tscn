@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0k6jracpa066"]
+
+[ext_resource type="Texture2D" uid="uid://vqt855buh0w1" path="res://assets/images/mainercity.jpg" id="1_3bmwc"]
+
+[node name="Intro" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+offset_left = 55.0
+offset_top = 204.0
+offset_right = 1124.0
+offset_bottom = 601.0
+theme_override_font_sizes/font_size = 71
+text = "YOU'RE BOSS IS VERY ANGRY. ELIMINATE THE COMPETITION BY VOIDDING ALL OF THEIR POLICIES. DON\"T GET CAUGHT"
+autowrap_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_top = -45.0
+offset_right = 1153.0
+offset_bottom = 653.0
+texture = ExtResource("1_3bmwc")
