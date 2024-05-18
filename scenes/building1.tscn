@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://b04qpb1q6jiw1"]
+[gd_scene load_steps=41 format=3 uid="uid://b04qpb1q6jiw1"]
 
 [ext_resource type="Texture2D" uid="uid://clr5uixdu72tx" path="res://assets/workbg.png" id="1_0xnk1"]
 [ext_resource type="PackedScene" uid="uid://doaoix1vrbfym" path="res://scenes/player.tscn" id="1_s7wtf"]
@@ -62,6 +62,12 @@ size = Vector2(1538.82, 242.219)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tcyv6"]
 size = Vector2(1544.46, 321.754)
+
+[sub_resource type="Curve2D" id="Curve2D_r74vt"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -885.118, -167.367, 0, 0, 0, 0, -37.6298, -171.517, 0, 0, 0, 0, 358.301, -477.205, 0, 0, 0, 0, 214.326, -614.142, 0, 0, 0, 0, -525.181, -618.291, 0, 0, 0, 0, -793.498, -741.396, 0, 0, 0, 0, -675.7, -911.53, 0, 0, 0, 0, 165.244, -907.381, 0, 0, 0, 0, 379.57, -1096.88, 0, 0, 0, 0, 220.87, -1143.91, 0, 0, 0, 0, -590.624, -1143.91, 0, 0, 0, 0, -826.219, -1273.93, 0, 0, 0, 0, -683.88, -1405.33, 0, 0, 0, 0, 430.288, -1419.17)
+}
+point_count = 14
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2orfx"]
 size = Vector2(42.5355, 109.552)
@@ -343,31 +349,41 @@ shape = SubResource("RectangleShape2D_tcyv6")
 position = Vector2(1022.55, -791.192)
 shape = SubResource("SegmentShape2D_g4yeh")
 
-[node name="Guard" type="RigidBody2D" parent="."]
-position = Vector2(-394, -4)
+[node name="Path2D" type="Path2D" parent="Building"]
+curve = SubResource("Curve2D_r74vt")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Building/Path2D"]
+position = Vector2(-885.118, -167.367)
+rotation = -0.00489633
+rotates = false
+
+[node name="Guard" type="RigidBody2D" parent="Building/Path2D/PathFollow2D"]
+position = Vector2(-184.447, 580.049)
+rotation = 0.0171356
+scale = Vector2(1.63608, 1.3832)
 lock_rotation = true
 script = ExtResource("6_d87cv")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Guard"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Building/Path2D/PathFollow2D/Guard"]
 position = Vector2(105.732, -420.224)
 shape = SubResource("RectangleShape2D_2orfx")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Guard"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Building/Path2D/PathFollow2D/Guard"]
 position = Vector2(111, -419)
 scale = Vector2(0.1025, 0.0916667)
 sprite_frames = SubResource("SpriteFrames_i368j")
 animation = &"enemy_walking"
 
-[node name="GuardArea" type="Area2D" parent="Guard"]
+[node name="GuardArea" type="Area2D" parent="Building/Path2D/PathFollow2D/Guard"]
 script = ExtResource("28_65up4")
 metadata/name = "guard1"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Guard/GuardArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Building/Path2D/PathFollow2D/Guard/GuardArea"]
 position = Vector2(107, -424)
 shape = SubResource("RectangleShape2D_fg0lw")
 
 [node name="Player" parent="." instance=ExtResource("1_s7wtf")]
-position = Vector2(-156, -134)
+position = Vector2(-152, -123)
 
 [node name="Area2D" type="Area2D" parent="Player"]
 script = ExtResource("28_65up4")
