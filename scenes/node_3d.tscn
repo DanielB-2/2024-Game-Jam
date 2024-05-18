@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://db506gr5k0ngu" path="res://assets/images/DoorAnim/Open/IMG_1683-7.png" id="11_pdf7d"]
 [ext_resource type="Texture2D" uid="uid://dlobnu1rv132b" path="res://assets/images/DoorAnim/Open/IMG_1683-8.png" id="12_uydcm"]
 [ext_resource type="AudioStream" uid="uid://c1sox7gysvn5h" path="res://music/bgmusic.wav" id="18_cun76"]
-[ext_resource type="Script" path="res://scenes/audio.gd" id="18_sqmjq"]
+[ext_resource type="Script" path="res://audio.gd" id="18_sqmjq"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s0w4s"]
 
@@ -61,7 +61,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"dooropen",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6wspb"]
@@ -98,7 +98,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"dooropen",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w7m3m"]
@@ -164,6 +164,7 @@ position = Vector2(0.189659, -1.02459)
 scale = Vector2(0.0865434, 0.117892)
 sprite_frames = SubResource("SpriteFrames_pogoq")
 animation = &"dooropen"
+frame_progress = 0.232825
 
 [node name="Door2" type="Area2D" parent="."]
 z_index = 2

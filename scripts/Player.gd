@@ -83,6 +83,6 @@ func shred_policy():
 	print("Policies Voided")
 	animation_player.play("transition")
 	voided_label.visible = true
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(1.5).timeout
 	voided_label.visible = false
 	
