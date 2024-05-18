@@ -118,7 +118,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_notie",
-"speed": 5.0
+"speed": 15.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8tre"]
@@ -214,7 +214,7 @@ script = ExtResource("1_l0sym")
 position = Vector2(6, -44)
 scale = Vector2(0.117, 0.097)
 sprite_frames = SubResource("SpriteFrames_uymlw")
-animation = &"walk"
+animation = &"walk_notie"
 
 [node name="PlayerNormalCollision" type="CollisionShape2D" parent="."]
 position = Vector2(2.5, -48)
