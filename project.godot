@@ -23,7 +23,6 @@ Building1Positions="*res://scripts/Building1Positions.gd"
 
 [display]
 
-window/size/mode=4
 window/stretch/mode="canvas_items"
 
 [editor]
