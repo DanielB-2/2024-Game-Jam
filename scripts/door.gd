@@ -18,7 +18,7 @@ func _on_body_exited(body):
 func _input(event):
 	if playerInsideArea and event.is_action_pressed("action"):
 		_sprite.play("dooropen")
-		await get_tree().create_timer(1.2).timeout
+		await get_tree().create_timer(0.6).timeout
 		changeScene()
 
 func changeScene():
