@@ -25,8 +25,6 @@ func _input(event):
 
 func shredPolicies():
 	_sprite.play("shred")
+	theBody.shred_policy()
 	await get_tree().create_timer(1.3).timeout
 	_sprite.stop()
-	theBody.shred_policy()
-	
-

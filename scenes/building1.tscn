@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dny4lcseecpko" path="res://icon.svg" id="3_vvcbn"]
 [ext_resource type="Texture2D" uid="uid://d2q3vk73kg75v" path="res://assets/building.png" id="4_eegki"]
 [ext_resource type="Texture2D" uid="uid://dq58lk02fnfof" path="res://assets/tempPlayer.png" id="4_fis1m"]
-[ext_resource type="Script" path="res://scenes/guard.gd" id="6_d87cv"]
+[ext_resource type="Script" path="res://scripts/guard.gd" id="6_d87cv"]
 [ext_resource type="PackedScene" uid="uid://ek27re4kc0gn" path="res://scenes/policy.tscn" id="6_i5mad"]
 [ext_resource type="Texture2D" uid="uid://dpl7sxyp0o3js" path="res://assets/images/EnemyAnims/Walking/walking-1.png" id="6_yt3k4"]
 [ext_resource type="PackedScene" uid="uid://dk0nhbw6yiwj1" path="res://scenes/shredder.tscn" id="7_0x03c"]
@@ -23,7 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://bbumytqso5cii" path="res://assets/images/EnemyAnims/Walking/walking-12.png" id="17_07j2k"]
 [ext_resource type="Texture2D" uid="uid://j5hmvts812hr" path="res://assets/images/EnemyAnims/Walking/walking-13.png" id="18_7vhis"]
 [ext_resource type="Texture2D" uid="uid://p2ob4mry3ceh" path="res://assets/images/EnemyAnims/Walking/walking-14.png" id="19_7gjev"]
-[ext_resource type="Script" path="res://scenes/roomDetection.gd" id="28_65up4"]
+[ext_resource type="Script" path="res://scripts/roomDetection.gd" id="21_4awx5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hjmq6"]
 size = Vector2(178.523, 213.5)
@@ -386,7 +386,7 @@ shape = SubResource("RectangleShape2D_fg0lw")
 position = Vector2(-152, -123)
 
 [node name="Area2D" type="Area2D" parent="Player"]
-script = ExtResource("28_65up4")
+script = ExtResource("21_4awx5")
 metadata/name = "player"
 
 [node name="PlayerArea" type="CollisionShape2D" parent="Player/Area2D"]
