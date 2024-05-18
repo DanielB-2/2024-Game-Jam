@@ -1,5 +1,5 @@
 extends Button
-
+const NODE_3D = preload("res://scenes/node_3d.tscn")
 
 
 func _ready():
