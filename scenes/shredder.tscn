@@ -1,6 +1,6 @@
 [gd_scene load_steps=28 format=3 uid="uid://dk0nhbw6yiwj1"]
 
-[ext_resource type="Script" path="res://scenes/shredder.gd" id="1_3pqdl"]
+[ext_resource type="Script" path="res://scripts/shredder.gd" id="1_l7ywo"]
 [ext_resource type="Texture2D" uid="uid://cassigfqow5bx" path="res://assets/images/ShredAnim/Shred/Untitled_Artwork-1.png" id="2_u2yy1"]
 [ext_resource type="Texture2D" uid="uid://bw3llre8e473c" path="res://assets/images/ShredAnim/Shred/Untitled_Artwork-2.png" id="3_qfj00"]
 [ext_resource type="Texture2D" uid="uid://ddj7khd41yxtf" path="res://assets/images/ShredAnim/Shred/Untitled_Artwork-3.png" id="4_sbxi1"]
@@ -116,7 +116,7 @@ size = Vector2(76.4706, 128)
 
 [node name="Shredder" type="Area2D"]
 scale = Vector2(0.68, 0.48)
-script = ExtResource("1_3pqdl")
+script = ExtResource("1_l7ywo")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(2.94118, -164.583)
