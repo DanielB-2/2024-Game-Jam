@@ -11,11 +11,13 @@ func _on_body_entered(body):
 	if body.name == "Player":
 		playerInsideArea = true
 		theBody = body
+		theBody.toggleSpaceIcon()
 		set_process_input(true)
 
 func _on_body_exited(body):
 	if body.name == "Player":
 		playerInsideArea = false
+		theBody.toggleSpaceIcon()
 		set_process_input(false)
 
 func _input(event):
