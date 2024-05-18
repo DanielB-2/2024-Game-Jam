@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://doaoix1vrbfym"]
+[gd_scene load_steps=39 format=3 uid="uid://doaoix1vrbfym"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_l0sym"]
 [ext_resource type="Texture2D" uid="uid://chckxu7x2crs6" path="res://assets/images/PlayerAnims/Walking/y-1.png" id="2_pny10"]
@@ -15,9 +15,23 @@
 [ext_resource type="Texture2D" uid="uid://ch7scomstgwop" path="res://assets/images/PlayerAnims/Walking/y-12.png" id="13_vtcuv"]
 [ext_resource type="Texture2D" uid="uid://bdvjsj2xxahhw" path="res://assets/images/voidedImage.png" id="14_b33rq"]
 [ext_resource type="FontFile" uid="uid://y1wejrllh8at" path="res://assets/PixelOperator8-Bold.ttf" id="14_gbf1d"]
+[ext_resource type="Texture2D" uid="uid://dwx2fxynvgll2" path="res://assets/images/PlayerAnims/walking_notie/walk-1.png" id="14_rd03s"]
+[ext_resource type="Texture2D" uid="uid://co6bfyog3ucns" path="res://assets/images/PlayerAnims/walking_notie/walk-2.png" id="15_afjnk"]
 [ext_resource type="Texture2D" uid="uid://c3fookl17efsx" path="res://assets/images/policyBoard.png" id="15_ou85k"]
+[ext_resource type="Texture2D" uid="uid://dd1o7omekjr4a" path="res://assets/images/PlayerAnims/walking_notie/walk-3.png" id="16_gjuth"]
+[ext_resource type="Texture2D" uid="uid://caqefb1oxv503" path="res://assets/images/PlayerAnims/walking_notie/walk-4.png" id="17_eg682"]
 [ext_resource type="Texture2D" uid="uid://b3cgqwbp8mtai" path="res://assets/policyImage.png" id="17_tn6kc"]
+[ext_resource type="Texture2D" uid="uid://b4hy4u4nehoni" path="res://assets/images/PlayerAnims/walking_notie/walk-5.png" id="18_gyvp2"]
 [ext_resource type="Texture2D" uid="uid://c12bey0sdcref" path="res://assets/icon.png" id="18_tdda3"]
+[ext_resource type="Texture2D" uid="uid://cxak55lco541i" path="res://assets/eicon.png" id="19_dtwo4"]
+[ext_resource type="Texture2D" uid="uid://b01m0mh2luqa5" path="res://assets/images/PlayerAnims/walking_notie/walk-6.png" id="19_h3ufn"]
+[ext_resource type="Texture2D" uid="uid://br54guleoncb3" path="res://assets/hide.png" id="20_1a8ki"]
+[ext_resource type="Texture2D" uid="uid://dquhpmgaa7ge" path="res://assets/images/PlayerAnims/walking_notie/walk-7.png" id="20_mage8"]
+[ext_resource type="Texture2D" uid="uid://d1vld4bj2hmmt" path="res://assets/images/PlayerAnims/walking_notie/walk-8.png" id="21_7qftb"]
+[ext_resource type="Texture2D" uid="uid://s1o24vih6ify" path="res://assets/images/PlayerAnims/walking_notie/walk-9.png" id="22_givi4"]
+[ext_resource type="Texture2D" uid="uid://ce10ihbbbv7ql" path="res://assets/images/PlayerAnims/walking_notie/walk-10.png" id="23_v116g"]
+[ext_resource type="Texture2D" uid="uid://bjrkdju7l555i" path="res://assets/images/PlayerAnims/walking_notie/walk-11.png" id="24_bbd37"]
+[ext_resource type="Texture2D" uid="uid://ddbh0rda2h45g" path="res://assets/images/PlayerAnims/walking_notie/walk-12.png" id="25_x56e7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uymlw"]
 animations = [{
@@ -61,6 +75,47 @@ animations = [{
 "loop": true,
 "name": &"walk",
 "speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_rd03s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_afjnk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_gjuth")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_eg682")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_gyvp2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_h3ufn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_mage8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_7qftb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_givi4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_v116g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_bbd37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_x56e7")
+}],
+"loop": true,
+"name": &"walk_notie",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8tre"]
@@ -157,7 +212,6 @@ position = Vector2(6, -44)
 scale = Vector2(0.117, 0.097)
 sprite_frames = SubResource("SpriteFrames_uymlw")
 animation = &"walk"
-frame_progress = 0.533444
 
 [node name="PlayerNormalCollision" type="CollisionShape2D" parent="."]
 position = Vector2(2.5, -48)
@@ -170,10 +224,10 @@ metadata/_edit_lock_ = true
 
 [node name="PolicyLabel" type="Label" parent="."]
 z_index = 10
-offset_left = -328.0
+offset_left = -374.0
 offset_top = -423.0
 offset_right = -257.0
-offset_bottom = -382.0
+offset_bottom = -373.0
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/line_spacing = 16
@@ -186,7 +240,7 @@ autowrap_mode = 3
 
 [node name="PolicyLabel2" type="Label" parent="."]
 z_index = 10
-offset_left = -530.0
+offset_left = -558.0
 offset_top = -420.0
 offset_right = -354.0
 offset_bottom = -328.0
@@ -213,9 +267,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -500.0
-offset_top = -807.0
+offset_top = -600.0
 offset_right = 500.0
-offset_bottom = 193.0
+offset_bottom = 400.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.005, 0.005)
@@ -231,21 +285,52 @@ autoplay = "transition"
 [node name="PolicyBoard" type="TextureRect" parent="."]
 offset_left = -560.0
 offset_top = -478.0
-offset_right = 782.0
+offset_right = 694.0
 offset_bottom = 522.0
 scale = Vector2(0.24, 0.2)
 texture = ExtResource("15_ou85k")
 
 [node name="PolicyImage" type="Sprite2D" parent="PolicyBoard"]
-position = Vector2(1012.5, 520)
+position = Vector2(925, 535)
 scale = Vector2(0.625, 0.71)
 texture = ExtResource("17_tn6kc")
 
 [node name="PolicyBoard2" type="TextureRect" parent="PolicyBoard"]
 layout_mode = 0
-offset_left = 1020.83
-offset_top = 275.0
-offset_right = 1802.83
-offset_bottom = 1275.0
+offset_left = 925.0
+offset_top = 290.0
+offset_right = 1707.0
+offset_bottom = 1290.0
 scale = Vector2(0.24, 0.2)
 texture = ExtResource("18_tdda3")
+
+[node name="PolicyBoard3" type="Sprite2D" parent="."]
+position = Vector2(-506, -254)
+scale = Vector2(0.095, 0.16225)
+texture = ExtResource("15_ou85k")
+
+[node name="Sprite2D" type="Sprite2D" parent="PolicyBoard3"]
+position = Vector2(427.273, -252.011)
+scale = Vector2(13.5303, 7.64924)
+texture = ExtResource("19_dtwo4")
+
+[node name="PolicyImage" type="Sprite2D" parent="PolicyBoard3"]
+position = Vector2(21.0523, -36.98)
+scale = Vector2(19.2983, 8.83411)
+texture = ExtResource("20_1a8ki")
+
+[node name="PolicyLabel3" type="Label" parent="."]
+z_index = 10
+offset_left = -592.0
+offset_top = -273.0
+offset_right = -416.0
+offset_bottom = -181.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 16
+theme_override_fonts/font = ExtResource("14_gbf1d")
+theme_override_font_sizes/font_size = 18
+text = "HIDE"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

@@ -1,11 +1,12 @@
-[gd_scene load_steps=41 format=3 uid="uid://b04qpb1q6jiw1"]
+[gd_scene load_steps=43 format=3 uid="uid://b04qpb1q6jiw1"]
 
 [ext_resource type="Texture2D" uid="uid://clr5uixdu72tx" path="res://assets/workbg.png" id="1_0xnk1"]
 [ext_resource type="PackedScene" uid="uid://doaoix1vrbfym" path="res://scenes/player.tscn" id="1_s7wtf"]
 [ext_resource type="Script" path="res://scripts/DoorExit.gd" id="3_4066m"]
-[ext_resource type="Texture2D" uid="uid://dny4lcseecpko" path="res://icon.svg" id="3_vvcbn"]
 [ext_resource type="Texture2D" uid="uid://d2q3vk73kg75v" path="res://assets/building.png" id="4_eegki"]
-[ext_resource type="Texture2D" uid="uid://dq58lk02fnfof" path="res://assets/tempPlayer.png" id="4_fis1m"]
+[ext_resource type="Texture2D" uid="uid://bj3ybwxf6fe05" path="res://assets/images/DoorAnim/Open/IMG_1683-1.png" id="4_xa1b6"]
+[ext_resource type="Texture2D" uid="uid://bjnsnts38t6jc" path="res://assets/stairs.png" id="6_6i2xm"]
+[ext_resource type="Texture2D" uid="uid://ppo186khpaxr" path="res://assets/floor.png" id="6_7ghyd"]
 [ext_resource type="Script" path="res://scripts/guard.gd" id="6_d87cv"]
 [ext_resource type="PackedScene" uid="uid://ek27re4kc0gn" path="res://scenes/policy.tscn" id="6_i5mad"]
 [ext_resource type="Texture2D" uid="uid://dpl7sxyp0o3js" path="res://assets/images/EnemyAnims/Walking/walking-1.png" id="6_yt3k4"]
@@ -127,6 +128,8 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5mhn7"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fg0lw"]
 size = Vector2(25, 26.5)
 
@@ -170,9 +173,9 @@ position = Vector2(50.2616, 49.25)
 shape = SubResource("RectangleShape2D_hjmq6")
 
 [node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Sprite2D/DoorExit"]
-position = Vector2(51.0636, 50.84)
-scale = Vector2(1.39787, 1.67437)
-texture = ExtResource("3_vvcbn")
+position = Vector2(53.2688, 53.1949)
+scale = Vector2(0.207595, 0.230882)
+texture = ExtResource("4_xa1b6")
 
 [node name="LeftWall" type="CollisionShape2D" parent="Building/StaticBody2D"]
 shape = SubResource("SegmentShape2D_d07jf")
@@ -210,19 +213,9 @@ build_mode = 1
 polygon = PackedVector2Array(30.1294, -19.3274, 78, -59, 78, -20, 73.5878, -20)
 
 [node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Floor1/StaticBody2D/Stairs/CollisionShape2D"]
-position = Vector2(66.5, -30)
-scale = Vector2(0.46, 0.4)
-texture = ExtResource("4_fis1m")
-
-[node name="Sprite2D2" type="Sprite2D" parent="Building/StaticBody2D/Floor1/StaticBody2D/Stairs/CollisionShape2D"]
-position = Vector2(48.5, -25.5)
-scale = Vector2(0.26, 0.22)
-texture = ExtResource("4_fis1m")
-
-[node name="Sprite2D3" type="Sprite2D" parent="Building/StaticBody2D/Floor1/StaticBody2D/Stairs/CollisionShape2D"]
-position = Vector2(71.5, -44.5)
-scale = Vector2(0.26, 0.22)
-texture = ExtResource("4_fis1m")
+position = Vector2(56.4829, -36.1776)
+scale = Vector2(0.0247744, 0.0220355)
+texture = ExtResource("6_6i2xm")
 
 [node name="Floor2" type="Area2D" parent="Building/StaticBody2D"]
 
@@ -236,6 +229,11 @@ shape = SubResource("RectangleShape2D_r166t")
 position = Vector2(567.719, -20.748)
 shape = SubResource("SegmentShape2D_g4yeh")
 
+[node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Floor2/StaticBody2D/floor"]
+position = Vector2(-912.931, -489.654)
+scale = Vector2(0.40715, 0.135554)
+texture = ExtResource("6_7ghyd")
+
 [node name="Stairs" type="RigidBody2D" parent="Building/StaticBody2D/Floor2/StaticBody2D"]
 position = Vector2(-674.061, -521.467)
 scale = Vector2(0.990977, 0.959108)
@@ -248,19 +246,9 @@ build_mode = 1
 polygon = PackedVector2Array(30.1294, -19.3274, 78, -59, 78, -20)
 
 [node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Floor2/StaticBody2D/Stairs/CollisionShape2D"]
-position = Vector2(66.5, -30)
-scale = Vector2(0.46, 0.4)
-texture = ExtResource("4_fis1m")
-
-[node name="Sprite2D2" type="Sprite2D" parent="Building/StaticBody2D/Floor2/StaticBody2D/Stairs/CollisionShape2D"]
-position = Vector2(48.5, -25.5)
-scale = Vector2(0.26, 0.22)
-texture = ExtResource("4_fis1m")
-
-[node name="Sprite2D3" type="Sprite2D" parent="Building/StaticBody2D/Floor2/StaticBody2D/Stairs/CollisionShape2D"]
-position = Vector2(71.5, -44.5)
-scale = Vector2(0.26, 0.22)
-texture = ExtResource("4_fis1m")
+position = Vector2(54.2646, -38.4461)
+scale = Vector2(0.0279648, 0.028853)
+texture = ExtResource("6_6i2xm")
 
 [node name="Floor3" type="Area2D" parent="Building/StaticBody2D"]
 
@@ -274,6 +262,11 @@ shape = SubResource("RectangleShape2D_h0xgy")
 position = Vector2(955.469, -293.239)
 shape = SubResource("SegmentShape2D_g4yeh")
 
+[node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Floor3/StaticBody2D/floor"]
+position = Vector2(-1078.99, -495.186)
+scale = Vector2(0.40715, 0.135554)
+texture = ExtResource("6_7ghyd")
+
 [node name="Stairs" type="RigidBody2D" parent="Building/StaticBody2D/Floor3/StaticBody2D"]
 position = Vector2(181.604, -980.691)
 freeze = true
@@ -285,19 +278,9 @@ build_mode = 1
 polygon = PackedVector2Array(30.1294, -19.3274, 78, -59, 78, -20)
 
 [node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Floor3/StaticBody2D/Stairs/CollisionShape2D"]
-position = Vector2(66.5, -30)
-scale = Vector2(0.46, 0.4)
-texture = ExtResource("4_fis1m")
-
-[node name="Sprite2D2" type="Sprite2D" parent="Building/StaticBody2D/Floor3/StaticBody2D/Stairs/CollisionShape2D"]
-position = Vector2(48.5, -25.5)
-scale = Vector2(0.26, 0.22)
-texture = ExtResource("4_fis1m")
-
-[node name="Sprite2D3" type="Sprite2D" parent="Building/StaticBody2D/Floor3/StaticBody2D/Stairs/CollisionShape2D"]
-position = Vector2(71.5, -44.5)
-scale = Vector2(0.26, 0.22)
-texture = ExtResource("4_fis1m")
+position = Vector2(54.2646, -38.4461)
+scale = Vector2(0.0279648, 0.028853)
+texture = ExtResource("6_6i2xm")
 
 [node name="Floor4" type="Area2D" parent="Building/StaticBody2D"]
 
@@ -323,19 +306,14 @@ build_mode = 1
 polygon = PackedVector2Array(30.1294, -19.3274, 78, -59, 78, -20)
 
 [node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Floor4/StaticBody2D/floor/Stairs/CollisionShape2D"]
-position = Vector2(66.5, -30)
-scale = Vector2(0.46, 0.4)
-texture = ExtResource("4_fis1m")
+position = Vector2(54.2646, -38.4461)
+scale = Vector2(0.0279648, 0.028853)
+texture = ExtResource("6_6i2xm")
 
-[node name="Sprite2D2" type="Sprite2D" parent="Building/StaticBody2D/Floor4/StaticBody2D/floor/Stairs/CollisionShape2D"]
-position = Vector2(48.5, -25.5)
-scale = Vector2(0.26, 0.22)
-texture = ExtResource("4_fis1m")
-
-[node name="Sprite2D3" type="Sprite2D" parent="Building/StaticBody2D/Floor4/StaticBody2D/floor/Stairs/CollisionShape2D"]
-position = Vector2(71.5, -44.5)
-scale = Vector2(0.26, 0.22)
-texture = ExtResource("4_fis1m")
+[node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Floor4/StaticBody2D/floor"]
+position = Vector2(-962.014, -495.187)
+scale = Vector2(0.40715, 0.135554)
+texture = ExtResource("6_7ghyd")
 
 [node name="Floor5" type="Area2D" parent="Building/StaticBody2D"]
 
@@ -348,6 +326,11 @@ shape = SubResource("RectangleShape2D_tcyv6")
 [node name="floor" type="CollisionShape2D" parent="Building/StaticBody2D/Floor5/StaticBody2D"]
 position = Vector2(1022.55, -791.192)
 shape = SubResource("SegmentShape2D_g4yeh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Floor5/StaticBody2D/floor"]
+position = Vector2(-1146.89, -489.653)
+scale = Vector2(0.40715, 0.135554)
+texture = ExtResource("6_7ghyd")
 
 [node name="Path2D" type="Path2D" parent="Building"]
 curve = SubResource("Curve2D_r74vt")
@@ -365,6 +348,7 @@ lock_rotation = true
 script = ExtResource("6_d87cv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Building/Path2D/PathFollow2D/Guard"]
+z_index = 1
 position = Vector2(105.732, -420.224)
 shape = SubResource("RectangleShape2D_2orfx")
 
@@ -375,10 +359,18 @@ sprite_frames = SubResource("SpriteFrames_i368j")
 animation = &"enemy_walking"
 
 [node name="GuardArea" type="Area2D" parent="Building/Path2D/PathFollow2D/Guard"]
-script = ExtResource("28_65up4")
+position = Vector2(648.856, -308.417)
+rotation = -0.0144766
+scale = Vector2(1.00003, 0.99998)
+skew = 0.00412893
+script = ExtResource("21_4awx5")
 metadata/name = "guard1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Building/Path2D/PathFollow2D/Guard/GuardArea"]
+position = Vector2(-541, -119)
+shape = SubResource("RectangleShape2D_5mhn7")
+
+[node name="Building_Path2D_PathFollow2D_Guard_GuardArea#CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(107, -424)
 shape = SubResource("RectangleShape2D_fg0lw")
 
