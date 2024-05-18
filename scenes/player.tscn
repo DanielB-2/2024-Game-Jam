@@ -224,10 +224,10 @@ metadata/_edit_lock_ = true
 
 [node name="PolicyLabel" type="Label" parent="."]
 z_index = 10
-offset_left = -374.0
+offset_left = -375.0
 offset_top = -423.0
 offset_right = -196.0
-offset_bottom = -319.0
+offset_bottom = -367.0
 scale = Vector2(0.68, 0.68)
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -241,10 +241,10 @@ autowrap_mode = 3
 
 [node name="PolicyLabel2" type="Label" parent="."]
 z_index = 10
-offset_left = -558.0
+offset_left = -568.0
 offset_top = -420.0
-offset_right = -354.0
-offset_bottom = -328.0
+offset_right = -355.0
+offset_bottom = -364.0
 scale = Vector2(1.12001, 1.12001)
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -285,15 +285,15 @@ libraries = {
 autoplay = "transition"
 
 [node name="PolicyBoard" type="TextureRect" parent="."]
-offset_left = -560.0
-offset_top = -478.0
-offset_right = 694.0
-offset_bottom = 522.0
+offset_left = -561.0
+offset_top = -494.0
+offset_right = 693.0
+offset_bottom = 506.0
 scale = Vector2(0.24, 0.2)
 texture = ExtResource("15_ou85k")
 
 [node name="PolicyImage" type="Sprite2D" parent="PolicyBoard"]
-position = Vector2(956.771, 534.375)
+position = Vector2(950, 510)
 scale = Vector2(0.389583, 0.4775)
 texture = ExtResource("17_tn6kc")
 
@@ -307,7 +307,7 @@ scale = Vector2(0.24, 0.2)
 texture = ExtResource("18_tdda3")
 
 [node name="PolicyBoard3" type="Sprite2D" parent="."]
-position = Vector2(-506, -269)
+position = Vector2(-512, -292)
 scale = Vector2(0.095, 0.226)
 texture = ExtResource("15_ou85k")
 
@@ -323,16 +323,46 @@ texture = ExtResource("20_1a8ki")
 
 [node name="PolicyLabel3" type="Label" parent="."]
 z_index = 10
-offset_left = -594.0
-offset_top = -288.0
-offset_right = -418.0
-offset_bottom = -196.0
+offset_left = -600.0
+offset_top = -314.0
+offset_right = -424.0
+offset_bottom = -222.0
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/line_spacing = 16
 theme_override_fonts/font = ExtResource("14_gbf1d")
 theme_override_font_sizes/font_size = 18
 text = "HIDE"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="PolicyBoard4" type="Sprite2D" parent="."]
+position = Vector2(-357.538, -290)
+scale = Vector2(0.179076, 0.24)
+texture = ExtResource("15_ou85k")
+
+[node name="ProgressBar" type="ProgressBar" parent="PolicyBoard4"]
+offset_left = -399.0
+offset_top = -8.0
+offset_right = 399.0
+offset_bottom = 133.0
+theme_override_fonts/font = ExtResource("14_gbf1d")
+theme_override_font_sizes/font_size = 100
+
+[node name="PolicyLabel4" type="Label" parent="."]
+z_index = 10
+offset_left = -433.0
+offset_top = -355.0
+offset_right = -298.0
+offset_bottom = -268.0
+scale = Vector2(1.12001, 1.12001)
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 16
+theme_override_fonts/font = ExtResource("14_gbf1d")
+theme_override_font_sizes/font_size = 14
+text = "EXPOSURE:"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
