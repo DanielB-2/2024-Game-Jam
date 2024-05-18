@@ -4,6 +4,8 @@ var player
 var targetPos = Vector2()
 var lastPos = Vector2()
 @onready var _anim = $AnimatedSprite2D
+@onready var collision = $CollisionShape2D
+@onready var playerData = PlayerData
 var canMove = true
 var pathFollow
 
@@ -17,6 +19,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	targetPos = player.global_position+(Vector2.DOWN * 400)+(Vector2.LEFT * 150)
+	collision.disabled = true if playerData.tietoggle else false
 	if targetPos.distance_to(lastPos) > 0 and canMove:
 		_anim.play("enemy_walking")
 		canMove = false

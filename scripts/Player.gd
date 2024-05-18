@@ -4,6 +4,13 @@ extends CharacterBody2D
 @onready var voided_label = $voidedLabel
 @onready var _sprite = $AnimatedSprite2D
 @onready var animation_player = $voidedLabel/AnimationPlayer
+@onready var hideaction = $PolicyLabel3
+@onready var hideactionimg = $PolicyBoard3/PolicyImage
+
+@onready var tieGood = load("res://assets/tie.png")
+@onready var tieBad = load("res://assets/hide.png")
+
+@onready var collision = $PlayerNormalCollision
 
 var speed = 500.0
 const JUMP_VELOCITY = -400.0
@@ -25,6 +32,10 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_just_pressed("up") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		
+	
+		
+		
 
 		
 	if Input.is_action_pressed("crouchKey"):
@@ -44,6 +55,9 @@ func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 
 
+	_sprite.animation = "walk_notie" if playerData.tietoggle else "walk"
+	hideactionimg.texture = tieGood if playerData.tietoggle else tieBad
+	hideaction.text = "SHOW" if playerData.tietoggle else "HIDE"
 			
 
 	var direction = Input.get_axis("left", "right")
@@ -55,13 +69,16 @@ func _physics_process(delta):
 			_sprite.flip_h = false
 				
 				
-		_sprite.play("walk")
+		_sprite.play("walk_notie" if playerData.tietoggle else "walk")
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		_sprite.stop()
 
 	move_and_slide()
 	policy_label.text = str(playerData.policiesHeld)
+	
+	if Input.is_action_just_pressed("tietoggle"):
+		playerData.tietoggle = !playerData.tietoggle
 	
 func onReturnToMainScene(doorPosition):
 	# Spawn player at the door position
