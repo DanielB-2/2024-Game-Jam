@@ -20,5 +20,5 @@ func on_coin_collected(index):
 	updateCoinState(index, true)
 	
 func introSequence():
-	await get_tree().create_timer(10).timeout
+	await get_tree().create_timer(1).timeout
 	get_tree().change_scene_to_file("res://scenes/node_3d.tscn")

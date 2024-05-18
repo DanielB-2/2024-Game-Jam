@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://doaoix1vrbfym"]
+[gd_scene load_steps=41 format=3 uid="uid://doaoix1vrbfym"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_l0sym"]
 [ext_resource type="Texture2D" uid="uid://chckxu7x2crs6" path="res://assets/images/PlayerAnims/Walking/y-1.png" id="2_pny10"]
@@ -32,6 +32,8 @@
 [ext_resource type="Texture2D" uid="uid://ce10ihbbbv7ql" path="res://assets/images/PlayerAnims/walking_notie/walk-10.png" id="23_v116g"]
 [ext_resource type="Texture2D" uid="uid://bjrkdju7l555i" path="res://assets/images/PlayerAnims/walking_notie/walk-11.png" id="24_bbd37"]
 [ext_resource type="Texture2D" uid="uid://ddbh0rda2h45g" path="res://assets/images/PlayerAnims/walking_notie/walk-12.png" id="25_x56e7"]
+[ext_resource type="Texture2D" uid="uid://c1pcaef14jc5s" path="res://assets/images/policyBoard (3).png" id="31_hqd6a"]
+[ext_resource type="Texture2D" uid="uid://s4hwkdqx4o0j" path="res://assets/images/policyBoard (4).png" id="34_l3ody"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uymlw"]
 animations = [{
@@ -269,9 +271,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -500.0
-offset_top = -600.0
+offset_top = -772.0
 offset_right = 500.0
-offset_bottom = 400.0
+offset_bottom = 228.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.005, 0.005)
@@ -307,25 +309,25 @@ scale = Vector2(0.24, 0.2)
 texture = ExtResource("18_tdda3")
 
 [node name="PolicyBoard3" type="Sprite2D" parent="."]
-position = Vector2(-512, -292)
-scale = Vector2(0.095, 0.226)
-texture = ExtResource("15_ou85k")
+position = Vector2(-502, -292)
+scale = Vector2(0.34, 0.34)
+texture = ExtResource("31_hqd6a")
 
 [node name="Sprite2D" type="Sprite2D" parent="PolicyBoard3"]
-position = Vector2(463.158, -131.799)
-scale = Vector2(11.6774, 4.78099)
+position = Vector2(137.5, -93.75)
+scale = Vector2(4.87501, 4.87501)
 texture = ExtResource("19_dtwo4")
 
 [node name="PolicyImage" type="Sprite2D" parent="PolicyBoard3"]
-position = Vector2(-10.5264, -22.124)
-scale = Vector2(19.6491, 6.19469)
+position = Vector2(-2.7895e-05, 12.5)
+scale = Vector2(5, 5)
 texture = ExtResource("20_1a8ki")
 
 [node name="PolicyLabel3" type="Label" parent="."]
 z_index = 10
-offset_left = -600.0
+offset_left = -589.0
 offset_top = -314.0
-offset_right = -424.0
+offset_right = -413.0
 offset_bottom = -222.0
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -338,30 +340,30 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="PolicyBoard4" type="Sprite2D" parent="."]
-position = Vector2(-357.538, -290)
-scale = Vector2(0.179076, 0.24)
-texture = ExtResource("15_ou85k")
+position = Vector2(-347.538, -290)
+scale = Vector2(0.34, 0.34)
+texture = ExtResource("34_l3ody")
 
 [node name="ProgressBar" type="ProgressBar" parent="PolicyBoard4"]
-offset_left = -399.0
-offset_top = -8.0
-offset_right = 399.0
-offset_bottom = 133.0
+offset_left = -179.0
+offset_top = 23.5294
+offset_right = 181.0
+offset_bottom = 100.529
 theme_override_fonts/font = ExtResource("14_gbf1d")
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 50
 
 [node name="PolicyLabel4" type="Label" parent="."]
 z_index = 10
-offset_left = -433.0
-offset_top = -355.0
-offset_right = -298.0
-offset_bottom = -268.0
+offset_left = -421.0
+offset_top = -347.0
+offset_right = -286.0
+offset_bottom = -260.0
 scale = Vector2(1.12001, 1.12001)
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/line_spacing = 16
 theme_override_fonts/font = ExtResource("14_gbf1d")
-theme_override_font_sizes/font_size = 14
+theme_override_font_sizes/font_size = 13
 text = "EXPOSURE:"
 horizontal_alignment = 1
 vertical_alignment = 1
