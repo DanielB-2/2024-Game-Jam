@@ -63,6 +63,7 @@ func can_i_see_the_player():
 func _physics_process(delta):
 	#check if the guard can see the player
 	if can_i_see_the_player():
+		print("I can see you")
 		#if the guard can see the player
 		speed = 2
 		var right
@@ -111,7 +112,6 @@ func _physics_process(delta):
 	else:
 		pathFollow.progress += 200 * delta * speed
 		
-	print(pathFollow.progress)
 	
 
 
