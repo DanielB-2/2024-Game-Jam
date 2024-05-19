@@ -380,12 +380,13 @@ position = Vector2(648.856, -308.417)
 rotation = -0.0144766
 scale = Vector2(1.00003, 0.99998)
 skew = 0.00412893
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("21_4awx5")
 metadata/name = "guard1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Building/Path2D/PathFollow2D/Guard/GuardArea"]
 position = Vector2(-541.459, -116.061)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_5mhn7")
 
 [node name="Building_Path2D_PathFollow2D_Guard_GuardArea#CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -438,3 +439,4 @@ position = Vector2(-456, -79)
 
 [connection signal="body_entered" from="Building/StaticBody2D/Sprite2D/DoorExit" to="Building/StaticBody2D/Sprite2D/DoorExit" method="_on_body_entered"]
 [connection signal="body_exited" from="Building/StaticBody2D/Sprite2D/DoorExit" to="Building/StaticBody2D/Sprite2D/DoorExit" method="_on_body_exited"]
+[connection signal="body_entered" from="Building/Path2D/PathFollow2D/Guard/GuardArea" to="Building/Path2D/PathFollow2D/Guard" method="_on_guard_area_body_entered"]
