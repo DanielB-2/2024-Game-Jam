@@ -13,6 +13,7 @@ var speed = 1
 var Building1Positions
 var nameOfSelf
 var right
+var heard = "no"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -40,6 +41,7 @@ func _process(delta):
 func patrol_building():
 	speed = 1
 func can_i_see_the_player():
+
 	if not playerData.tietoggle:
 		if Building1Positions.locations[nameOfSelf] == Building1Positions.locations["player"]:
 			return true
@@ -52,8 +54,22 @@ func can_i_see_the_player():
 			else:
 				return false
 		patrol_building()
-func _physics_process(delta):
 
+func can_i_hear_the_player():
+	if Building1Positions.locations[nameOfSelf] == Building1Positions.locations["player"] + 1:
+		return "down"
+	elif Building1Positions.locations[nameOfSelf] == Building1Positions.locations["player"]-1:
+		return "up"
+	else:
+		#either no, or the guard should be seeing the player on the same floor
+		return "no"
+		
+func _physics_process(delta):
+	if not playerData.shifting:
+		heard = can_i_hear_the_player()
+	else:
+		heard = "no"
+		speed = 1
 	#is the player wearing a tie
 	#if not playerData.tietoggle:
 		#check if the guard can see the player
@@ -90,6 +106,15 @@ func _physics_process(delta):
 			#Back to the main scene for you
 			get_tree().change_scene_to_file("res://scenes/node_3d.tscn")
 			player.onReturnToMainScene(Vector2(0, -1000))
+	
+	elif heard == "up":
+		#run up and investigate
+		direction = true
+		speed = 2
+	elif heard == "down":
+		#run down and investigate
+		direction = false
+		speed = 2
 	#else:
 		#otherwise just patrol like normal
 		#patrol_building()
