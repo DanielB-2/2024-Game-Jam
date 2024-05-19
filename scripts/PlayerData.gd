@@ -9,6 +9,7 @@ var lastEntered = Vector2(-100,0)
 var tietoggle = false
 var shifting = false
 var exposure = 0
+var exposed = false
 
 func _ready():
 	# Set the singleton instance
