@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://5xwk1uxo0i10"]
+[gd_scene load_steps=6 format=3 uid="uid://5xwk1uxo0i10"]
 
 [ext_resource type="Texture2D" uid="uid://vqt855buh0w1" path="res://assets/images/mainercity.jpg" id="1_v4xk2"]
 [ext_resource type="Texture2D" uid="uid://kyabdkcmb73d" path="res://assets/logo.png" id="2_gta0u"]
 [ext_resource type="Script" path="res://scenes/scrollingCredits.gd" id="2_lkhbm"]
+[ext_resource type="Script" path="res://scenes/ExitCreditsButton.gd" id="4_12a66"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h1b7c"]
 border_color = Color(0, 0, 0, 1)
@@ -24,16 +25,14 @@ texture = ExtResource("1_v4xk2")
 offset_left = 50.0
 offset_top = 244.0
 offset_right = 420.0
-offset_bottom = 589.0
+offset_bottom = 536.0
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_h1b7c")
 text = "   
     DanielB-2
    _galaga_1
    asthehourspass
-   buildaboat373
-
-"
+   buildaboat373"
 
 [node name="Label" type="Label" parent="Label"]
 layout_mode = 0
@@ -70,3 +69,19 @@ horizontal_alignment = 1
 position = Vector2(230, 219)
 scale = Vector2(0.222222, 0.288889)
 texture = ExtResource("2_gta0u")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 54.0
+offset_top = 566.0
+offset_right = 415.0
+offset_bottom = 628.0
+script = ExtResource("4_12a66")
+
+[node name="Label3" type="Label" parent="Button"]
+offset_left = 1.0
+offset_right = 361.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_h1b7c")
+text = "Exit"
+horizontal_alignment = 1
