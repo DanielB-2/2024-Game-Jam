@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://b04qpb1q6jiw1"]
+[gd_scene load_steps=42 format=3 uid="uid://b04qpb1q6jiw1"]
 
 [ext_resource type="Texture2D" uid="uid://clr5uixdu72tx" path="res://assets/workbg.png" id="1_0xnk1"]
 [ext_resource type="PackedScene" uid="uid://doaoix1vrbfym" path="res://scenes/player.tscn" id="1_s7wtf"]
@@ -14,7 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://dx0kik60q78vw" path="res://assets/images/EnemyAnims/Walking/walking-2.png" id="7_yavjk"]
 [ext_resource type="Texture2D" uid="uid://b6kxwl7pwi2ur" path="res://assets/images/EnemyAnims/Walking/walking-3.png" id="8_l0ejr"]
 [ext_resource type="Texture2D" uid="uid://72feu0r42302" path="res://assets/images/EnemyAnims/Walking/walking-4.png" id="9_j2hbd"]
-[ext_resource type="Texture2D" uid="uid://0orf67h81yx3" path="res://assets/images/EnemyAnims/Walking/walking-5.png" id="10_br04c"]
 [ext_resource type="Texture2D" uid="uid://dr25mslojdtv7" path="res://assets/images/EnemyAnims/Walking/walking-6.png" id="11_5w6tu"]
 [ext_resource type="Texture2D" uid="uid://cuftq4n8q7qii" path="res://assets/images/EnemyAnims/Walking/walking-7.png" id="12_emc0n"]
 [ext_resource type="Texture2D" uid="uid://bpma4r4h0bxll" path="res://assets/images/EnemyAnims/Walking/walking-8.png" id="13_fuhjg"]
@@ -92,9 +91,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("9_j2hbd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_br04c")
 }, {
 "duration": 1.0,
 "texture": ExtResource("11_5w6tu")
