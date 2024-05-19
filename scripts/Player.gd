@@ -77,7 +77,7 @@ func _physics_process(delta):
 	hideactionimg.texture = tieGood if playerData.tietoggle else tieBad
 	hideaction.text = "SHOW" if playerData.tietoggle else "HIDE"
 	
-	if progress_bar.value >= 75:
+	if progress_bar.value >= 750:
 		PlayerData.exposed = true
 	else:
 		PlayerData.exposed = false
