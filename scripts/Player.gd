@@ -9,6 +9,15 @@ extends CharacterBody2D
 @onready var space_label = $spaceLabel
 @onready var progress_bar = $PolicyBoard4/ProgressBar
 
+@onready var nums = [
+	$"PolicyBoard5/Node2D/num1",
+	$"PolicyBoard5/Node2D/num2",
+	$"PolicyBoard5/Node2D/num3",
+	$"PolicyBoard5/Node2D/num4"
+]
+
+@onready var buildingsDone = Global.completedBuildings
+
 @onready var tieGood = load("res://assets/tie.png")
 @onready var tieBad = load("res://assets/hide.png")
 
@@ -56,7 +65,13 @@ func _physics_process(delta):
 		
 
 	# Get the input direction and handle the movement/deceleration.
-
+	var index = 4
+	for building in buildingsDone.keys():
+		var comp = buildingsDone[building]
+		if index - 1 < nums.size() and comp:
+			print("hello")
+			nums[nums.size() - index].visible = true
+		index -= 1
 
 	_sprite.animation = "walk_notie" if playerData.tietoggle else "walk"
 	hideactionimg.texture = tieGood if playerData.tietoggle else tieBad
