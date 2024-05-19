@@ -55,7 +55,6 @@ func can_i_see_the_player():
 func _physics_process(delta):
 	#check if the guard can see the player
 	if can_i_see_the_player():
-		print("I can see you")
 		#if the guard can see the player
 		speed = 2
 		var right
@@ -80,6 +79,14 @@ func _physics_process(delta):
 			#walk left
 			direction = not right
 		
+		#check if the guard has collided with (captured) the player
+		
+		if get_node("GuardArea").overlaps_area(get_tree().get_root().get_node("Node2D/Player/Area2D")):
+			print("You got captured")
+			
+			#Back to the main scene for you
+			get_tree().change_scene_to_file("res://scenes/node_3d.tscn")
+			player.onReturnToMainScene(Vector2(0, -1000))
 	else:
 		#otherwise just patrol like normal
 		patrol_building()
@@ -107,4 +114,5 @@ func _physics_process(delta):
 	else:
 		pathFollow.progress += 200 * delta * speed
 		
+	print(pathFollow.progress)
 	
