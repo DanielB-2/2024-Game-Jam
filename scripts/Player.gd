@@ -82,9 +82,7 @@ func _physics_process(delta):
 	
 func onReturnToMainScene(doorPosition):
 	# Spawn player at the door position
-	print("returned to main scene " + str(doorPosition))
 	global_position = doorPosition
-	print(global_position)
 	
 func collect_policy():
 	# function called from policy.gd. returns false if not at limit. returns true if at limit
@@ -102,6 +100,7 @@ func shred_policy():
 	voided_label.visible = true
 	await get_tree().create_timer(1.5).timeout
 	voided_label.visible = false
+	Global.checkIfAllPoliciesCollected()
 	
 func toggleSpaceIcon():
 	space_label.visible = not space_label.visible
