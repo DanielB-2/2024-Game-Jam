@@ -12,7 +12,9 @@ var direction = false
 var speed = 1
 var Building1Positions
 var nameOfSelf
+
 # Called when the node enters the scene tree for the first time.
+
 func _ready():
 	player = get_parent().get_parent().get_parent().get_parent().get_node("Player")
 	_anim = $AnimatedSprite2D
