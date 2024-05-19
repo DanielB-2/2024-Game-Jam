@@ -1,25 +1,41 @@
-[gd_scene load_steps=44 format=3 uid="uid://doaoix1vrbfym"]
+[gd_scene load_steps=60 format=3 uid="uid://doaoix1vrbfym"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_l0sym"]
 [ext_resource type="Texture2D" uid="uid://chckxu7x2crs6" path="res://assets/images/PlayerAnims/Walking/y-1.png" id="2_pny10"]
+[ext_resource type="Texture2D" uid="uid://creaplkak7sw2" path="res://assets/images/PlayerAnims/Crouch/Tie/Crouch-1.png" id="2_uadi8"]
 [ext_resource type="Texture2D" uid="uid://dxjfc0adfny7x" path="res://assets/images/PlayerAnims/Walking/y-2.png" id="3_8lcnw"]
+[ext_resource type="Texture2D" uid="uid://b776xmemg75rt" path="res://assets/images/PlayerAnims/Crouch/Tie/Crouch-2.png" id="3_j85wk"]
+[ext_resource type="Texture2D" uid="uid://coirahyftumt0" path="res://assets/images/PlayerAnims/Crouch/Tie/Crouch-3.png" id="4_12m8c"]
 [ext_resource type="Texture2D" uid="uid://dyx6xl6jkghrl" path="res://assets/images/PlayerAnims/Walking/y-3.png" id="4_t7x62"]
+[ext_resource type="Texture2D" uid="uid://bodswrqa6smes" path="res://assets/images/PlayerAnims/Crouch/Tie/Crouch-4.png" id="5_87ac8"]
 [ext_resource type="Texture2D" uid="uid://bk2vgjh0uf4ld" path="res://assets/images/PlayerAnims/Walking/y-4.png" id="5_gpcrr"]
+[ext_resource type="Texture2D" uid="uid://b1vnydgwpal51" path="res://assets/images/PlayerAnims/Crouch/Tie/Crouch-5.png" id="6_l2scq"]
 [ext_resource type="Texture2D" uid="uid://f7eud7wbwo7n" path="res://assets/images/PlayerAnims/Walking/y-5.png" id="6_w6wk4"]
+[ext_resource type="Texture2D" uid="uid://yljpn5hujs87" path="res://assets/images/PlayerAnims/Crouch/Tie/Crouch-6.png" id="7_8ngfr"]
 [ext_resource type="Texture2D" uid="uid://da1aumvw4ejgb" path="res://assets/images/PlayerAnims/Walking/y-6.png" id="7_j2or7"]
+[ext_resource type="Texture2D" uid="uid://c5kqxpd88253" path="res://assets/images/PlayerAnims/Crouch/Tie/Crouch-7.png" id="8_ju2h1"]
 [ext_resource type="Texture2D" uid="uid://t7mojod6kdg1" path="res://assets/images/PlayerAnims/Walking/y-7.png" id="8_xh065"]
 [ext_resource type="Texture2D" uid="uid://cjcf3k48vtg7u" path="res://assets/images/PlayerAnims/Walking/y-8.png" id="9_emrty"]
+[ext_resource type="Texture2D" uid="uid://bp0qe8gcer0bp" path="res://assets/images/PlayerAnims/Crouch/Tie/Crouch-8.png" id="9_o6so8"]
+[ext_resource type="Texture2D" uid="uid://38inxyubgnhp" path="res://assets/images/PlayerAnims/Crouch/UnTieMySanity/Crouch-1.png" id="10_07s7o"]
 [ext_resource type="Texture2D" uid="uid://dtoxyk7vyrdnh" path="res://assets/images/PlayerAnims/Walking/y-9.png" id="10_vhsf4"]
+[ext_resource type="Texture2D" uid="uid://cx11oui2dk326" path="res://assets/images/PlayerAnims/Crouch/UnTieMySanity/Crouch-2.png" id="11_5vg78"]
 [ext_resource type="Texture2D" uid="uid://ctwtp5n7he7xl" path="res://assets/images/PlayerAnims/Walking/y-10.png" id="11_jvrfu"]
 [ext_resource type="Texture2D" uid="uid://dbg5ymdb17oju" path="res://assets/images/PlayerAnims/Walking/y-11.png" id="12_0enye"]
+[ext_resource type="Texture2D" uid="uid://cjhylvvfs01q0" path="res://assets/images/PlayerAnims/Crouch/UnTieMySanity/Crouch-3.png" id="12_03p2f"]
+[ext_resource type="Texture2D" uid="uid://bqgcqedoi3red" path="res://assets/images/PlayerAnims/Crouch/UnTieMySanity/Crouch-4.png" id="13_dahy4"]
 [ext_resource type="Texture2D" uid="uid://ch7scomstgwop" path="res://assets/images/PlayerAnims/Walking/y-12.png" id="13_vtcuv"]
 [ext_resource type="Texture2D" uid="uid://bdvjsj2xxahhw" path="res://assets/images/voidedImage.png" id="14_b33rq"]
 [ext_resource type="FontFile" uid="uid://y1wejrllh8at" path="res://assets/PixelOperator8-Bold.ttf" id="14_gbf1d"]
 [ext_resource type="Texture2D" uid="uid://dwx2fxynvgll2" path="res://assets/images/PlayerAnims/walking_notie/walk-1.png" id="14_rd03s"]
+[ext_resource type="Texture2D" uid="uid://c35867yrikeja" path="res://assets/images/PlayerAnims/Crouch/UnTieMySanity/Crouch-5.png" id="14_v28lh"]
+[ext_resource type="Texture2D" uid="uid://c51obeea3pm0v" path="res://assets/images/PlayerAnims/Crouch/UnTieMySanity/Crouch-6.png" id="15_2l8yd"]
 [ext_resource type="Texture2D" uid="uid://co6bfyog3ucns" path="res://assets/images/PlayerAnims/walking_notie/walk-2.png" id="15_afjnk"]
 [ext_resource type="Texture2D" uid="uid://cll4kw1f6bl1e" path="res://assets/images/policyBoard.png" id="15_ou85k"]
 [ext_resource type="Texture2D" uid="uid://dd1o7omekjr4a" path="res://assets/images/PlayerAnims/walking_notie/walk-3.png" id="16_gjuth"]
+[ext_resource type="Texture2D" uid="uid://dk3iil1p0o265" path="res://assets/images/PlayerAnims/Crouch/UnTieMySanity/Crouch-7.png" id="16_vfjci"]
 [ext_resource type="Texture2D" uid="uid://caqefb1oxv503" path="res://assets/images/PlayerAnims/walking_notie/walk-4.png" id="17_eg682"]
+[ext_resource type="Texture2D" uid="uid://b3aufwdy64o6y" path="res://assets/images/PlayerAnims/Crouch/UnTieMySanity/Crouch-8.png" id="17_kmao5"]
 [ext_resource type="Texture2D" uid="uid://b3cgqwbp8mtai" path="res://assets/policyImage.png" id="17_tn6kc"]
 [ext_resource type="Texture2D" uid="uid://b4hy4u4nehoni" path="res://assets/images/PlayerAnims/walking_notie/walk-5.png" id="18_gyvp2"]
 [ext_resource type="Texture2D" uid="uid://c12bey0sdcref" path="res://assets/icon.png" id="18_tdda3"]
@@ -40,6 +56,64 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uymlw"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_uadi8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_j85wk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_12m8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_87ac8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_l2scq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8ngfr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ju2h1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_o6so8")
+}],
+"loop": true,
+"name": &"crouch",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_07s7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5vg78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_03p2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_dahy4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_v28lh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_2l8yd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_vfjci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_kmao5")
+}],
+"loop": true,
+"name": &"crouch_notie",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_pny10")
@@ -216,7 +290,7 @@ script = ExtResource("1_l0sym")
 position = Vector2(6, -44)
 scale = Vector2(0.117, 0.097)
 sprite_frames = SubResource("SpriteFrames_uymlw")
-animation = &"walk_notie"
+animation = &"walk"
 
 [node name="PlayerNormalCollision" type="CollisionShape2D" parent="."]
 position = Vector2(2.5, -48)
