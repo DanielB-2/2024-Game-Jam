@@ -72,8 +72,10 @@ func _physics_process(delta):
 			print("hello")
 			nums[nums.size() - index].visible = true
 		index -= 1
-
-	_sprite.animation = "walk_notie" if playerData.tietoggle else "walk"
+	if playerData.shifting:
+		_sprite.animation = "crouch_notie" if playerData.tietoggle else "crouch"
+	else:
+		_sprite.animation = "walk_notie" if playerData.tietoggle else "walk"
 	hideactionimg.texture = tieGood if playerData.tietoggle else tieBad
 	hideaction.text = "SHOW" if playerData.tietoggle else "HIDE"
 	
