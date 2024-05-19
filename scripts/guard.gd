@@ -12,6 +12,8 @@ var direction = false
 var speed = 1
 var Building1Positions
 var nameOfSelf
+var right
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	player = get_parent().get_parent().get_parent().get_parent().get_node("Player")
@@ -71,16 +73,6 @@ func _physics_process(delta):
 				print("walking left")
 				#walk left
 				direction = not right
-			
-		#figure out which direction to the player and then go that way
-		if self.position.direction_to(player.position).x > 0:
-			print("walking right")
-			#walk right
-			direction = right
-		else:
-			print("walking left")
-			#walk left
-			direction = not right
 		
 		#check if the guard has collided with (captured) the player
 		
