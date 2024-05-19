@@ -4,7 +4,6 @@ extends Node2D
 @onready var player = $Player
 @onready var phone = $Player/Phone
 
-@onready var phoneTimer = $"Player/Phone/Timer/Call Time"
 @onready var message1 = $"Player/Phone/Text Messages/Text1"
 @onready var message2 = $"Player/Phone/Text Messages/Text2"
 @onready var message3 = $"Player/Phone/Text Messages/Text3"
