@@ -21,6 +21,7 @@ func _input(event):
 	if playerInsideArea and event.is_action_pressed("action"):
 		_sprite.play("dooropen")
 		await get_tree().create_timer(0.6).timeout
+		PlayerData.currentBuilding=get_meta("building_number")
 		changeScene()
 
 func changeScene():
