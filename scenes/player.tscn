@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://doaoix1vrbfym"]
+[gd_scene load_steps=61 format=3 uid="uid://doaoix1vrbfym"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_l0sym"]
 [ext_resource type="Texture2D" uid="uid://chckxu7x2crs6" path="res://assets/images/PlayerAnims/Walking/y-1.png" id="2_pny10"]
@@ -53,6 +53,7 @@
 [ext_resource type="Texture2D" uid="uid://s4hwkdqx4o0j" path="res://assets/images/policyBoard (4).png" id="34_l3ody"]
 [ext_resource type="Texture2D" uid="uid://cka0gmsyny1wy" path="res://assets/buildingsguideline.png" id="36_w14cq"]
 [ext_resource type="Texture2D" uid="uid://bjhds4ck1s2qm" path="res://assets/donebuilding.png" id="37_iyjdk"]
+[ext_resource type="Texture2D" uid="uid://c824ddbj6ki3u" path="res://assets/images/policyBoard (5).png" id="52_8rko4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uymlw"]
 animations = [{
@@ -485,38 +486,38 @@ wait_time = 0.05
 autostart = true
 
 [node name="PolicyBoard5" type="Sprite2D" parent="."]
-position = Vector2(338, -389.5)
-scale = Vector2(0.886, 0.369)
-texture = ExtResource("34_l3ody")
+position = Vector2(379, -380)
+scale = Vector2(0.369, 0.369)
+texture = ExtResource("52_8rko4")
 
 [node name="Buildingsguideline" type="Sprite2D" parent="PolicyBoard5"]
-position = Vector2(5.64333, -5.42004)
-scale = Vector2(0.226988, 0.530714)
+position = Vector2(5.64333, -9.48508)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("36_w14cq")
 
 [node name="Node2D" type="Node2D" parent="PolicyBoard5"]
 
 [node name="num4" type="Sprite2D" parent="PolicyBoard5/Node2D"]
 visible = false
-position = Vector2(-135.44, 92.1409)
+position = Vector2(-319.783, 77.2356)
 scale = Vector2(0.0501631, 0.0835591)
 texture = ExtResource("37_iyjdk")
 
 [node name="num3" type="Sprite2D" parent="PolicyBoard5/Node2D"]
 visible = false
-position = Vector2(-40, 92.1411)
+position = Vector2(-102.981, 77.2358)
 scale = Vector2(0.0501631, 0.0835591)
 texture = ExtResource("37_iyjdk")
 
 [node name="num2" type="Sprite2D" parent="PolicyBoard5/Node2D"]
 visible = false
-position = Vector2(60, 92.141)
+position = Vector2(119.241, 77.2357)
 scale = Vector2(0.0501631, 0.0835591)
 texture = ExtResource("37_iyjdk")
 
 [node name="num1" type="Sprite2D" parent="PolicyBoard5/Node2D"]
 visible = false
-position = Vector2(160, 92.141)
+position = Vector2(341.464, 77.2357)
 scale = Vector2(0.0501631, 0.0835591)
 texture = ExtResource("37_iyjdk")
 
