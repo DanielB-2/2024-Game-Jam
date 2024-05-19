@@ -372,6 +372,7 @@ position = Vector2(16.9846, -73.0927)
 scale = Vector2(0.1025, 0.0916667)
 sprite_frames = SubResource("SpriteFrames_i368j")
 animation = &"enemy_walking"
+frame_progress = 0.673274
 
 [node name="GuardArea" type="Area2D" parent="Building/Path2D/PathFollow2D/Guard"]
 position = Vector2(554.972, 50.1293)

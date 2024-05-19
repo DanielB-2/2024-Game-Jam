@@ -5,7 +5,11 @@ var targetPos = Vector2()
 var lastPos = Vector2()
 @onready var _anim = $AnimatedSprite2D
 @onready var collision = $CollisionShape2D
+@onready var soundplayer = AudioStreamPlayer2D.new()
+@onready var bgMusic = load("res://music/building.mp3")
+@onready var bgMusicChase = load("res://music/chase.mp3")
 @onready var playerData = PlayerData
+var hasNotSetMusic = true
 var canMove = true
 var pathFollow
 var direction = false
@@ -18,8 +22,16 @@ var heard = "no"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	add_child(soundplayer)
+	soundplayer.autoplay = true
+	bgMusic.loop = true
+	bgMusicChase.loop = true
+	soundplayer.stream = bgMusic
+	soundplayer.play()
+	
 	player = get_parent().get_parent().get_parent().get_parent().get_node("Player")
 	_anim = $AnimatedSprite2D
+	_anim.play("enemy_walking")
 	pathFollow = get_tree().get_root().get_node(str(get_tree().current_scene.name) + "/Building/Path2D/PathFollow2D")
 	Building1Positions = get_node("/root/Building1Positions")
 	nameOfSelf = get_meta("name")
@@ -29,7 +41,6 @@ func _ready():
 func _process(delta):
 	targetPos = player.global_position+(Vector2.DOWN * 400)+(Vector2.LEFT * 150)
 	if targetPos.distance_to(lastPos) > 0 and canMove:
-		_anim.play("enemy_walking")
 		canMove = false
 	else:
 		_anim.stop()
@@ -80,7 +91,13 @@ func _physics_process(delta):
 	#if not playerData.tietoggle:
 		#check if the guard can see the player
 	if can_i_see_the_player():
+		
 		print("can be seen")
+		if soundplayer.stream != bgMusicChase:
+			soundplayer.stop()
+			soundplayer.stream = bgMusicChase
+			soundplayer.play()
+		
 		#if the guard can see the player
 		speed = 2
 		var right
@@ -107,8 +124,6 @@ func _physics_process(delta):
 				
 				
 			
-		
-		
 		#check if the guard has collided with (captured) the player
 		
 		# can i feel the player
@@ -131,6 +146,10 @@ func _physics_process(delta):
 		#otherwise just patrol like normal
 		#patrol_building()
 	
+	if soundplayer.stream != bgMusic:
+		soundplayer.stop()
+		soundplayer.stream = bgMusic
+		soundplayer.play()
 	#check if the guard is about to teleport and prevent it
 	#check if the guard has reached the bottom
 	if pathFollow.progress<10:
