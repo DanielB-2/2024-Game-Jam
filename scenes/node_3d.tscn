@@ -1,10 +1,9 @@
-[gd_scene load_steps=29 format=3 uid="uid://bqxodl8ibgv4y"]
+[gd_scene load_steps=27 format=3 uid="uid://bqxodl8ibgv4y"]
 
 [ext_resource type="PackedScene" uid="uid://doaoix1vrbfym" path="res://scenes/player.tscn" id="1_lj0yb"]
 [ext_resource type="Texture2D" uid="uid://vqt855buh0w1" path="res://assets/images/mainercity.jpg" id="1_ogxcy"]
 [ext_resource type="Script" path="res://scripts/door.gd" id="2_hsbgy"]
 [ext_resource type="Texture2D" uid="uid://biydsk876eg4b" path="res://grayfloor.png" id="2_ke7xl"]
-[ext_resource type="Texture2D" uid="uid://dny4lcseecpko" path="res://icon.svg" id="2_u0i4s"]
 [ext_resource type="PackedScene" uid="uid://c75mieb5kwl38" path="res://scenes/building2.tscn" id="3_f0l3d"]
 [ext_resource type="PackedScene" uid="uid://b04qpb1q6jiw1" path="res://scenes/building1.tscn" id="4_avp1o"]
 [ext_resource type="PackedScene" uid="uid://ek27re4kc0gn" path="res://scenes/policy.tscn" id="5_q6e6y"]
@@ -104,9 +103,6 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_w7m3m"]
-size = Vector2(312, 64)
-
 [node name="Node2D2" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -132,7 +128,7 @@ shape = SubResource("WorldBoundaryShape2D_s0w4s")
 debug_color = Color(0.252904, 0.630268, 0.229332, 0.42)
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground"]
-position = Vector2(-533.168, 1850.54)
+position = Vector2(-507.533, 1851)
 scale = Vector2(39.8826, 1.76978)
 texture = ExtResource("2_ke7xl")
 
@@ -266,41 +262,32 @@ script = ExtResource("18_sqmjq")
 stream = ExtResource("18_cun76")
 metadata/music = "res://music/bgmusic.wav"
 
-[node name="TestSneak" type="StaticBody2D" parent="."]
-position = Vector2(365, -61)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestSneak"]
-position = Vector2(66, 405)
-scale = Vector2(0.403509, 0.644444)
-shape = SubResource("RectangleShape2D_w7m3m")
-
-[node name="Sprite2D" type="Sprite2D" parent="TestSneak"]
-position = Vector2(355, 765)
-scale = Vector2(1.00329, 0.314286)
-texture = ExtResource("2_u0i4s")
-
 [node name="Policies" type="Node" parent="."]
 
 [node name="Policy" parent="Policies" instance=ExtResource("5_q6e6y")]
-position = Vector2(109, -58)
+position = Vector2(96, -40)
 
 [node name="Policy2" parent="Policies" instance=ExtResource("5_q6e6y")]
-position = Vector2(260, -64)
+position = Vector2(264, -54)
 
 [node name="Policy3" parent="Policies" instance=ExtResource("5_q6e6y")]
-position = Vector2(35, -93)
+position = Vector2(38, -41)
 
 [node name="Policy4" parent="Policies" instance=ExtResource("5_q6e6y")]
-position = Vector2(104, -107)
+position = Vector2(-29, -42)
 
 [node name="Policy5" parent="Policies" instance=ExtResource("5_q6e6y")]
-position = Vector2(169, -62)
+position = Vector2(161, -41)
 
 [node name="Policy6" parent="Policies" instance=ExtResource("5_q6e6y")]
-position = Vector2(223, -122)
+position = Vector2(218, -39)
 
 [node name="Policy7" parent="Policies" instance=ExtResource("5_q6e6y")]
-position = Vector2(366, -253)
+position = Vector2(551, -34)
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
 
 [connection signal="body_entered" from="Door2" to="Door2" method="_on_body_entered"]
 [connection signal="body_exited" from="Door2" to="Door2" method="_on_body_exited"]

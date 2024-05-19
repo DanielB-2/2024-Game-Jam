@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_l0sym"]
 [ext_resource type="Texture2D" uid="uid://chckxu7x2crs6" path="res://assets/images/PlayerAnims/Walking/y-1.png" id="2_pny10"]
 [ext_resource type="Texture2D" uid="uid://dxjfc0adfny7x" path="res://assets/images/PlayerAnims/Walking/y-2.png" id="3_8lcnw"]
-[ext_resource type="Script" path="res://scenes/Panel.gd" id="3_iv07f"]
+[ext_resource type="Script" path="res://scenes/Timer.gd" id="4_pb7bd"]
 [ext_resource type="Texture2D" uid="uid://dyx6xl6jkghrl" path="res://assets/images/PlayerAnims/Walking/y-3.png" id="4_t7x62"]
 [ext_resource type="Texture2D" uid="uid://bk2vgjh0uf4ld" path="res://assets/images/PlayerAnims/Walking/y-4.png" id="5_gpcrr"]
 [ext_resource type="Texture2D" uid="uid://f7eud7wbwo7n" path="res://assets/images/PlayerAnims/Walking/y-5.png" id="6_w6wk4"]
@@ -212,84 +212,47 @@ z_index = 10
 script = ExtResource("1_l0sym")
 
 [node name="Timer" type="Sprite2D" parent="."]
-position = Vector2(406.219, -396.5)
-scale = Vector2(0.286438, 0.223)
+position = Vector2(389, -392)
+scale = Vector2(0.319, 0.186)
 texture = ExtResource("15_ou85k")
 
-[node name="Panel" type="Panel" parent="Timer"]
-offset_left = -1219.0
-offset_top = 2108.0
-offset_right = -1179.0
-offset_bottom = 2148.0
-script = ExtResource("3_iv07f")
+[node name="Time" type="Label" parent="Timer"]
+offset_left = -426.0
+offset_top = -210.0
+offset_right = -38.0
+offset_bottom = 247.0
+theme_override_fonts/font = ExtResource("14_gbf1d")
+theme_override_font_sizes/font_size = 100
+text = "TIME"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Minutes" type="Label" parent="Timer/Panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 5.465
-anchor_top = -62.523
-anchor_right = 33.583
-anchor_bottom = 4.071
-offset_left = 568.507
-offset_top = 288.012
-offset_right = -407.213
-offset_bottom = -2110.75
+[node name="Timer" type="Label" parent="Timer"]
+offset_left = 31.348
+offset_top = -112.903
+offset_right = 425.348
+offset_bottom = 152.097
 theme_override_fonts/font = ExtResource("14_gbf1d")
 theme_override_font_sizes/font_size = 105
-text = "0
+text = "3:00
 "
-horizontal_alignment = 2
+horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("4_pb7bd")
 
-[node name="Seconds" type="Label" parent="Timer/Panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 18.639
-anchor_top = -66.993
-anchor_right = 44.549
-anchor_bottom = -36.284
-offset_left = 350.486
-offset_top = 502.213
-offset_right = -570.915
-offset_bottom = -533.147
-theme_override_fonts/font = ExtResource("14_gbf1d")
-theme_override_font_sizes/font_size = 105
-text = "0"
-horizontal_alignment = 2
-vertical_alignment = 1
-
-[node name="Milliseconds" type="Label" parent="Timer/Panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 15.383
-anchor_top = -62.514
-anchor_right = 49.872
-anchor_bottom = -43.859
-offset_left = 767.703
-offset_top = 318.569
-offset_right = -506.857
-offset_bottom = -222.631
-theme_override_fonts/font = ExtResource("14_gbf1d")
-theme_override_font_sizes/font_size = 105
-text = "0"
-horizontal_alignment = 2
-vertical_alignment = 1
-
-[node name="Timer2" type="Timer" parent="Timer"]
+[node name="Timer2" type="Timer" parent="Timer/Timer"]
 wait_time = 1800.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(7, -60)
+position = Vector2(6, -44)
 scale = Vector2(0.117, 0.097)
 sprite_frames = SubResource("SpriteFrames_uymlw")
 animation = &"walk_notie"
-metadata/_edit_lock_ = true
 
 [node name="PlayerNormalCollision" type="CollisionShape2D" parent="."]
-position = Vector2(2, -52)
+position = Vector2(2.5, -48)
 scale = Vector2(3.75, 3.75)
 shape = SubResource("RectangleShape2D_n8tre")
-metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -128)
@@ -331,7 +294,7 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="CrouchingCollisionShape" type="CollisionShape2D" parent="."]
-position = Vector2(2, 14)
+position = Vector2(2.5, 17.7188)
 scale = Vector2(3.75, 3.75)
 shape = SubResource("RectangleShape2D_wth06")
 
@@ -459,8 +422,5 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = -17.0
-offset_top = -14.0
-offset_right = 23.0
-offset_bottom = 26.0
-metadata/_edit_lock_ = true
+offset_right = 40.0
+offset_bottom = 40.0
