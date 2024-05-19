@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://5xwk1uxo0i10"]
+[gd_scene load_steps=5 format=3 uid="uid://5xwk1uxo0i10"]
 
 [ext_resource type="Texture2D" uid="uid://vqt855buh0w1" path="res://assets/images/mainercity.jpg" id="1_v4xk2"]
 [ext_resource type="Texture2D" uid="uid://kyabdkcmb73d" path="res://assets/logo.png" id="2_gta0u"]
+[ext_resource type="Script" path="res://scenes/scrollingCredits.gd" id="2_lkhbm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h1b7c"]
 border_color = Color(0, 0, 0, 1)
@@ -27,7 +28,7 @@ offset_bottom = 589.0
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_h1b7c")
 text = "   
-    cat132132132
+    DanielB-2
    _galaga_1
    asthehourspass
    buildaboat373
@@ -43,6 +44,27 @@ offset_bottom = -15.0
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_h1b7c")
 text = "   Game Made By:"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 557.0
+offset_top = 83.0
+offset_right = 1072.0
+offset_bottom = 595.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_h1b7c")
+horizontal_alignment = 1
+script = ExtResource("2_lkhbm")
+
+[node name="Label" type="Label" parent="Label2"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -73.0
+offset_right = 520.0
+offset_bottom = -15.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_h1b7c")
+text = "Details:"
+horizontal_alignment = 1
 
 [node name="Logo" type="Sprite2D" parent="."]
 position = Vector2(230, 219)
