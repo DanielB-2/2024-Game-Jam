@@ -21,6 +21,7 @@ func _ready():
 	
 func _physics_process(delta):
 	checkForWin()
+	print(completedBuildings)
 	for coin in get_tree().get_nodes_in_group("Policies"):
 		if coin.name in collected_coins:
 			coin.queue_free()

@@ -1,20 +1,17 @@
-[gd_scene load_steps=31 format=3 uid="uid://bqxodl8ibgv4y"]
+[gd_scene load_steps=27 format=3 uid="uid://bqxodl8ibgv4y"]
 
 [ext_resource type="PackedScene" uid="uid://doaoix1vrbfym" path="res://scenes/player.tscn" id="1_lj0yb"]
 [ext_resource type="Texture2D" uid="uid://vqt855buh0w1" path="res://assets/images/mainercity.jpg" id="1_ogxcy"]
 [ext_resource type="Script" path="res://scripts/door.gd" id="2_hsbgy"]
-[ext_resource type="Texture2D" uid="uid://dny4lcseecpko" path="res://icon.svg" id="2_u0i4s"]
 [ext_resource type="Texture2D" uid="uid://j3e0fnjctsjr" path="res://assets/foreground.png" id="2_xlfx8"]
 [ext_resource type="PackedScene" uid="uid://d2o34yypg7rta" path="res://scenes/building2.tscn" id="3_f0l3d"]
 [ext_resource type="Texture2D" uid="uid://byppupeci10ny" path="res://assets/bench.png" id="3_v2liq"]
 [ext_resource type="Texture2D" uid="uid://dduuxb8e8qujs" path="res://assets/lightbg.png" id="4_82oll"]
 [ext_resource type="PackedScene" uid="uid://b04qpb1q6jiw1" path="res://scenes/building1.tscn" id="4_avp1o"]
-[ext_resource type="PackedScene" uid="uid://ek27re4kc0gn" path="res://scenes/policy.tscn" id="5_q6e6y"]
 [ext_resource type="Texture2D" uid="uid://bj3ybwxf6fe05" path="res://assets/images/DoorAnim/Open/IMG_1683-1.png" id="5_wh4uu"]
 [ext_resource type="Texture2D" uid="uid://blxdhba8jx2o" path="res://assets/images/DoorAnim/Open/IMG_1683-2.png" id="6_5q60j"]
 [ext_resource type="Texture2D" uid="uid://bulh8ltc7ymov" path="res://assets/images/DoorAnim/Open/IMG_1683-3.png" id="7_b0awk"]
 [ext_resource type="Texture2D" uid="uid://d2q3vk73kg75v" path="res://assets/building.png" id="7_d0llh"]
-[ext_resource type="PackedScene" uid="uid://dk0nhbw6yiwj1" path="res://scenes/shredder.tscn" id="8_28muw"]
 [ext_resource type="Texture2D" uid="uid://ddmk3nydwvh5y" path="res://assets/images/DoorAnim/Open/IMG_1683-4.png" id="8_dbk8b"]
 [ext_resource type="Texture2D" uid="uid://dcvi2paqi1woc" path="res://assets/images/DoorAnim/Open/IMG_1683-5.png" id="9_w665r"]
 [ext_resource type="Texture2D" uid="uid://dbse3m4o558fo" path="res://assets/images/DoorAnim/Open/IMG_1683-6.png" id="10_gthpn"]
@@ -106,9 +103,6 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_w7m3m"]
-size = Vector2(312, 64)
-
 [node name="Node2D2" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -156,7 +150,7 @@ texture = ExtResource("4_82oll")
 centered = false
 
 [node name="Ground" type="StaticBody2D" parent="."]
-position = Vector2(1280, 0)
+position = Vector2(1280, 24)
 scale = Vector2(2.79982, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
@@ -283,9 +277,6 @@ position = Vector2(-605, 0)
 scale = Vector2(3.81481, 4.29938)
 texture = ExtResource("7_d0llh")
 
-[node name="Shredder" parent="." instance=ExtResource("8_28muw")]
-position = Vector2(360, -113)
-
 [node name="Player" parent="." instance=ExtResource("1_lj0yb")]
 position = Vector2(-250, -33)
 
@@ -297,39 +288,13 @@ script = ExtResource("18_sqmjq")
 stream = ExtResource("18_cun76")
 metadata/music = "res://music/bgmusic.wav"
 
-[node name="TestSneak" type="StaticBody2D" parent="."]
-position = Vector2(365, -61)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestSneak"]
-scale = Vector2(0.403509, 0.644444)
-shape = SubResource("RectangleShape2D_w7m3m")
-
-[node name="Sprite2D" type="Sprite2D" parent="TestSneak"]
-scale = Vector2(1.00329, 0.314286)
-texture = ExtResource("2_u0i4s")
-
-[node name="Policies" type="Node" parent="."]
-
-[node name="Policy" parent="Policies" instance=ExtResource("5_q6e6y")]
-position = Vector2(109, -58)
-
-[node name="Policy2" parent="Policies" instance=ExtResource("5_q6e6y")]
-position = Vector2(260, -64)
-
-[node name="Policy3" parent="Policies" instance=ExtResource("5_q6e6y")]
-position = Vector2(35, -93)
-
-[node name="Policy4" parent="Policies" instance=ExtResource("5_q6e6y")]
-position = Vector2(104, -107)
-
-[node name="Policy5" parent="Policies" instance=ExtResource("5_q6e6y")]
-position = Vector2(169, -62)
-
-[node name="Policy6" parent="Policies" instance=ExtResource("5_q6e6y")]
-position = Vector2(223, -122)
-
-[node name="Policy7" parent="Policies" instance=ExtResource("5_q6e6y")]
-position = Vector2(366, -253)
+[node name="Label" type="Label" parent="."]
+offset_left = 1557.0
+offset_top = -111.0
+offset_right = 1680.0
+offset_bottom = -62.0
+text = "there is nothing
+this way"
 
 [connection signal="body_entered" from="Door2" to="Door2" method="_on_body_entered"]
 [connection signal="body_exited" from="Door2" to="Door2" method="_on_body_exited"]
