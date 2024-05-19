@@ -150,11 +150,15 @@ func _physics_process(delta):
 			player.onReturnToMainScene(Vector2(0, -1000))
 	
 	elif heard == "up":
+		soundplayer.stop()
+		soundplayer2.play()
 		can_be_seen_last_frame = false
 		#run up and investigate
 		direction = true
 		run()
 	elif heard == "down":
+		soundplayer.stop()
+		soundplayer2.play()
 		can_be_seen_last_frame = false
 		#run down and investigate
 		direction = false
