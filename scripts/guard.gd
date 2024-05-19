@@ -6,6 +6,7 @@ var lastPos = Vector2()
 @onready var _anim = $AnimatedSprite2D
 @onready var collision = $CollisionShape2D
 @onready var playerData = PlayerData
+@onready var guard_area = $GuardArea
 var canMove = true
 var pathFollow
 var direction = false
@@ -22,7 +23,6 @@ func _ready():
 	Building1Positions = get_node("/root/Building1Positions")
 	nameOfSelf = get_meta("name")
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	targetPos = player.global_position+(Vector2.DOWN * 400)+(Vector2.LEFT * 150)
@@ -31,11 +31,19 @@ func _process(delta):
 		set_collision_mask_value(2, false)
 		set_collision_layer_value(1, true)
 		set_collision_mask_value(1, true)
+		guard_area.set_collision_layer_value(2, false)
+		guard_area.set_collision_mask_value(2, false)
+		guard_area.set_collision_layer_value(1, true)
+		guard_area.set_collision_mask_value(1, true)
 	else:
 		set_collision_layer_value(2, true)
 		set_collision_mask_value(2, true)
 		set_collision_layer_value(1, false)
 		set_collision_mask_value(1, false)
+		guard_area.set_collision_layer_value(2, true)
+		guard_area.set_collision_mask_value(2, true)
+		guard_area.set_collision_layer_value(1, false)
+		guard_area.set_collision_mask_value(1, false)
 	if targetPos.distance_to(lastPos) > 0 and canMove:
 		_anim.play("enemy_walking")
 		canMove = false
@@ -106,9 +114,6 @@ func _physics_process(delta):
 		direction = false;
 		
 		
-		
-		
-		
 	#move the guard according to the direction var
 	if direction == false:
 		pathFollow.progress -= 200 * delta * speed
@@ -118,3 +123,10 @@ func _physics_process(delta):
 		
 	print(pathFollow.progress)
 	
+
+
+func _on_guard_area_body_entered(body):
+	if body.name == "Player":
+		print("You got captured")
+		get_tree().change_scene_to_file("res://scenes/node_3d.tscn")
+		player.onReturnToMainScene(Vector2(0, -1000))
