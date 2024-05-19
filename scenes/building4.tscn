@@ -149,12 +149,13 @@ position = Vector2(-479, -244)
 motion_mirroring = Vector2(1200, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(-54, -876)
-scale = Vector2(2.2213, 3.53086)
+position = Vector2(-54, -1266)
+scale = Vector2(2.2213, 4.49382)
 texture = ExtResource("1_x3bto")
 centered = false
 
 [node name="Building" type="Area2D" parent="."]
+position = Vector2(-1500, 0)
 scale = Vector2(0.611218, 0.72296)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Building"]
@@ -390,7 +391,7 @@ position = Vector2(107, -424)
 shape = SubResource("RectangleShape2D_fg0lw")
 
 [node name="Player" parent="." instance=ExtResource("23_n1tri")]
-position = Vector2(-296, -94)
+position = Vector2(-1200, -94)
 
 [node name="Area2D" type="Area2D" parent="Player"]
 script = ExtResource("22_u61j2")
@@ -401,34 +402,34 @@ position = Vector2(3, -14.5)
 shape = SubResource("RectangleShape2D_8coho")
 
 [node name="PolicyB" parent="." instance=ExtResource("24_njj6o")]
-position = Vector2(-251, -374)
+position = Vector2(-1771, -408)
 
 [node name="PolicyB2" parent="." instance=ExtResource("24_njj6o")]
-position = Vector2(-42, -374)
+position = Vector2(-1562, -408)
 
 [node name="PolicyB3" parent="." instance=ExtResource("24_njj6o")]
-position = Vector2(-251, -574)
+position = Vector2(-1771, -608)
 
 [node name="PolicyB4" parent="." instance=ExtResource("24_njj6o")]
-position = Vector2(-42, -574)
+position = Vector2(-1562, -608)
 
 [node name="PolicyB5" parent="." instance=ExtResource("24_njj6o")]
-position = Vector2(-251, -753)
+position = Vector2(-1771, -787)
 
 [node name="PolicyB6" parent="." instance=ExtResource("24_njj6o")]
-position = Vector2(-42, -753)
+position = Vector2(-1562, -787)
 
 [node name="PolicyB7" parent="." instance=ExtResource("24_njj6o")]
-position = Vector2(-251, -932)
+position = Vector2(-1771, -966)
 
 [node name="PolicyB8" parent="." instance=ExtResource("24_njj6o")]
-position = Vector2(-42, -932)
+position = Vector2(-1562, -966)
 
 [node name="PolicyB9" parent="." instance=ExtResource("24_njj6o")]
-position = Vector2(-251, -81.0001)
+position = Vector2(-1771, -115)
 
 [node name="PolicyB10" parent="." instance=ExtResource("24_njj6o")]
-position = Vector2(-42, -81.0001)
+position = Vector2(-1562, -115)
 
 [node name="Shredder" parent="." instance=ExtResource("25_ynxgu")]
 position = Vector2(-456, -79)

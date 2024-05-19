@@ -138,7 +138,7 @@ size = Vector2(25, 26.5)
 size = Vector2(42, 85)
 
 [node name="building2" type="Node2D"]
-position = Vector2(-1061, -6)
+position = Vector2(-1048, 14)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scroll_offset = Vector2(-1635.33, 1547.45)
@@ -149,12 +149,13 @@ position = Vector2(-479, -244)
 motion_mirroring = Vector2(1200, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(-54, -876)
-scale = Vector2(2.2213, 3.53086)
+position = Vector2(-54, -1231)
+scale = Vector2(2.2213, 4.4074)
 texture = ExtResource("1_q3jcs")
 centered = false
 
 [node name="Building" type="Area2D" parent="."]
+position = Vector2(-1000, 0)
 scale = Vector2(0.611218, 0.72296)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Building"]
@@ -386,7 +387,7 @@ position = Vector2(-541.459, -116.061)
 shape = SubResource("RectangleShape2D_5mhn7")
 
 [node name="Building_Path2D_PathFollow2D_Guard_GuardArea#CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(107, -424)
+position = Vector2(-858, -437)
 shape = SubResource("RectangleShape2D_fg0lw")
 
 [node name="Player" parent="." instance=ExtResource("23_mhoah")]
@@ -401,37 +402,37 @@ position = Vector2(3, -14.5)
 shape = SubResource("RectangleShape2D_8coho")
 
 [node name="PolicyB" parent="." instance=ExtResource("24_aqfic")]
-position = Vector2(-251, -374)
+position = Vector2(-1258, -404)
 
 [node name="PolicyB2" parent="." instance=ExtResource("24_aqfic")]
-position = Vector2(-42, -374)
+position = Vector2(-1049, -404)
 
 [node name="PolicyB3" parent="." instance=ExtResource("24_aqfic")]
-position = Vector2(-251, -574)
+position = Vector2(-1258, -604)
 
 [node name="PolicyB4" parent="." instance=ExtResource("24_aqfic")]
-position = Vector2(-42, -574)
+position = Vector2(-1049, -604)
 
 [node name="PolicyB5" parent="." instance=ExtResource("24_aqfic")]
-position = Vector2(-251, -753)
+position = Vector2(-1258, -783)
 
 [node name="PolicyB6" parent="." instance=ExtResource("24_aqfic")]
-position = Vector2(-42, -753)
+position = Vector2(-1049, -783)
 
 [node name="PolicyB7" parent="." instance=ExtResource("24_aqfic")]
-position = Vector2(-251, -932)
+position = Vector2(-1258, -962)
 
 [node name="PolicyB8" parent="." instance=ExtResource("24_aqfic")]
-position = Vector2(-42, -932)
+position = Vector2(-1049, -962)
 
 [node name="PolicyB9" parent="." instance=ExtResource("24_aqfic")]
-position = Vector2(-251, -81.0001)
+position = Vector2(-1258, -111)
 
 [node name="PolicyB10" parent="." instance=ExtResource("24_aqfic")]
-position = Vector2(-42, -81.0001)
+position = Vector2(-1049, -111)
 
 [node name="Shredder" parent="." instance=ExtResource("25_4dw6v")]
-position = Vector2(-456, -79)
+position = Vector2(-1463, -109)
 
 [connection signal="body_entered" from="Building/StaticBody2D/Sprite2D/DoorExit" to="Building/StaticBody2D/Sprite2D/DoorExit" method="_on_body_entered"]
 [connection signal="body_exited" from="Building/StaticBody2D/Sprite2D/DoorExit" to="Building/StaticBody2D/Sprite2D/DoorExit" method="_on_body_exited"]
