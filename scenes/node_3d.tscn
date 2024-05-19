@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bqxodl8ibgv4y"]
+[gd_scene load_steps=31 format=3 uid="uid://bqxodl8ibgv4y"]
 
 [ext_resource type="PackedScene" uid="uid://doaoix1vrbfym" path="res://scenes/player.tscn" id="1_lj0yb"]
 [ext_resource type="Texture2D" uid="uid://vqt855buh0w1" path="res://assets/images/mainercity.jpg" id="1_ogxcy"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dny4lcseecpko" path="res://icon.svg" id="2_u0i4s"]
 [ext_resource type="Texture2D" uid="uid://j3e0fnjctsjr" path="res://assets/foreground.png" id="2_xlfx8"]
 [ext_resource type="PackedScene" uid="uid://d2o34yypg7rta" path="res://scenes/building2.tscn" id="3_f0l3d"]
+[ext_resource type="Texture2D" uid="uid://byppupeci10ny" path="res://assets/bench.png" id="3_v2liq"]
+[ext_resource type="Texture2D" uid="uid://dduuxb8e8qujs" path="res://assets/lightbg.png" id="4_82oll"]
 [ext_resource type="PackedScene" uid="uid://b04qpb1q6jiw1" path="res://scenes/building1.tscn" id="4_avp1o"]
 [ext_resource type="PackedScene" uid="uid://ek27re4kc0gn" path="res://scenes/policy.tscn" id="5_q6e6y"]
 [ext_resource type="Texture2D" uid="uid://bj3ybwxf6fe05" path="res://assets/images/DoorAnim/Open/IMG_1683-1.png" id="5_wh4uu"]
@@ -131,6 +133,26 @@ motion_mirroring = Vector2(1200, 0)
 position = Vector2(-54, -169)
 scale = Vector2(0.681667, 0.4875)
 texture = ExtResource("2_xlfx8")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(0, -238)
+motion_mirroring = Vector2(1200, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(84, 108)
+scale = Vector2(0.128333, 0.16)
+texture = ExtResource("3_v2liq")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(0, -238)
+motion_mirroring = Vector2(1200, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(-54.746, -214.264)
+scale = Vector2(0.66097, 0.46772)
+texture = ExtResource("4_82oll")
 centered = false
 
 [node name="Ground" type="StaticBody2D" parent="."]

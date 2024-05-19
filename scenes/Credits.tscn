@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://5xwk1uxo0i10"]
+
+[ext_resource type="Texture2D" uid="uid://vqt855buh0w1" path="res://assets/images/mainercity.jpg" id="1_v4xk2"]
+[ext_resource type="Texture2D" uid="uid://kyabdkcmb73d" path="res://assets/logo.png" id="2_gta0u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h1b7c"]
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[node name="Credits" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_top = -45.0
+offset_right = 1153.0
+offset_bottom = 653.0
+texture = ExtResource("1_v4xk2")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 50.0
+offset_top = 244.0
+offset_right = 420.0
+offset_bottom = 589.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_h1b7c")
+text = "   
+    cat132132132
+   _galaga_1
+   asthehourspass
+   buildaboat373
+
+"
+
+[node name="Label" type="Label" parent="Label"]
+offset_left = -3.0
+offset_top = -73.0
+offset_right = 356.0
+offset_bottom = -15.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_h1b7c")
+text = "   Game Made By:"
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(230, 219)
+scale = Vector2(0.222222, 0.288889)
+texture = ExtResource("2_gta0u")
