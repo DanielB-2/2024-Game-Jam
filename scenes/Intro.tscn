@@ -11,7 +11,7 @@ offset_top = 204.0
 offset_right = 1124.0
 offset_bottom = 601.0
 theme_override_font_sizes/font_size = 71
-text = "YOU'RE BOSS IS VERY ANGRY. ELIMINATE THE COMPETITION BY VOIDDING ALL OF THEIR POLICIES. DON\"T GET CAUGHT"
+text = "YOU'RE BOSS IS VERY ANGRY. ELIMINATE THE COMPETITION BY VOIDING ALL OF THEIR POLICIES. DON'T GET CAUGHT."
 autowrap_mode = 3
 
 [node name="TextureRect" type="TextureRect" parent="."]
