@@ -6,7 +6,8 @@ static var instance
 # Player data
 var policiesHeld = 0
 var lastEntered = Vector2(-100,0)
-var tietoggle = false;
+var tietoggle = false
+var shifting = false
 
 func _ready():
 	# Set the singleton instance
