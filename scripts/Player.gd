@@ -7,6 +7,7 @@ extends CharacterBody2D
 @onready var hideaction = $PolicyLabel3
 @onready var hideactionimg = $PolicyBoard3/PolicyImage
 @onready var space_label = $spaceLabel
+@onready var progress_bar = $PolicyBoard4/ProgressBar
 
 @onready var tieGood = load("res://assets/tie.png")
 @onready var tieBad = load("res://assets/hide.png")
@@ -60,8 +61,12 @@ func _physics_process(delta):
 	_sprite.animation = "walk_notie" if playerData.tietoggle else "walk"
 	hideactionimg.texture = tieGood if playerData.tietoggle else tieBad
 	hideaction.text = "SHOW" if playerData.tietoggle else "HIDE"
-			
-
+	
+	if progress_bar.value >= 75:
+		PlayerData.exposed = true
+	else:
+		PlayerData.exposed = false
+	
 	var direction = Input.get_axis("left", "right")
 	if direction:
 		velocity.x = direction * speed
@@ -106,3 +111,10 @@ func shred_policy():
 	
 func toggleSpaceIcon():
 	space_label.visible = not space_label.visible
+
+
+func _on_exposure_tick_timeout():
+	if playerData.tietoggle == true:
+		progress_bar.value += 1
+	else:
+		progress_bar.value -= 1

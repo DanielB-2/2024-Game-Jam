@@ -20,7 +20,7 @@ func _ready():
 	soundplayer.set_max_polyphony(2)
 	
 func _physics_process(delta):
-	print(completedBuildings["building1"])
+	#print(completedBuildings["building1"])
 	checkForWin()
 	for coin in get_tree().get_nodes_in_group("Policies"):
 		if coin.name in collected_coins:
