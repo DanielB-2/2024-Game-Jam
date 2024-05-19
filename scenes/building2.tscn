@@ -428,7 +428,7 @@ position = Vector2(-251, -81.0001)
 position = Vector2(-42, -81.0001)
 
 [node name="Shredder" parent="." instance=ExtResource("25_a7ixy")]
-position = Vector2(-456, -79)
+position = Vector2(-466, -30)
 
 [connection signal="body_entered" from="Building/StaticBody2D/Sprite2D/DoorExit" to="Building/StaticBody2D/Sprite2D/DoorExit" method="_on_body_entered"]
 [connection signal="body_exited" from="Building/StaticBody2D/Sprite2D/DoorExit" to="Building/StaticBody2D/Sprite2D/DoorExit" method="_on_body_exited"]
