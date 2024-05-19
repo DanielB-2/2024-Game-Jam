@@ -5,7 +5,6 @@ var targetPos = Vector2()
 var lastPos = Vector2()
 @onready var collision = $CollisionShape2D
 @onready var soundplayer = AudioStreamPlayer2D.new()
-@onready var soundplayer2 = AudioStreamPlayer2D.new()
 @onready var bgMusic = load("res://music/building.mp3")
 @onready var bgMusicChase = load("res://music/chase.mp3")
 @onready var playerData = PlayerData
@@ -25,12 +24,7 @@ var can_be_seen_last_frame = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	add_child(soundplayer)
-	add_child(soundplayer2)
-	soundplayer.autoplay = true
-	bgMusic.loop = true
-	bgMusicChase.loop = true
 	soundplayer.stream = bgMusic
-	soundplayer2.stream = bgMusicChase
 	soundplayer.play()
 	
 	player = get_parent().get_parent().get_parent().get_parent().get_node("Player")
@@ -109,8 +103,10 @@ func _physics_process(delta):
 	if can_i_see_the_player() or did_i_see_the_player():
 		can_be_seen_last_frame = true;
 		print("can be seen")
-		soundplayer.stop()
-		soundplayer2.play()
+		if hasNotSetMusic:
+			soundplayer.stream = bgMusicChase
+			soundplayer.play()
+			hasNotSetMusic = false
 		
 		#if the guard can see the player
 		run()
@@ -150,25 +146,23 @@ func _physics_process(delta):
 			player.onReturnToMainScene(Vector2(0, -1000))
 	
 	elif heard == "up":
-		soundplayer.stop()
-		soundplayer2.play()
 		can_be_seen_last_frame = false
 		#run up and investigate
 		direction = true
 		run()
 	elif heard == "down":
-		soundplayer.stop()
-		soundplayer2.play()
 		can_be_seen_last_frame = false
 		#run down and investigate
 		direction = false
 		run()
 	else:
+		if (!hasNotSetMusic):
+			soundplayer.stream = bgMusic
+			soundplayer.play()
+			hasNotSetMusic = true
 		can_be_seen_last_frame = false;
 		#otherwise just patrol like normal
 		patrol_building()
-		soundplayer2.stop()
-		soundplayer.play()
 	
 		
 	if (Building1Positions.locations[nameOfSelf]%2 == 0):
