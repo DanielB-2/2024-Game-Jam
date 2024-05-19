@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dygumgw63lrq7"
-path="res://.godot/imported/FunnyMan.png-db87632e8b7b8f7fdd9110b4a2d815a5.ctex"
+uid="uid://b3sbis6qkk15u"
+path="res://.godot/imported/innerBuilding.png-5e5dedb0ac897b626cf05098854d4b2f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://FunnyMan.png"
-dest_files=["res://.godot/imported/FunnyMan.png-db87632e8b7b8f7fdd9110b4a2d815a5.ctex"]
+source_file="res://assets/innerBuilding.png"
+dest_files=["res://.godot/imported/innerBuilding.png-5e5dedb0ac897b626cf05098854d4b2f.ctex"]
 
 [params]
 
