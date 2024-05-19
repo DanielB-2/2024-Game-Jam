@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://qc14kjv5snm4"]
+[gd_scene load_steps=55 format=3 uid="uid://qc14kjv5snm4"]
 
 [ext_resource type="Texture2D" uid="uid://vqt855buh0w1" path="res://assets/images/mainercity.jpg" id="1_awife"]
 [ext_resource type="Script" path="res://scripts/introAnimation.gd" id="1_cspy4"]
@@ -49,6 +49,7 @@
 [ext_resource type="Texture2D" uid="uid://c6vljb2p4rtug" path="res://assets/images/introscene/textmsg/IMG_1700-4.png" id="45_js8eu"]
 [ext_resource type="Texture2D" uid="uid://j5ki37fim8qp" path="res://assets/images/introscene/textmsg/IMG_1700-3.png" id="46_r88ct"]
 [ext_resource type="Texture2D" uid="uid://c1xd4xu1vfwt3" path="res://assets/images/introscene/textmsg/IMG_1700-2.png" id="47_4elr1"]
+[ext_resource type="FontFile" uid="uid://y1wejrllh8at" path="res://assets/PixelOperator8-Bold.ttf" id="50_g4ts5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0160f"]
 animations = [{
@@ -245,6 +246,16 @@ position = Vector2(21, -297)
 scale = Vector2(0.678333, 0.765833)
 texture = ExtResource("43_vrkx1")
 centered = false
+
+[node name="Instructions" type="Label" parent="."]
+offset_left = 1703.0
+offset_top = -240.0
+offset_right = 2878.0
+offset_bottom = 791.0
+theme_override_constants/line_spacing = 25
+theme_override_fonts/font = ExtResource("50_g4ts5")
+theme_override_font_sizes/font_size = 36
+autowrap_mode = 3
 
 [node name="Player" type="AnimatedSprite2D" parent="."]
 z_index = 1

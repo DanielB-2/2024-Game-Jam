@@ -20,7 +20,6 @@ func _ready():
 	soundplayer.set_max_polyphony(2)
 	
 func _physics_process(delta):
-	print(completedBuildings)
 	checkForWin()
 	for coin in get_tree().get_nodes_in_group("Policies"):
 		if coin.name in collected_coins:
@@ -42,6 +41,7 @@ func introSequence():
 func policyCollectSound():
 	soundplayer.stop()
 	soundplayer.play()
+	print("Played sound")
 	
 func checkIfAllPoliciesCollected():
 	if get_tree().current_scene:
