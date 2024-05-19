@@ -20,7 +20,7 @@ func _ready():
 	soundplayer.set_max_polyphony(2)
 	
 func _physics_process(delta):
-	#print(completedBuildings["building1"])
+	print(completedBuildings)
 	checkForWin()
 	for coin in get_tree().get_nodes_in_group("Policies"):
 		if coin.name in collected_coins:
@@ -51,5 +51,5 @@ func checkIfAllPoliciesCollected():
 				#print(str(get_tree().current_scene.name) + " rhrsrys")
 				completedBuildings[get_tree().current_scene.name] = true
 func checkForWin():
-	if completedBuildings["building1"] == true:
+	if completedBuildings["building1"] == true and completedBuildings["building2"] == true:
 		get_tree().change_scene_to_file("res://scenes/WinScreen.tscn")

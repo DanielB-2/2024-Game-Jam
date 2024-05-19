@@ -9,6 +9,7 @@ var lastEntered = Vector2(-100,0)
 
 var tietoggle = false #no semicolons allowed java stinks
 var exposed = false
+var shifting = false
 
 
 func _ready():

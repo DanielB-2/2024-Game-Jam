@@ -44,13 +44,13 @@ func _physics_process(delta):
 		$PlayerNormalCollision.disabled = true
 		print("Shift has been pressed")
 		speed = 200
-		playerData.shifting = true
+		PlayerData.shifting = true
 		
 	else:
 		$CrouchingCollisionShape.disabled = true
 		$PlayerNormalCollision.disabled = false
 		speed = 500
-		playerData.shifting = false
+		PlayerData.shifting = false
 		
 		
 		

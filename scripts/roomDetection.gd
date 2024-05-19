@@ -8,7 +8,7 @@ func _ready():
 	Building1Positions = get_node("/root/Building1Positions")
 	nameOfSelf = get_meta("name")
 	for i in range(5):
-		floors[i] = get_tree().get_root().get_node("building1/Building/StaticBody2D").get_node("Floor" + str(i+1))
+		floors[i] = get_tree().get_root().get_node(str(get_tree().current_scene.name) + "/Building/StaticBody2D").get_node("Floor" + str(i+1))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
