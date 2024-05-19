@@ -17,7 +17,8 @@ func _physics_process(delta):
 		#print(str(collected_coins) + " end")
 		if coin.name in collected_coins:
 			coin.queue_free()
-			pass
+	if Input.is_action_just_pressed("exitgame"):
+		get_tree().quit()
 
 func updateCoinState(coin_id: String, collected: bool):
 	collected_coins[coin_id] = collected

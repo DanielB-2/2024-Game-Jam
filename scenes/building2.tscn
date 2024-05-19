@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://c75mieb5kwl38"]
+[gd_scene load_steps=10 format=3 uid="uid://c75mieb5kwl38"]
 
 [ext_resource type="PackedScene" uid="uid://doaoix1vrbfym" path="res://scenes/player.tscn" id="1_s7wtf"]
 [ext_resource type="Script" path="res://scripts/DoorExit.gd" id="3_4066m"]
 [ext_resource type="Texture2D" uid="uid://dny4lcseecpko" path="res://icon.svg" id="3_vvcbn"]
 [ext_resource type="Texture2D" uid="uid://d2q3vk73kg75v" path="res://assets/building.png" id="4_eegki"]
 [ext_resource type="Texture2D" uid="uid://dq58lk02fnfof" path="res://assets/tempPlayer.png" id="4_fis1m"]
+[ext_resource type="PackedScene" uid="uid://ek27re4kc0gn" path="res://scenes/policy.tscn" id="6_ct7r2"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s0w4s"]
 
@@ -16,6 +17,7 @@ size = Vector2(178.523, 213.5)
 [node name="Node2D" type="Node2D"]
 
 [node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(-214, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
 shape = SubResource("WorldBoundaryShape2D_s0w4s")
@@ -27,9 +29,10 @@ scale = Vector2(8.50833, 0.123371)
 texture = ExtResource("3_vvcbn")
 
 [node name="Player" parent="." instance=ExtResource("1_s7wtf")]
-position = Vector2(-270, -59)
+position = Vector2(-484, -59)
 
 [node name="Stairs" type="RigidBody2D" parent="."]
+position = Vector2(-214, 0)
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Stairs"]
 position = Vector2(-56.5006, 151.372)
@@ -53,6 +56,7 @@ scale = Vector2(0.26, 0.22)
 texture = ExtResource("4_fis1m")
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-214, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_xym8x")
@@ -77,6 +81,9 @@ scale = Vector2(1.39787, 1.67437)
 texture = ExtResource("3_vvcbn")
 
 [node name="Area2D" type="Area2D" parent="Area2D"]
+
+[node name="PolicyB" parent="." instance=ExtResource("6_ct7r2")]
+position = Vector2(-136, -68)
 
 [connection signal="body_entered" from="Area2D/Sprite2D/DoorExit" to="Area2D/Sprite2D/DoorExit" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D/Sprite2D/DoorExit" to="Area2D/Sprite2D/DoorExit" method="_on_body_exited"]
