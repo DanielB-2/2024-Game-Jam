@@ -3,12 +3,12 @@ extends RigidBody2D
 var player
 var targetPos = Vector2()
 var lastPos = Vector2()
-@onready var _anim = $AnimatedSprite2D
 @onready var collision = $CollisionShape2D
 @onready var soundplayer = AudioStreamPlayer2D.new()
 @onready var bgMusic = load("res://music/building.mp3")
 @onready var bgMusicChase = load("res://music/chase.mp3")
 @onready var playerData = PlayerData
+@onready var _sprite_2d = $AnimatedSprite2D
 var hasNotSetMusic = true
 var canMove = true
 var pathFollow
@@ -31,8 +31,6 @@ func _ready():
 	soundplayer.play()
 	
 	player = get_parent().get_parent().get_parent().get_parent().get_node("Player")
-	_anim = $AnimatedSprite2D
-	_anim.play("enemy_walking")
 	pathFollow = get_tree().get_root().get_node(str(get_tree().current_scene.name) + "/Building/Path2D/PathFollow2D")
 	Building1Positions = get_node("/root/Building1Positions")
 	nameOfSelf = get_meta("name")
@@ -44,7 +42,6 @@ func _process(delta):
 	if targetPos.distance_to(lastPos) > 0 and canMove:
 		canMove = false
 	else:
-		_anim.stop()
 		canMove = true
 		
 	lastPos = targetPos
@@ -133,11 +130,12 @@ func _physics_process(delta):
 				print("walking right")
 				#walk right
 				direction = right
+				_sprite_2d.flip_h = false
 			else:
 				print("walking left")
 				#walk left
 				direction = not right
-				
+				_sprite_2d.flip_h = true
 				
 			
 		#check if the guard has collided with (captured) the player
@@ -165,6 +163,18 @@ func _physics_process(delta):
 		#otherwise just patrol like normal
 		patrol_building()
 	
+		
+	if (Building1Positions.locations[nameOfSelf]%2 == 0):
+		if direction == true:
+			_sprite_2d.flip_h = false
+		else:
+			_sprite_2d.flip_h = true
+	else:
+		if direction == true:
+			_sprite_2d.flip_h = true
+		else:
+			_sprite_2d.flip_h = false
+	print(direction)
 	if soundplayer.stream != bgMusic:
 		soundplayer.stop()
 		soundplayer.stream = bgMusic
@@ -177,7 +187,8 @@ func _physics_process(delta):
 	#check if the guard has reached the top of the building
 	if pathFollow.progress >= 6270:
 		#turn the guard around
-		direction = false;
+		direction = false
+		#_sprite_2d.flip_h = not _sprite_2d.flip_h
 		
 		
 		

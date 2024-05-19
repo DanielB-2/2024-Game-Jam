@@ -125,7 +125,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"enemy_walking",
-"speed": 5.0
+"speed": 15.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5mhn7"]
@@ -372,6 +372,7 @@ position = Vector2(16.9846, -73.0927)
 scale = Vector2(0.1025, 0.0916667)
 sprite_frames = SubResource("SpriteFrames_i368j")
 animation = &"enemy_walking"
+autoplay = "enemy_walking"
 
 [node name="GuardArea" type="Area2D" parent="Building/Path2D/PathFollow2D/Guard"]
 position = Vector2(554.972, 50.1293)
