@@ -116,6 +116,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("9_o6so8")
+}],
+"loop": true,
+"name": &"crouch_stable",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_kmao5")
+}],
+"loop": true,
+"name": &"crouch_stable_notie",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("2_pny10")
 }, {
 "duration": 1.0,
@@ -290,7 +306,7 @@ script = ExtResource("1_l0sym")
 position = Vector2(6, -44)
 scale = Vector2(0.117, 0.097)
 sprite_frames = SubResource("SpriteFrames_uymlw")
-animation = &"walk"
+animation = &"crouch"
 
 [node name="PlayerNormalCollision" type="CollisionShape2D" parent="."]
 position = Vector2(2.5, -48)

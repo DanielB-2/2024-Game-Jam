@@ -35,6 +35,7 @@ text = "
 "
 
 [node name="Label" type="Label" parent="Label"]
+layout_mode = 0
 offset_left = -3.0
 offset_top = -73.0
 offset_right = 356.0

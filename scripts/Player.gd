@@ -9,6 +9,8 @@ extends CharacterBody2D
 @onready var space_label = $spaceLabel
 @onready var progress_bar = $PolicyBoard4/ProgressBar
 
+var hasNotCrouched = true
+
 @onready var nums = [
 	$"PolicyBoard5/Node2D/num1",
 	$"PolicyBoard5/Node2D/num2",
@@ -62,7 +64,7 @@ func _physics_process(delta):
 		PlayerData.shifting = false
 		
 		
-		
+	
 
 	# Get the input direction and handle the movement/deceleration.
 	var index = 4
@@ -76,6 +78,8 @@ func _physics_process(delta):
 		_sprite.animation = "crouch_notie" if playerData.tietoggle else "crouch"
 	else:
 		_sprite.animation = "walk_notie" if playerData.tietoggle else "walk"
+		hasNotCrouched = true
+		
 	hideactionimg.texture = tieGood if playerData.tietoggle else tieBad
 	hideaction.text = "SHOW" if playerData.tietoggle else "HIDE"
 	
@@ -93,7 +97,8 @@ func _physics_process(delta):
 			_sprite.flip_h = false
 				
 				
-		_sprite.play("walk_notie" if playerData.tietoggle else "walk")
+		_sprite.play("crouch_stable" if playerData.shifting and !hasNotCrouched else "crouch_stable_notie" if playerData.shifting and !hasNotCrouched and playerData.tietoggle else "crouch" if playerData.shifting and hasNotCrouched else "crouch-notie" if playerData.shifting and playerData.tietoggle and hasNotCrouched else "walk_notie" if playerData.tietoggle else "walk")
+		hasNotCrouched = false
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		_sprite.stop()
