@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 PlayerData="*res://scripts/PlayerData.gd"
 Global="*res://scripts/Global.gd"
 Building1Positions="*res://scripts/Building1Positions.gd"
+BuildingDifficulties="*res://building_difficulties.gd"
 
 [display]
 

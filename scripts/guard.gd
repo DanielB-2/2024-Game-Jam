@@ -19,6 +19,7 @@ var nameOfSelf
 var right
 var heard = "no"
 @onready var building = get_tree().get_root()
+var can_be_seen_last_frame = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -45,15 +46,11 @@ func _process(delta):
 		
 	lastPos = targetPos
 	
-	if playerData.tietoggle:
-		playerData.exposure += 1
-	else:
-		playerData.exposure -= 1
 		
 	#apply_central_force(self.global_position.direction_to(targetPos) * Vector2(1, 0) * 1200)
 	
 func patrol_building():
-	speed = 1
+	walk()
 func can_i_see_the_player():
 
 	if not playerData.tietoggle:
@@ -70,25 +67,44 @@ func can_i_see_the_player():
 		patrol_building()
 
 func can_i_hear_the_player():
-	if Building1Positions.locations[nameOfSelf] == Building1Positions.locations["player"] + 1:
-		return "down"
-	elif Building1Positions.locations[nameOfSelf] == Building1Positions.locations["player"]-1:
-		return "up"
+	print(PlayerData.currentBuilding)
+	if BuildingDifficulties.difficulties[str(PlayerData.currentBuilding)]["canHear"]:
+		if Building1Positions.locations[nameOfSelf] == Building1Positions.locations["player"] + 1:
+			return "down"
+		elif Building1Positions.locations[nameOfSelf] == Building1Positions.locations["player"]-1:
+			return "up"
+		else:
+			#either no, or the guard should be seeing the player on the same floor
+			return "no"
 	else:
-		#either no, or the guard should be seeing the player on the same floor
-		return "no"
-		
+		return "no";
+func run():
+	if BuildingDifficulties.difficulties[str(PlayerData.currentBuilding)]["canRun"]:
+		speed = 2
+	else:
+		speed = 1
+func walk():
+	speed = 1
+func did_i_see_the_player():
+	if BuildingDifficulties.difficulties[str(PlayerData.currentBuilding)]["canSwitchTieInFrontOfGuard"]:
+		return false
+	else:
+		#check if the player is still on the same floor as the guard
+		if Building1Positions.locations["player"] == Building1Positions.locations[nameOfSelf]:
+			return can_be_seen_last_frame
+		else:
+			can_be_seen_last_frame = false
+			return false
 func _physics_process(delta):
 	if not playerData.shifting:
 		heard = can_i_hear_the_player()
 	else:
 		heard = "no"
-		speed = 1
-	#is the player wearing a tie
-	#if not playerData.tietoggle:
-		#check if the guard can see the player
-	if can_i_see_the_player():
-		
+		walk()
+	
+	#check if the guard can see the player
+	if can_i_see_the_player() or did_i_see_the_player():
+		can_be_seen_last_frame = true;
 		print("can be seen")
 		if soundplayer.stream != bgMusicChase:
 			soundplayer.stop()
@@ -96,7 +112,7 @@ func _physics_process(delta):
 			soundplayer.play()
 		
 		#if the guard can see the player
-		speed = 2
+		run()
 		var right
 		#figure out which way is left and which is right based on the floor number
 		if (Building1Positions.locations[nameOfSelf]%2 == 0):
@@ -133,16 +149,20 @@ func _physics_process(delta):
 			player.onReturnToMainScene(Vector2(0, -1000))
 	
 	elif heard == "up":
+		can_be_seen_last_frame = false
 		#run up and investigate
 		direction = true
-		speed = 2
+		run()
 	elif heard == "down":
+		can_be_seen_last_frame = false
 		#run down and investigate
 		direction = false
-		speed = 2
-	#else:
+		run()
+	else:
+		can_be_seen_last_frame = false;
 		#otherwise just patrol like normal
-		#patrol_building()
+		patrol_building()
+	
 		
 	if (Building1Positions.locations[nameOfSelf]%2 == 0):
 		if direction == true:

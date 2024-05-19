@@ -129,7 +129,9 @@ func toggleSpaceIcon():
 
 
 func _on_exposure_tick_timeout():
-	if playerData.tietoggle == true:
-		progress_bar.value += 1
-	else:
-		progress_bar.value -= 1
+	if not (PlayerData.currentBuilding == 0):
+		if BuildingDifficulties.difficulties[str(PlayerData.currentBuilding)]["canBeExposed"]:
+			if playerData.tietoggle == true:
+				progress_bar.value += 1
+			else:
+				progress_bar.value -= 1

@@ -185,6 +185,7 @@ position = Vector2(-1327, -127)
 scale = Vector2(2.59625, 2.28)
 script = ExtResource("2_hsbgy")
 target_room = ExtResource("3_f0l3d")
+metadata/building_number = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door2"]
 shape = SubResource("RectangleShape2D_1g2c6")
@@ -201,6 +202,7 @@ position = Vector2(-1982, -135)
 scale = Vector2(2.63625, 2.44)
 script = ExtResource("2_hsbgy")
 target_room = ExtResource("13_wiobd")
+metadata/building_number = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door3"]
 shape = SubResource("RectangleShape2D_1g2c6")
@@ -226,6 +228,7 @@ position = Vector2(-2631, -135)
 scale = Vector2(2.63625, 2.44)
 script = ExtResource("2_hsbgy")
 target_room = ExtResource("15_idl5g")
+metadata/building_number = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door4"]
 shape = SubResource("RectangleShape2D_1g2c6")
@@ -260,6 +263,7 @@ position = Vector2(-651, -127)
 scale = Vector2(2.59625, 2.28)
 script = ExtResource("2_hsbgy")
 target_room = ExtResource("4_avp1o")
+metadata/building_number = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door1"]
 shape = SubResource("RectangleShape2D_1g2c6")
