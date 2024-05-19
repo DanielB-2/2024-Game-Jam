@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b17kypa37a1mm"]
+[gd_scene load_steps=5 format=3 uid="uid://b17kypa37a1mm"]
 
 [ext_resource type="Texture2D" uid="uid://vqt855buh0w1" path="res://assets/images/mainercity.jpg" id="1_kmqru"]
 [ext_resource type="Script" path="res://scripts/menuPlayButton.gd" id="2_3vh1e"]
+[ext_resource type="Script" path="res://scenes/CreditsButton.gd" id="3_1brnf"]
 [ext_resource type="Texture2D" uid="uid://kyabdkcmb73d" path="res://assets/logo.png" id="3_ssvs1"]
 
 [node name="Node2D" type="Node2D"]
@@ -40,7 +41,7 @@ offset_bottom = 239.0
 theme_override_font_sizes/font_size = 66
 text = "Credits
 "
-script = ExtResource("2_3vh1e")
+script = ExtResource("3_1brnf")
 
 [node name="Logo" type="Sprite2D" parent="."]
 position = Vector2(578, 381.5)

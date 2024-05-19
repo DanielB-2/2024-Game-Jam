@@ -14,6 +14,7 @@ var Building1Positions
 var nameOfSelf
 var right
 var heard = "no"
+@onready var building = get_tree().get_root()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -35,6 +36,11 @@ func _process(delta):
 		canMove = true
 		
 	lastPos = targetPos
+	
+	if playerData.tietoggle:
+		playerData.exposure += 1
+	else:
+		playerData.exposure -= 1
 		
 	#apply_central_force(self.global_position.direction_to(targetPos) * Vector2(1, 0) * 1200)
 	
@@ -87,7 +93,9 @@ func _physics_process(delta):
 				print("walking left")
 				#walk left
 				direction = not right
-		
+				
+				
+			
 		
 		
 		#check if the guard has collided with (captured) the player
