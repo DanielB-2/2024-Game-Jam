@@ -6,10 +6,10 @@ static var instance
 # Player data
 var policiesHeld = 0
 var lastEntered = Vector2(-100,0)
-
-var tietoggle = false #no semicolons allowed java stinks
+var tietoggle = false
+var shifting = false
+var exposure = 0
 var exposed = false
-
 
 func _ready():
 	# Set the singleton instance

@@ -1,9 +1,10 @@
-[gd_scene load_steps=26 format=3 uid="uid://bqxodl8ibgv4y"]
+[gd_scene load_steps=27 format=3 uid="uid://bqxodl8ibgv4y"]
 
 [ext_resource type="PackedScene" uid="uid://doaoix1vrbfym" path="res://scenes/player.tscn" id="1_lj0yb"]
 [ext_resource type="Texture2D" uid="uid://vqt855buh0w1" path="res://assets/images/mainercity.jpg" id="1_ogxcy"]
 [ext_resource type="Script" path="res://scripts/door.gd" id="2_hsbgy"]
 [ext_resource type="Texture2D" uid="uid://dny4lcseecpko" path="res://icon.svg" id="2_u0i4s"]
+[ext_resource type="Texture2D" uid="uid://j3e0fnjctsjr" path="res://assets/foreground.png" id="2_xlfx8"]
 [ext_resource type="PackedScene" uid="uid://d2o34yypg7rta" path="res://scenes/building2.tscn" id="3_f0l3d"]
 [ext_resource type="PackedScene" uid="uid://b04qpb1q6jiw1" path="res://scenes/building1.tscn" id="4_avp1o"]
 [ext_resource type="PackedScene" uid="uid://ek27re4kc0gn" path="res://scenes/policy.tscn" id="5_q6e6y"]
@@ -120,6 +121,16 @@ scale = Vector2(2.2213, 2.74627)
 texture = ExtResource("1_ogxcy")
 centered = false
 
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(0, -238)
+motion_mirroring = Vector2(1200, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(-54, -169)
+scale = Vector2(0.681667, 0.4875)
+texture = ExtResource("2_xlfx8")
+centered = false
+
 [node name="Ground" type="StaticBody2D" parent="."]
 position = Vector2(1280, 0)
 scale = Vector2(2.79982, 1)
@@ -127,11 +138,6 @@ scale = Vector2(2.79982, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
 shape = SubResource("WorldBoundaryShape2D_s0w4s")
 debug_color = Color(0.252904, 0.630268, 0.229332, 0.42)
-
-[node name="Sprite2D" type="Sprite2D" parent="Ground"]
-position = Vector2(-533.168, 200)
-scale = Vector2(39.8826, 3.35)
-texture = ExtResource("2_u0i4s")
 
 [node name="WorldBounds" type="StaticBody2D" parent="."]
 position = Vector2(1280, 0)
