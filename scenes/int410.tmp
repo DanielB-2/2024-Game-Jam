@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://qc14kjv5snm4"]
+[gd_scene load_steps=53 format=3 uid="uid://qc14kjv5snm4"]
 
 [ext_resource type="Texture2D" uid="uid://vqt855buh0w1" path="res://assets/images/mainercity.jpg" id="1_awife"]
 [ext_resource type="Script" path="res://scripts/introAnimation.gd" id="1_cspy4"]
@@ -44,7 +44,6 @@
 [ext_resource type="Texture2D" uid="uid://d2q3vk73kg75v" path="res://assets/building.png" id="27_vvok3"]
 [ext_resource type="Texture2D" uid="uid://j3e0fnjctsjr" path="res://assets/foreground.png" id="43_vrkx1"]
 [ext_resource type="Texture2D" uid="uid://ma56dti2i3hd" path="res://assets/images/introscene/textmsg/IMG_1700-5.png" id="44_7nbsk"]
-[ext_resource type="Script" path="res://scripts/intro/YesButton.gd" id="44_erlqd"]
 [ext_resource type="Texture2D" uid="uid://caf2yhqnmixds" path="res://assets/images/introscene/textmsg/IMG_1700-1.png" id="44_ff1ya"]
 [ext_resource type="Texture2D" uid="uid://c6vljb2p4rtug" path="res://assets/images/introscene/textmsg/IMG_1700-4.png" id="45_js8eu"]
 [ext_resource type="Texture2D" uid="uid://j5ki37fim8qp" path="res://assets/images/introscene/textmsg/IMG_1700-3.png" id="46_r88ct"]
@@ -276,7 +275,6 @@ theme = SubResource("Theme_jx38u")
 theme_override_styles/normal = SubResource("StyleBoxFlat_3bifg")
 text = "Hello
 "
-script = ExtResource("44_erlqd")
 
 [node name="Button2" type="Button" parent="Player/Phone"]
 layout_mode = 0
