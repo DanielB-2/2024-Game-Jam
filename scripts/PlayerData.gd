@@ -10,6 +10,7 @@ var tietoggle = false
 var shifting = false
 var exposure = 0
 var exposed = false
+var shifting = false
 
 func _ready():
 	# Set the singleton instance

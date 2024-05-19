@@ -137,7 +137,7 @@ size = Vector2(25, 26.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8coho"]
 size = Vector2(42, 85)
 
-[node name="building1" type="Node2D"]
+[node name="building2" type="Node2D"]
 position = Vector2(-1061, -6)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -400,34 +400,34 @@ metadata/name = "player"
 position = Vector2(3, -14.5)
 shape = SubResource("RectangleShape2D_8coho")
 
-[node name="PolicyA" parent="." instance=ExtResource("6_ct7r2")]
+[node name="PolicyB" parent="." instance=ExtResource("6_ct7r2")]
 position = Vector2(-251, -374)
 
-[node name="PolicyA2" parent="." instance=ExtResource("6_ct7r2")]
+[node name="PolicyB2" parent="." instance=ExtResource("6_ct7r2")]
 position = Vector2(-42, -374)
 
-[node name="PolicyA3" parent="." instance=ExtResource("6_ct7r2")]
+[node name="PolicyB3" parent="." instance=ExtResource("6_ct7r2")]
 position = Vector2(-251, -574)
 
-[node name="PolicyA4" parent="." instance=ExtResource("6_ct7r2")]
+[node name="PolicyB4" parent="." instance=ExtResource("6_ct7r2")]
 position = Vector2(-42, -574)
 
-[node name="PolicyA5" parent="." instance=ExtResource("6_ct7r2")]
+[node name="PolicyB5" parent="." instance=ExtResource("6_ct7r2")]
 position = Vector2(-251, -753)
 
-[node name="PolicyA6" parent="." instance=ExtResource("6_ct7r2")]
+[node name="PolicyB6" parent="." instance=ExtResource("6_ct7r2")]
 position = Vector2(-42, -753)
 
-[node name="PolicyA7" parent="." instance=ExtResource("6_ct7r2")]
+[node name="PolicyB7" parent="." instance=ExtResource("6_ct7r2")]
 position = Vector2(-251, -932)
 
-[node name="PolicyA8" parent="." instance=ExtResource("6_ct7r2")]
+[node name="PolicyB8" parent="." instance=ExtResource("6_ct7r2")]
 position = Vector2(-42, -932)
 
-[node name="PolicyA9" parent="." instance=ExtResource("6_ct7r2")]
+[node name="PolicyB9" parent="." instance=ExtResource("6_ct7r2")]
 position = Vector2(-251, -81.0001)
 
-[node name="PolicyA10" parent="." instance=ExtResource("6_ct7r2")]
+[node name="PolicyB10" parent="." instance=ExtResource("6_ct7r2")]
 position = Vector2(-42, -81.0001)
 
 [node name="Shredder" parent="." instance=ExtResource("25_a7ixy")]
