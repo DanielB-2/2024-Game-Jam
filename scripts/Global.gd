@@ -6,6 +6,13 @@ extends Node
 var collected_coins = {}
 signal coin_collected
 
+var completedBuildings = {
+	"building1": false,
+	"building2": false,
+	"building3": false,
+	"building4": false,
+}
+
 func _ready():
 	Global.coin_collected.connect(on_coin_collected)
 	add_child(soundplayer)
@@ -13,8 +20,9 @@ func _ready():
 	soundplayer.set_max_polyphony(2)
 	
 func _physics_process(delta):
+	print(completedBuildings["building1"])
+	checkForWin()
 	for coin in get_tree().get_nodes_in_group("Policies"):
-		#print(str(collected_coins) + " end")
 		if coin.name in collected_coins:
 			coin.queue_free()
 	if Input.is_action_just_pressed("exitgame"):
@@ -34,3 +42,14 @@ func introSequence():
 func policyCollectSound():
 	soundplayer.stop()
 	soundplayer.play()
+	
+func checkIfAllPoliciesCollected():
+	if get_tree().current_scene:
+		# best line of code ive ever written => vv
+		if get_tree().current_scene.name == "building1" or get_tree().current_scene.name == "building2" or get_tree().current_scene.name == "building3" or get_tree().current_scene.name == "building4":
+			if get_tree().get_nodes_in_group("Policies").is_empty():
+				#print(str(get_tree().current_scene.name) + " rhrsrys")
+				completedBuildings[get_tree().current_scene.name] = true
+func checkForWin():
+	if completedBuildings["building1"] == true:
+		get_tree().change_scene_to_file("res://scenes/WinScreen.tscn")

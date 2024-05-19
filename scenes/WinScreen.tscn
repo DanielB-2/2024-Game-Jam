@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://bw5ssd70rylhq"]
+
+[ext_resource type="Texture2D" uid="uid://vqt855buh0w1" path="res://assets/images/mainercity.jpg" id="1_0ifo1"]
+
+[node name="WinScreen" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_top = -45.0
+offset_right = 1153.0
+offset_bottom = 653.0
+texture = ExtResource("1_0ifo1")
+
+[node name="Label" type="Label" parent="TextureRect"]
+offset_left = 16.0
+offset_top = 362.0
+offset_right = 544.0
+offset_bottom = 604.0
+theme_override_font_sizes/font_size = 30
+text = "you win"
+horizontal_alignment = 1
+autowrap_mode = 3
