@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bw5ssd70rylhq"]
+[gd_scene load_steps=4 format=3 uid="uid://bw5ssd70rylhq"]
 
 [ext_resource type="Texture2D" uid="uid://vqt855buh0w1" path="res://assets/images/mainercity.jpg" id="1_0ifo1"]
+[ext_resource type="FontFile" uid="uid://y1wejrllh8at" path="res://assets/PixelOperator8-Bold.ttf" id="2_eqd3t"]
+[ext_resource type="Texture2D" uid="uid://kyabdkcmb73d" path="res://assets/logo.png" id="3_62a5e"]
 
 [node name="WinScreen" type="Node2D"]
 
@@ -12,11 +14,22 @@ texture = ExtResource("1_0ifo1")
 
 [node name="Label" type="Label" parent="TextureRect"]
 layout_mode = 0
-offset_left = 16.0
-offset_top = 362.0
-offset_right = 544.0
-offset_bottom = 604.0
-theme_override_font_sizes/font_size = 30
-text = "you win"
+offset_left = 156.5
+offset_top = 252.0
+offset_right = 993.5
+offset_bottom = 681.0
+theme_override_fonts/font = ExtResource("2_eqd3t")
+theme_override_font_sizes/font_size = 50
+text = "You saved your company
+
+You are now RICH
+
+
+Thank you for playing"
 horizontal_alignment = 1
 autowrap_mode = 3
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(569, 221)
+scale = Vector2(0.222222, 0.288889)
+texture = ExtResource("3_62a5e")
