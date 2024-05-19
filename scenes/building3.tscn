@@ -125,7 +125,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"enemy_walking",
-"speed": 5.0
+"speed": 15.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5mhn7"]
@@ -137,7 +137,7 @@ size = Vector2(25, 26.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8coho"]
 size = Vector2(42, 85)
 
-[node name="building2" type="Node2D"]
+[node name="building3" type="Node2D"]
 position = Vector2(-1048, 14)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -373,6 +373,7 @@ position = Vector2(16.9846, -73.0927)
 scale = Vector2(0.1025, 0.0916667)
 sprite_frames = SubResource("SpriteFrames_i368j")
 animation = &"enemy_walking"
+autoplay = "enemy_walking"
 
 [node name="GuardArea" type="Area2D" parent="Building/Path2D/PathFollow2D/Guard"]
 position = Vector2(554.972, 50.1293)
@@ -401,38 +402,38 @@ metadata/name = "player"
 position = Vector2(3, -14.5)
 shape = SubResource("RectangleShape2D_8coho")
 
-[node name="PolicyB" parent="." instance=ExtResource("24_aqfic")]
+[node name="PolicyC" parent="." instance=ExtResource("24_aqfic")]
 position = Vector2(-1258, -404)
 
-[node name="PolicyB2" parent="." instance=ExtResource("24_aqfic")]
+[node name="PolicyC2" parent="." instance=ExtResource("24_aqfic")]
 position = Vector2(-1049, -404)
 
-[node name="PolicyB3" parent="." instance=ExtResource("24_aqfic")]
+[node name="PolicyC3" parent="." instance=ExtResource("24_aqfic")]
 position = Vector2(-1258, -604)
 
-[node name="PolicyB4" parent="." instance=ExtResource("24_aqfic")]
+[node name="PolicyC4" parent="." instance=ExtResource("24_aqfic")]
 position = Vector2(-1049, -604)
 
-[node name="PolicyB5" parent="." instance=ExtResource("24_aqfic")]
+[node name="PolicyC5" parent="." instance=ExtResource("24_aqfic")]
 position = Vector2(-1258, -783)
 
-[node name="PolicyB6" parent="." instance=ExtResource("24_aqfic")]
+[node name="PolicyC6" parent="." instance=ExtResource("24_aqfic")]
 position = Vector2(-1049, -783)
 
-[node name="PolicyB7" parent="." instance=ExtResource("24_aqfic")]
+[node name="PolicyC7" parent="." instance=ExtResource("24_aqfic")]
 position = Vector2(-1258, -962)
 
-[node name="PolicyB8" parent="." instance=ExtResource("24_aqfic")]
+[node name="PolicyC8" parent="." instance=ExtResource("24_aqfic")]
 position = Vector2(-1049, -962)
 
-[node name="PolicyB9" parent="." instance=ExtResource("24_aqfic")]
+[node name="PolicyC9" parent="." instance=ExtResource("24_aqfic")]
 position = Vector2(-1258, -111)
 
-[node name="PolicyB10" parent="." instance=ExtResource("24_aqfic")]
+[node name="PolicyC10" parent="." instance=ExtResource("24_aqfic")]
 position = Vector2(-1049, -111)
 
 [node name="Shredder" parent="." instance=ExtResource("25_4dw6v")]
-position = Vector2(-1463, -109)
+position = Vector2(-1468, -47)
 
 [connection signal="body_entered" from="Building/StaticBody2D/Sprite2D/DoorExit" to="Building/StaticBody2D/Sprite2D/DoorExit" method="_on_body_entered"]
 [connection signal="body_exited" from="Building/StaticBody2D/Sprite2D/DoorExit" to="Building/StaticBody2D/Sprite2D/DoorExit" method="_on_body_exited"]

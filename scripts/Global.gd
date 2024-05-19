@@ -51,5 +51,5 @@ func checkIfAllPoliciesCollected():
 				#print(str(get_tree().current_scene.name) + " rhrsrys")
 				completedBuildings[get_tree().current_scene.name] = true
 func checkForWin():
-	if completedBuildings["building1"] == true and completedBuildings["building2"] == true:
+	if completedBuildings["building1"] == true and completedBuildings["building2"] == true and completedBuildings["building3"] == true and completedBuildings["building4"] == true:
 		get_tree().change_scene_to_file("res://scenes/WinScreen.tscn")
