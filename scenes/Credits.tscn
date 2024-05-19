@@ -78,6 +78,7 @@ offset_bottom = 628.0
 script = ExtResource("4_12a66")
 
 [node name="Label3" type="Label" parent="Button"]
+layout_mode = 0
 offset_left = 1.0
 offset_right = 361.0
 offset_bottom = 60.0
