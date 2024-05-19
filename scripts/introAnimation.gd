@@ -4,6 +4,11 @@ extends Node2D
 @onready var player = $Player
 @onready var phone = $Player/Phone
 
+@onready var audio1 = $MusicasMias/AudioStreamPlayer
+@onready var audio2 = $MusicasMias/AudioStreamPlayer2
+
+@onready var track1 = load("res://music//bgmusic.wav")
+
 @onready var message1 = $"Player/Phone/Text Messages/Text1"
 @onready var message2 = $"Player/Phone/Text Messages/Text2"
 @onready var message3 = $"Player/Phone/Text Messages/Text3"
@@ -19,6 +24,8 @@ var canMove = true
 
 func _ready():
 	player.play("walk")
+	audio1.stream = track1
+	audio1.play()
 	seq()
 	pass
 
