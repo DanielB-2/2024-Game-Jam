@@ -355,9 +355,6 @@ rotation = -0.00489633
 rotates = false
 
 [node name="Guard" type="RigidBody2D" parent="Building/Path2D/PathFollow2D"]
-position = Vector2(-180.842, 495.237)
-rotation = 0.0171356
-scale = Vector2(1.63608, 1.3832)
 collision_layer = 2
 collision_mask = 2
 gravity_scale = 0.0
@@ -366,17 +363,18 @@ script = ExtResource("6_d87cv")
 metadata/name = "guard1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Building/Path2D/PathFollow2D/Guard"]
-position = Vector2(105.732, -420.224)
+position = Vector2(11.8476, -61.6777)
 shape = SubResource("RectangleShape2D_2orfx")
+disabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Building/Path2D/PathFollow2D/Guard"]
-position = Vector2(110.869, -431.639)
+position = Vector2(16.9846, -73.0927)
 scale = Vector2(0.1025, 0.0916667)
 sprite_frames = SubResource("SpriteFrames_i368j")
 animation = &"enemy_walking"
 
 [node name="GuardArea" type="Area2D" parent="Building/Path2D/PathFollow2D/Guard"]
-position = Vector2(648.856, -308.417)
+position = Vector2(554.972, 50.1293)
 rotation = -0.0144766
 scale = Vector2(1.00003, 0.99998)
 skew = 0.00412893
@@ -385,7 +383,6 @@ metadata/name = "guard1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Building/Path2D/PathFollow2D/Guard/GuardArea"]
 position = Vector2(-541.459, -116.061)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_5mhn7")
 
 [node name="Building_Path2D_PathFollow2D_Guard_GuardArea#CollisionShape2D" type="CollisionShape2D" parent="."]
