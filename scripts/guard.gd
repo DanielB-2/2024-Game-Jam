@@ -24,24 +24,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	targetPos = player.global_position+(Vector2.DOWN * 400)+(Vector2.LEFT * 150)
-	if playerData.tietoggle:
-		set_collision_layer_value(2, false)
-		set_collision_mask_value(2, false)
-		set_collision_layer_value(1, true)
-		set_collision_mask_value(1, true)
-		guard_area.set_collision_layer_value(2, false)
-		guard_area.set_collision_mask_value(2, false)
-		guard_area.set_collision_layer_value(1, true)
-		guard_area.set_collision_mask_value(1, true)
-	else:
-		set_collision_layer_value(2, true)
-		set_collision_mask_value(2, true)
-		set_collision_layer_value(1, false)
-		set_collision_mask_value(1, false)
-		guard_area.set_collision_layer_value(2, true)
-		guard_area.set_collision_mask_value(2, true)
-		guard_area.set_collision_layer_value(1, false)
-		guard_area.set_collision_mask_value(1, false)
+
 	if targetPos.distance_to(lastPos) > 0 and canMove:
 		_anim.play("enemy_walking")
 		canMove = false
@@ -61,40 +44,43 @@ func can_i_see_the_player():
 	else:
 		return false
 func _physics_process(delta):
-	#check if the guard can see the player
-	if can_i_see_the_player():
-		#if the guard can see the player
-		speed = 2
-		var right
-		#figure out which way is left and which is right based on the floor number
-		if (Building1Positions.locations[nameOfSelf]%2 == 0):
-			right = true
-			#up is right
-			print(right)
-		else:
-			#down is right
-			right = false
-			print(right)
+	
+	#is the player wearing a tie
+	if not playerData.tietoggle:
+		#check if the guard can see the player
+		if can_i_see_the_player():
+			#if the guard can see the player
+			speed = 2
+			var right
+			#figure out which way is left and which is right based on the floor number
+			if (Building1Positions.locations[nameOfSelf]%2 == 0):
+				right = true
+				#up is right
+				print(right)
+			else:
+				#down is right
+				right = false
+				print(right)
+				
 			
+			#figure out which direction to the player and then go that way
+			if self.global_position.x-player.global_position.x < 0:
+				print("walking right")
+				#walk right
+				direction = right
+			else:
+				print("walking left")
+				#walk left
+				direction = not right
 			
-		#figure out which direction to the player and then go that way
-		if self.position.direction_to(player.position).x > 0:
-			print("walking right")
-			#walk right
-			direction = right
-		else:
-			print("walking left")
-			#walk left
-			direction = not right
-		
-		#check if the guard has collided with (captured) the player
-		
-		if get_node("GuardArea").overlaps_area(get_tree().get_root().get_node("Node2D/Player/Area2D")):
-			print("You got captured")
+			#check if the guard has collided with (captured) the player
 			
-			#Back to the main scene for you
-			get_tree().change_scene_to_file("res://scenes/node_3d.tscn")
-			player.onReturnToMainScene(Vector2(0, -1000))
+			if get_node("GuardArea").overlaps_area(get_tree().get_root().get_node("Node2D/Player/Area2D")):
+				print("You got captured")
+				
+				#Back to the main scene for you
+				get_tree().change_scene_to_file("res://scenes/node_3d.tscn")
+				player.onReturnToMainScene(Vector2(0, -1000))
 	else:
 		#otherwise just patrol like normal
 		patrol_building()
@@ -119,7 +105,6 @@ func _physics_process(delta):
 	else:
 		pathFollow.progress += 200 * delta * speed
 		
-	print(pathFollow.progress)
 	
 
 
