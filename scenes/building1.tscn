@@ -137,7 +137,7 @@ size = Vector2(25, 26.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8coho"]
 size = Vector2(42, 85)
 
-[node name="Node2D" type="Node2D"]
+[node name="building1" type="Node2D"]
 position = Vector2(-582, 0)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]

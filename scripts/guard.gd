@@ -18,7 +18,7 @@ var right
 func _ready():
 	player = get_parent().get_parent().get_parent().get_parent().get_node("Player")
 	_anim = $AnimatedSprite2D
-	pathFollow = get_tree().get_root().get_node("Node2D/Building/Path2D/PathFollow2D")
+	pathFollow = get_tree().get_root().get_node("building1/Building/Path2D/PathFollow2D")
 	Building1Positions = get_node("/root/Building1Positions")
 	nameOfSelf = get_meta("name")
 
@@ -45,7 +45,7 @@ func can_i_see_the_player():
 	else:
 		return false
 func _physics_process(delta):
-	
+
 	#is the player wearing a tie
 	if not playerData.tietoggle:
 		#check if the guard can see the player
@@ -76,7 +76,7 @@ func _physics_process(delta):
 		
 		#check if the guard has collided with (captured) the player
 		
-		if get_node("GuardArea").overlaps_area(get_tree().get_root().get_node("Node2D/Player/Area2D")):
+		if get_node("GuardArea").overlaps_area(get_tree().get_root().get_node("building1/Player/Area2D")):
 			print("You got captured")
 			
 			#Back to the main scene for you
@@ -108,5 +108,3 @@ func _physics_process(delta):
 		
 	else:
 		pathFollow.progress += 200 * delta * speed
-		
-	
