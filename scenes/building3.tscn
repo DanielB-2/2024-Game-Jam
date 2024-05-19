@@ -1,0 +1,437 @@
+[gd_scene load_steps=43 format=3 uid="uid://bvx0xnu414h7q"]
+
+[ext_resource type="Texture2D" uid="uid://clr5uixdu72tx" path="res://assets/workbg.png" id="1_q3jcs"]
+[ext_resource type="Texture2D" uid="uid://b3sbis6qkk15u" path="res://assets/innerBuilding.png" id="2_rr4ls"]
+[ext_resource type="Script" path="res://scripts/DoorExit.gd" id="3_xfwad"]
+[ext_resource type="Texture2D" uid="uid://bj3ybwxf6fe05" path="res://assets/images/DoorAnim/Open/IMG_1683-1.png" id="4_7lnc7"]
+[ext_resource type="Texture2D" uid="uid://bjnsnts38t6jc" path="res://assets/stairs.png" id="5_1rkat"]
+[ext_resource type="Texture2D" uid="uid://ppo186khpaxr" path="res://assets/floor.png" id="6_e4l4e"]
+[ext_resource type="Script" path="res://scripts/guard.gd" id="7_o4758"]
+[ext_resource type="Texture2D" uid="uid://dpl7sxyp0o3js" path="res://assets/images/EnemyAnims/Walking/walking-1.png" id="8_iet08"]
+[ext_resource type="Texture2D" uid="uid://dx0kik60q78vw" path="res://assets/images/EnemyAnims/Walking/walking-2.png" id="9_pwndu"]
+[ext_resource type="Texture2D" uid="uid://b6kxwl7pwi2ur" path="res://assets/images/EnemyAnims/Walking/walking-3.png" id="10_bk8us"]
+[ext_resource type="Texture2D" uid="uid://72feu0r42302" path="res://assets/images/EnemyAnims/Walking/walking-4.png" id="11_p0bdw"]
+[ext_resource type="Texture2D" uid="uid://0orf67h81yx3" path="res://assets/images/EnemyAnims/Walking/walking-5.png" id="12_w3jtx"]
+[ext_resource type="Texture2D" uid="uid://dr25mslojdtv7" path="res://assets/images/EnemyAnims/Walking/walking-6.png" id="13_5bhgg"]
+[ext_resource type="Texture2D" uid="uid://cuftq4n8q7qii" path="res://assets/images/EnemyAnims/Walking/walking-7.png" id="14_jlgdw"]
+[ext_resource type="Texture2D" uid="uid://bpma4r4h0bxll" path="res://assets/images/EnemyAnims/Walking/walking-8.png" id="15_8fge7"]
+[ext_resource type="Texture2D" uid="uid://osti6o0y17cb" path="res://assets/images/EnemyAnims/Walking/walking-9.png" id="16_fat4x"]
+[ext_resource type="Texture2D" uid="uid://c23oqlggfhv3b" path="res://assets/images/EnemyAnims/Walking/walking-10.png" id="17_53vhr"]
+[ext_resource type="Texture2D" uid="uid://dnpox6lqktva8" path="res://assets/images/EnemyAnims/Walking/walking-11.png" id="18_vbs60"]
+[ext_resource type="Texture2D" uid="uid://bbumytqso5cii" path="res://assets/images/EnemyAnims/Walking/walking-12.png" id="19_emqxp"]
+[ext_resource type="Texture2D" uid="uid://j5hmvts812hr" path="res://assets/images/EnemyAnims/Walking/walking-13.png" id="20_hbplt"]
+[ext_resource type="Texture2D" uid="uid://p2ob4mry3ceh" path="res://assets/images/EnemyAnims/Walking/walking-14.png" id="21_0xjb2"]
+[ext_resource type="Script" path="res://scripts/roomDetection.gd" id="22_txhfm"]
+[ext_resource type="PackedScene" uid="uid://doaoix1vrbfym" path="res://scenes/player.tscn" id="23_mhoah"]
+[ext_resource type="PackedScene" uid="uid://ek27re4kc0gn" path="res://scenes/policy.tscn" id="24_aqfic"]
+[ext_resource type="PackedScene" uid="uid://dk0nhbw6yiwj1" path="res://scenes/shredder.tscn" id="25_4dw6v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hjmq6"]
+size = Vector2(178.523, 213.5)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_d07jf"]
+a = Vector2(-1019, -12)
+b = Vector2(-1035, -1580)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_cqh0v"]
+a = Vector2(521, -1569)
+b = Vector2(509, -10)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_7djjw"]
+a = Vector2(-1036, -1576)
+b = Vector2(522, -1570)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_aby2f"]
+a = Vector2(-1018, -12)
+b = Vector2(510, -12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_53iu8"]
+size = Vector2(1536.28, 473.055)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r166t"]
+size = Vector2(1536.28, 265.575)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_g4yeh"]
+a = Vector2(-1557.55, -456.456)
+b = Vector2(-417.2, -460.607)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h0xgy"]
+size = Vector2(1537.19, 238.761)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yxf6s"]
+size = Vector2(1538.82, 242.219)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tcyv6"]
+size = Vector2(1544.46, 321.754)
+
+[sub_resource type="Curve2D" id="Curve2D_r74vt"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -902.956, -109.828, -27.5733, 26.8517, 27.5733, -26.8517, -80.6276, -118.778, -65.1044, 47.7438, 65.1044, -47.7438, 311.884, -366.836, 86.8237, 0.523573, -86.8237, -0.523573, 188.617, -549.684, 82.1747, 2.25667, -82.1747, -2.25667, -601.276, -549.684, 94.2671, 63.361, -94.2671, -63.361, -782.935, -643.025, -82.1016, -0.373767, 82.1016, 0.373767, -700.215, -809.25, -38.7063, 0.913973, 38.7063, -0.913973, 167.531, -809.25, -58.6958, 49.0359, 58.6958, -49.0359, 302.154, -901.312, 95.7743, -0.583449, -95.7743, 0.583449, 185.373, -1035.57, 46.5991, 0.579056, -46.5991, -0.579056, -570.459, -1036.85, 39.8425, 21.1923, -39.8425, -21.1923, -713.191, -1107.18, -127.288, 1.61282, 127.288, -1.61282, -599.654, -1263.17, 0, 0, 0, 0, 451.374, -1263.17)
+}
+point_count = 14
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2orfx"]
+size = Vector2(42.5355, 109.552)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i368j"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_iet08")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_pwndu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_bk8us")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_p0bdw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_w3jtx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_5bhgg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_jlgdw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_8fge7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_fat4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_53vhr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_vbs60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_emqxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_hbplt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_0xjb2")
+}],
+"loop": true,
+"name": &"enemy_walking",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5mhn7"]
+size = Vector2(34.6977, 122.022)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fg0lw"]
+size = Vector2(25, 26.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8coho"]
+size = Vector2(42, 85)
+
+[node name="building2" type="Node2D"]
+position = Vector2(-1061, -6)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_offset = Vector2(-1635.33, 1547.45)
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-479, -244)
+motion_mirroring = Vector2(1200, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(-54, -876)
+scale = Vector2(2.2213, 3.53086)
+texture = ExtResource("1_q3jcs")
+centered = false
+
+[node name="Building" type="Area2D" parent="."]
+scale = Vector2(0.611218, 0.72296)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Building"]
+collision_layer = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D"]
+position = Vector2(-190.603, -797.416)
+scale = Vector2(5.74849, 3.16343)
+texture = ExtResource("2_rr4ls")
+
+[node name="DoorExit" type="Area2D" parent="Building/StaticBody2D/Sprite2D"]
+position = Vector2(-38.8493, 146.259)
+scale = Vector2(0.642682, 0.649023)
+script = ExtResource("3_xfwad")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Building/StaticBody2D/Sprite2D/DoorExit"]
+position = Vector2(50.2616, 49.25)
+shape = SubResource("RectangleShape2D_hjmq6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Sprite2D/DoorExit"]
+position = Vector2(53.2688, 53.1949)
+scale = Vector2(0.207595, 0.230882)
+texture = ExtResource("4_7lnc7")
+
+[node name="LeftWall" type="CollisionShape2D" parent="Building/StaticBody2D"]
+shape = SubResource("SegmentShape2D_d07jf")
+
+[node name="RightWall" type="CollisionShape2D" parent="Building/StaticBody2D"]
+shape = SubResource("SegmentShape2D_cqh0v")
+
+[node name="TopWall" type="CollisionShape2D" parent="Building/StaticBody2D"]
+shape = SubResource("SegmentShape2D_7djjw")
+
+[node name="BottomWall" type="CollisionShape2D" parent="Building/StaticBody2D"]
+position = Vector2(-13.0886, 13.832)
+scale = Vector2(0.999999, 1)
+shape = SubResource("SegmentShape2D_aby2f")
+one_way_collision_margin = 10.0
+
+[node name="Floor1" type="Area2D" parent="Building/StaticBody2D"]
+position = Vector2(-258.5, -239.294)
+scale = Vector2(0.999999, 1)
+
+[node name="shape" type="CollisionShape2D" parent="Building/StaticBody2D/Floor1"]
+position = Vector2(5.72627, 1.38319)
+shape = SubResource("RectangleShape2D_53iu8")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Building/StaticBody2D/Floor1"]
+
+[node name="Stairs" type="RigidBody2D" parent="Building/StaticBody2D/Floor1/StaticBody2D"]
+position = Vector2(88.3481, 167.367)
+scale = Vector2(1.41837, 1.0913)
+collision_layer = 3
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Building/StaticBody2D/Floor1/StaticBody2D/Stairs"]
+position = Vector2(-220, 258)
+scale = Vector2(8.84064, 9.69231)
+build_mode = 1
+polygon = PackedVector2Array(30.2111, -19.8811, 79.8657, -58.5852, 78, -20)
+
+[node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Floor1/StaticBody2D/Stairs/CollisionShape2D"]
+position = Vector2(57.2502, -38.2146)
+rotation = 0.0174533
+scale = Vector2(0.0254356, 0.0220355)
+texture = ExtResource("5_1rkat")
+
+[node name="Floor2" type="Area2D" parent="Building/StaticBody2D"]
+
+[node name="shape" type="CollisionShape2D" parent="Building/StaticBody2D/Floor2"]
+position = Vector2(-256.046, -612.759)
+shape = SubResource("RectangleShape2D_r166t")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Building/StaticBody2D/Floor2"]
+collision_layer = 3
+
+[node name="floor" type="CollisionShape2D" parent="Building/StaticBody2D/Floor2/StaticBody2D"]
+position = Vector2(567.719, -20.748)
+shape = SubResource("SegmentShape2D_g4yeh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Floor2/StaticBody2D/floor"]
+position = Vector2(-959.152, -489.654)
+scale = Vector2(0.38074, 0.135554)
+texture = ExtResource("6_e4l4e")
+
+[node name="Stairs" type="RigidBody2D" parent="Building/StaticBody2D/Floor2/StaticBody2D"]
+position = Vector2(-674.061, -521.467)
+scale = Vector2(0.990977, 0.959108)
+collision_layer = 3
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Building/StaticBody2D/Floor2/StaticBody2D/Stairs"]
+position = Vector2(326.892, 160.081)
+scale = Vector2(-8.54294, 5.89571)
+build_mode = 1
+polygon = PackedVector2Array(37.8784, -19.8137, 78.0757, -62.6213, 78, -20)
+
+[node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Floor2/StaticBody2D/Stairs/CollisionShape2D"]
+position = Vector2(59.2839, -40.046)
+scale = Vector2(0.0230631, 0.0272906)
+texture = ExtResource("5_1rkat")
+
+[node name="Floor3" type="Area2D" parent="Building/StaticBody2D"]
+
+[node name="shape" type="CollisionShape2D" parent="Building/StaticBody2D/Floor3"]
+position = Vector2(-258.863, -875.142)
+shape = SubResource("RectangleShape2D_h0xgy")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Building/StaticBody2D/Floor3"]
+collision_layer = 3
+
+[node name="floor" type="CollisionShape2D" parent="Building/StaticBody2D/Floor3/StaticBody2D"]
+position = Vector2(955.469, -293.239)
+shape = SubResource("SegmentShape2D_g4yeh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Floor3/StaticBody2D/floor"]
+position = Vector2(-1061.81, -495.186)
+scale = Vector2(0.397334, 0.135554)
+texture = ExtResource("6_e4l4e")
+
+[node name="Stairs" type="RigidBody2D" parent="Building/StaticBody2D/Floor3/StaticBody2D"]
+position = Vector2(181.604, -980.691)
+collision_layer = 3
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Building/StaticBody2D/Floor3/StaticBody2D/Stairs"]
+position = Vector2(-165.244, 327.819)
+scale = Vector2(6.25614, 5.59452)
+build_mode = 1
+polygon = PackedVector2Array(26.6747, -19.0376, 79.7623, -64.5302, 78.4548, -19.2848)
+
+[node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Floor3/StaticBody2D/Stairs/CollisionShape2D"]
+position = Vector2(54.2646, -40.1768)
+scale = Vector2(0.0279648, 0.0271629)
+texture = ExtResource("5_1rkat")
+
+[node name="Floor4" type="Area2D" parent="Building/StaticBody2D"]
+
+[node name="shape" type="CollisionShape2D" parent="Building/StaticBody2D/Floor4"]
+position = Vector2(-258.045, -1123.77)
+shape = SubResource("RectangleShape2D_yxf6s")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Building/StaticBody2D/Floor4"]
+collision_layer = 3
+
+[node name="floor" type="CollisionShape2D" parent="Building/StaticBody2D/Floor4/StaticBody2D"]
+position = Vector2(570.991, -540.832)
+shape = SubResource("SegmentShape2D_g4yeh")
+
+[node name="Stairs" type="RigidBody2D" parent="Building/StaticBody2D/Floor4/StaticBody2D/floor"]
+position = Vector2(-1253.24, -510.402)
+scale = Vector2(0.990977, 0.959108)
+collision_layer = 3
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Building/StaticBody2D/Floor4/StaticBody2D/floor/Stairs"]
+position = Vector2(326.892, 160.081)
+scale = Vector2(-8.54294, 5.89571)
+build_mode = 1
+polygon = PackedVector2Array(28.9878, -19.0798, 79.0411, -64.8227, 78, -20)
+
+[node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Floor4/StaticBody2D/floor/Stairs/CollisionShape2D"]
+position = Vector2(54.2646, -38.4461)
+scale = Vector2(0.0279648, 0.028853)
+texture = ExtResource("5_1rkat")
+
+[node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Floor4/StaticBody2D/floor"]
+position = Vector2(-994.327, -495.187)
+scale = Vector2(0.388686, 0.135554)
+texture = ExtResource("6_e4l4e")
+
+[node name="Floor5" type="Area2D" parent="Building/StaticBody2D"]
+
+[node name="shape" type="CollisionShape2D" parent="Building/StaticBody2D/Floor5"]
+position = Vector2(-256.864, -1411.82)
+shape = SubResource("RectangleShape2D_tcyv6")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Building/StaticBody2D/Floor5"]
+collision_layer = 3
+
+[node name="floor" type="CollisionShape2D" parent="Building/StaticBody2D/Floor5/StaticBody2D"]
+position = Vector2(1022.55, -791.192)
+shape = SubResource("SegmentShape2D_g4yeh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Building/StaticBody2D/Floor5/StaticBody2D/floor"]
+position = Vector2(-1080.22, -489.653)
+scale = Vector2(0.369052, 0.135554)
+texture = ExtResource("6_e4l4e")
+
+[node name="Path2D" type="Path2D" parent="Building"]
+position = Vector2(-3.74628, 116.042)
+scale = Vector2(1.00871, 1.08177)
+curve = SubResource("Curve2D_r74vt")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Building/Path2D"]
+position = Vector2(-902.956, -109.828)
+rotation = -0.00489633
+rotates = false
+
+[node name="Guard" type="RigidBody2D" parent="Building/Path2D/PathFollow2D"]
+collision_layer = 2
+collision_mask = 2
+gravity_scale = 0.0
+lock_rotation = true
+script = ExtResource("7_o4758")
+metadata/name = "guard1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Building/Path2D/PathFollow2D/Guard"]
+position = Vector2(11.8476, -61.6777)
+shape = SubResource("RectangleShape2D_2orfx")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Building/Path2D/PathFollow2D/Guard"]
+position = Vector2(16.9846, -73.0927)
+scale = Vector2(0.1025, 0.0916667)
+sprite_frames = SubResource("SpriteFrames_i368j")
+animation = &"enemy_walking"
+
+[node name="GuardArea" type="Area2D" parent="Building/Path2D/PathFollow2D/Guard"]
+position = Vector2(554.972, 50.1293)
+rotation = -0.0144766
+scale = Vector2(1.00003, 0.99998)
+skew = 0.00412893
+script = ExtResource("22_txhfm")
+metadata/name = "guard1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Building/Path2D/PathFollow2D/Guard/GuardArea"]
+position = Vector2(-541.459, -116.061)
+shape = SubResource("RectangleShape2D_5mhn7")
+
+[node name="Building_Path2D_PathFollow2D_Guard_GuardArea#CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(107, -424)
+shape = SubResource("RectangleShape2D_fg0lw")
+
+[node name="Player" parent="." instance=ExtResource("23_mhoah")]
+position = Vector2(-296, -94)
+
+[node name="Area2D" type="Area2D" parent="Player"]
+script = ExtResource("22_txhfm")
+metadata/name = "player"
+
+[node name="PlayerArea" type="CollisionShape2D" parent="Player/Area2D"]
+position = Vector2(3, -14.5)
+shape = SubResource("RectangleShape2D_8coho")
+
+[node name="PolicyB" parent="." instance=ExtResource("24_aqfic")]
+position = Vector2(-251, -374)
+
+[node name="PolicyB2" parent="." instance=ExtResource("24_aqfic")]
+position = Vector2(-42, -374)
+
+[node name="PolicyB3" parent="." instance=ExtResource("24_aqfic")]
+position = Vector2(-251, -574)
+
+[node name="PolicyB4" parent="." instance=ExtResource("24_aqfic")]
+position = Vector2(-42, -574)
+
+[node name="PolicyB5" parent="." instance=ExtResource("24_aqfic")]
+position = Vector2(-251, -753)
+
+[node name="PolicyB6" parent="." instance=ExtResource("24_aqfic")]
+position = Vector2(-42, -753)
+
+[node name="PolicyB7" parent="." instance=ExtResource("24_aqfic")]
+position = Vector2(-251, -932)
+
+[node name="PolicyB8" parent="." instance=ExtResource("24_aqfic")]
+position = Vector2(-42, -932)
+
+[node name="PolicyB9" parent="." instance=ExtResource("24_aqfic")]
+position = Vector2(-251, -81.0001)
+
+[node name="PolicyB10" parent="." instance=ExtResource("24_aqfic")]
+position = Vector2(-42, -81.0001)
+
+[node name="Shredder" parent="." instance=ExtResource("25_4dw6v")]
+position = Vector2(-456, -79)
+
+[connection signal="body_entered" from="Building/StaticBody2D/Sprite2D/DoorExit" to="Building/StaticBody2D/Sprite2D/DoorExit" method="_on_body_entered"]
+[connection signal="body_exited" from="Building/StaticBody2D/Sprite2D/DoorExit" to="Building/StaticBody2D/Sprite2D/DoorExit" method="_on_body_exited"]
