@@ -1,9 +1,43 @@
-[gd_scene load_steps=5 format=3 uid="uid://b17kypa37a1mm"]
+[gd_scene load_steps=10 format=3 uid="uid://b17kypa37a1mm"]
 
 [ext_resource type="Texture2D" uid="uid://vqt855buh0w1" path="res://assets/images/mainercity.jpg" id="1_kmqru"]
 [ext_resource type="Script" path="res://scripts/menuPlayButton.gd" id="2_3vh1e"]
+[ext_resource type="FontFile" uid="uid://y1wejrllh8at" path="res://assets/PixelOperator8-Bold.ttf" id="2_w1lmu"]
 [ext_resource type="Script" path="res://scenes/CreditsButton.gd" id="3_1brnf"]
 [ext_resource type="Texture2D" uid="uid://kyabdkcmb73d" path="res://assets/logo.png" id="3_ssvs1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_65d6j"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_color = Color(0, 0, 0, 1)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cw4n7"]
+bg_color = Color(0.854634, 0.854634, 0.854634, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ky8q"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_phtuh"]
+bg_color = Color(0.854902, 0.854902, 0.854902, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+shadow_size = 20
 
 [node name="Node2D" type="Node2D"]
 
@@ -28,7 +62,12 @@ offset_left = 566.0
 offset_top = 353.0
 offset_right = 1131.0
 offset_bottom = 457.0
-theme_override_font_sizes/font_size = 66
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_w1lmu")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_65d6j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cw4n7")
 text = "New Game"
 script = ExtResource("2_3vh1e")
 
@@ -38,7 +77,12 @@ offset_left = -1.0
 offset_top = 135.0
 offset_right = 564.0
 offset_bottom = 239.0
-theme_override_font_sizes/font_size = 66
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_w1lmu")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_1ky8q")
+theme_override_styles/hover = SubResource("StyleBoxFlat_phtuh")
 text = "Credits
 "
 script = ExtResource("3_1brnf")
