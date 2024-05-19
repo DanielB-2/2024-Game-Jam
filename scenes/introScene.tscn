@@ -341,5 +341,10 @@ drag_horizontal_offset = 1.0
 drag_left_margin = 0.0
 metadata/_edit_lock_ = true
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="MusicasMias" type="Node2D" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MusicasMias"]
+max_polyphony = 2
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="MusicasMias"]
 max_polyphony = 2
