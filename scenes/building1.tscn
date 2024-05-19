@@ -385,7 +385,6 @@ metadata/name = "guard1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Building/Path2D/PathFollow2D/Guard/GuardArea"]
 position = Vector2(-541.459, -116.061)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_5mhn7")
 
 [node name="Building_Path2D_PathFollow2D_Guard_GuardArea#CollisionShape2D" type="CollisionShape2D" parent="."]
