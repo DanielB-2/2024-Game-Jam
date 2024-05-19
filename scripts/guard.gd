@@ -40,53 +40,59 @@ func _process(delta):
 func patrol_building():
 	speed = 1
 func can_i_see_the_player():
-	if Building1Positions.locations[nameOfSelf] == Building1Positions.locations["player"]:
-		return true
-	else:
-		return false
+	if not playerData.tietoggle:
+		if Building1Positions.locations[nameOfSelf] == Building1Positions.locations["player"]:
+			return true
+		else:
+			return false
+	elif playerData.tietoggle:
+		if playerData.exposed:
+			if Building1Positions.locations[nameOfSelf] == Building1Positions.locations["player"]:
+				return true
+			else:
+				return false
+		patrol_building()
 func _physics_process(delta):
 
 	#is the player wearing a tie
-	if not playerData.tietoggle:
+	#if not playerData.tietoggle:
 		#check if the guard can see the player
-		if can_i_see_the_player():
-			#if the guard can see the player
-			speed = 2
-			var right
-			#figure out which way is left and which is right based on the floor number
-			if (Building1Positions.locations[nameOfSelf]%2 == 0):
-				right = true
-				#up is right
-				print(right)
-			else:
-				#down is right
-				right = false
-				print(right)
+	if can_i_see_the_player():
+		print("can be seen")
+		#if the guard can see the player
+		speed = 2
+		var right
+		#figure out which way is left and which is right based on the floor number
+		if (Building1Positions.locations[nameOfSelf]%2 == 0):
+			right = true
+			#up is right
+			print(right)
+		else:
+			#down is right
+			right = false
+			print(right)
 				
 			
-			#figure out which direction to the player and then go that way
-			if self.global_position.x-player.global_position.x < 0:
-				print("walking right")
-				#walk right
-				direction = right
-			else:
-				print("walking left")
-				#walk left
-				direction = not right
+		#figure out which direction to the player and then go that way
+		if self.global_position.x-player.global_position.x < 0:
+			print("walking right")
+			#walk right
+			direction = right
+		else:
+			print("walking left")
+			#walk left
+			direction = not right
 		
-		#check if the guard has collided with (captured) the player
-		
+		# can i feel the player
 		if get_node("GuardArea").overlaps_area(get_tree().get_root().get_node("building1/Player/Area2D")):
 			print("You got captured")
 			
 			#Back to the main scene for you
 			get_tree().change_scene_to_file("res://scenes/node_3d.tscn")
 			player.onReturnToMainScene(Vector2(0, -1000))
-	else:
+	#else:
 		#otherwise just patrol like normal
-		patrol_building()
-	
-	
+		#patrol_building()
 	
 	#check if the guard is about to teleport and prevent it
 	#check if the guard has reached the bottom
